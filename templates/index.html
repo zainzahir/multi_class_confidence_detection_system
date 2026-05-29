@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - Student Confidence Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+
+        /* ───────── Top Navigation Bar ───────── */
+        .top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: rgba(20, 20, 40, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-brand span.brand-icon {
+            font-size: 1.5rem;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-info {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.82rem;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-info .divider {
+            width: 1px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .nav-info strong {
+            color: #fff;
+            font-weight: 600;
+        }
+
+        .logout-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #fff;
+            padding: 7px 20px;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .logout-btn:hover {
+            background: rgba(220, 53, 69, 0.7);
+            border-color: rgba(220, 53, 69, 0.5);
+            transform: translateY(-1px);
+        }
+
+        /* ───────── Main Container ───────── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px 20px 40px;
+        }
+
+        /* ───────── Flash Messages ───────── */
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+
+        .flash-msg {
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            animation: slideDown 0.4s ease;
+            backdrop-filter: blur(12px);
+        }
+
+        .flash-msg.success {
+            background: rgba(40, 167, 69, 0.2);
+            border: 1px solid rgba(40, 167, 69, 0.3);
+            color: #d4edda;
+        }
+
+        .flash-msg.error, .flash-msg.danger {
+            background: rgba(220, 53, 69, 0.2);
+            border: 1px solid rgba(220, 53, 69, 0.3);
+            color: #f8d7da;
+        }
+
+        .flash-msg.info, .flash-msg.warning {
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            color: #fff3cd;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-12px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ───────── Student Profile Card ───────── */
+        .profile-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 16px;
+            padding: 20px 28px;
+            margin-bottom: 28px;
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            animation: fadeUp 0.5s ease;
+            color: #fff;
+        }
+
+        .profile-avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            flex-shrink: 0;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .profile-details {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .profile-item {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.85rem;
+        }
+
+        .profile-item .p-icon {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .profile-item .p-label {
+            opacity: 0.7;
+            font-weight: 400;
+            font-size: 0.75rem;
+        }
+
+        .profile-item .p-value {
+            font-weight: 600;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ───────── Main Analyzer Card ───────── */
+        .main-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 36px 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.18);
+            margin-bottom: 32px;
+            animation: fadeUp 0.6s ease;
+        }
+
+        .input-section {
+            margin-bottom: 24px;
+        }
+
+        .input-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 14px;
+        }
+
+        .label-icon {
+            font-size: 1.25rem;
+        }
+
+        .response-input {
+            width: 100%;
+            padding: 16px 18px;
+            border: 2px solid #e8e8f0;
+            border-radius: 14px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            resize: vertical;
+            transition: all 0.3s ease;
+            background: #fafaff;
+            color: #333;
+        }
+
+        .response-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+            background: #fff;
+        }
+
+        .char-counter {
+            text-align: right;
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .button-section {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .analyze-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 14px 44px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.2px;
+        }
+
+        .analyze-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(102, 126, 234, 0.45);
+        }
+
+        .analyze-btn:active {
+            transform: translateY(-1px);
+        }
+
+        .analyze-btn:disabled {
+            opacity: 0.65;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        .btn-icon {
+            font-size: 1.15rem;
+        }
+
+        /* Result Container */
+        .result-container {
+            margin-top: 28px;
+            padding-top: 28px;
+            border-top: 2px solid #f0f0f5;
+            animation: slideIn 0.5s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-header h3 {
+            color: #333;
+            margin-bottom: 18px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .result-badge {
+            padding: 24px 28px;
+            border-radius: 14px;
+            border-left: 5px solid;
+            margin-bottom: 18px;
+        }
+
+        .confidence-label {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 14px;
+        }
+
+        .confidence-bar-container {
+            background: #e9ecef;
+            border-radius: 10px;
+            height: 28px;
+            overflow: hidden;
+            margin-bottom: 14px;
+        }
+
+        .confidence-bar {
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 12px;
+            color: white;
+            font-weight: 600;
+            font-size: 0.82rem;
+            min-width: 40px;
+        }
+
+        .confidence-score {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        .message {
+            font-size: 0.95rem;
+            color: #444;
+            line-height: 1.65;
+        }
+
+        .feedback-section {
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f2ff 100%);
+            padding: 22px 24px;
+            border-radius: 14px;
+            margin-top: 18px;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .feedback-section h4 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feedback-section p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 0.9rem;
+        }
+
+        .error-message {
+            background: #fff5f5;
+            color: #c53030;
+            padding: 18px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid rgba(220, 53, 69, 0.15);
+        }
+
+        .error-icon {
+            font-size: 1.4rem;
+        }
+
+        /* Example Buttons */
+        .examples-section {
+            margin-top: 28px;
+            padding-top: 22px;
+            border-top: 1px dashed #e8e8f0;
+        }
+
+        .examples-section h4 {
+            color: #666;
+            margin-bottom: 14px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .example-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .example-btn {
+            background: #f4f4fb;
+            border: 1.5px solid #e8e8f0;
+            padding: 9px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: #555;
+            transition: all 0.25s ease;
+        }
+
+        .example-btn:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(102, 126, 234, 0.3);
+        }
+
+        .example-btn .ex-dot {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        /* ───────── Prediction History Section ───────── */
+        .history-card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 32px 36px;
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.14);
+            margin-bottom: 32px;
+            animation: fadeUp 0.7s ease;
+        }
+
+        .history-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .history-table-wrap {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid #f0f0f5;
+        }
+
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+        }
+
+        .history-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .history-table thead th {
+            padding: 13px 16px;
+            text-align: left;
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+
+        .history-table tbody tr {
+            border-bottom: 1px solid #f5f5f8;
+            transition: background 0.2s;
+        }
+
+        .history-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .history-table tbody tr:hover {
+            background: #fafaff;
+        }
+
+        .history-table tbody td {
+            padding: 12px 16px;
+            color: #444;
+            vertical-align: middle;
+        }
+
+        .history-table .row-num {
+            font-weight: 600;
+            color: #999;
+            width: 40px;
+        }
+
+        .history-table .input-text-cell {
+            max-width: 260px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #555;
+        }
+
+        .pred-badge {
+            display: inline-block;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.76rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .pred-badge.high {
+            background: rgba(40, 167, 69, 0.12);
+            color: #28a745;
+        }
+
+        .pred-badge.medium {
+            background: rgba(255, 152, 0, 0.12);
+            color: #e68a00;
+        }
+
+        .pred-badge.low {
+            background: rgba(220, 53, 69, 0.12);
+            color: #dc3545;
+        }
+
+        .source-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 3px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            background: #f0f0f8;
+            color: #666;
+        }
+
+        .date-cell {
+            font-size: 0.8rem;
+            color: #888;
+            white-space: nowrap;
+        }
+
+        .empty-history {
+            text-align: center;
+            padding: 48px 20px;
+            color: #999;
+        }
+
+        .empty-history .empty-icon {
+            font-size: 2.8rem;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .empty-history p {
+            font-size: 0.92rem;
+        }
+
+        /* ───────── Info Cards ───────── */
+        .info-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+            margin-top: 4px;
+            animation: fadeUp 0.8s ease;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            padding: 28px 24px;
+            border-radius: 18px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: #fff;
+        }
+
+        .info-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .info-icon {
+            font-size: 2.4rem;
+            margin-bottom: 14px;
+            display: block;
+        }
+
+        .info-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .info-card p {
+            opacity: 0.85;
+            line-height: 1.65;
+            font-size: 0.85rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+
+        .badge.high {
+            background: rgba(40, 167, 69, 0.2);
+            color: #73e896;
+        }
+
+        .badge.medium {
+            background: rgba(255, 193, 7, 0.2);
+            color: #ffe082;
+        }
+
+        .badge.low {
+            background: rgba(220, 53, 69, 0.2);
+            color: #f5a0a8;
+        }
+
+        /* ───────── Footer ───────── */
+        .footer {
+            text-align: center;
+            padding: 28px 0 16px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.78rem;
+        }
+
+        /* ───────── Responsive ───────── */
+        @media (max-width: 768px) {
+            .top-nav {
+                padding: 0 16px;
+            }
+
+            .nav-brand {
+                font-size: 0.95rem;
+            }
+
+            .nav-info {
+                display: none;
+            }
+
+            .container {
+                padding: 20px 14px 32px;
+            }
+
+            .profile-card {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 14px;
+                padding: 18px 20px;
+            }
+
+            .profile-details {
+                gap: 12px;
+            }
+
+            .main-card {
+                padding: 24px 20px;
+            }
+
+            .history-card {
+                padding: 24px 18px;
+            }
+
+            .example-buttons {
+                flex-direction: column;
+            }
+
+            .info-section {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-details {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+
+            .nav-brand span.brand-text {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ─── Top Navigation Bar ─── -->
+    <nav class="top-nav">
+        <div class="nav-brand">
+            <span class="brand-icon">🎓</span>
+            <span class="brand-text">Student Confidence Detector</span>
+        </div>
+        <div class="nav-right">
+            <div class="nav-info">
+                <span><strong>{{ current_user.name }}</strong></span>
+                <span class="divider"></span>
+                <span>Reg No: <strong>{{ current_user.registration_no }}</strong></span>
+            </div>
+            <a href="{{ url_for('logout') }}" class="logout-btn">
+                🚪 Logout
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <!-- ─── Flash Messages ─── -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+            <div class="flash-msg {{ category }}">
+                {% if category == 'success' %}✅
+                {% elif category == 'error' or category == 'danger' %}❌
+                {% else %}ℹ️{% endif %}
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <!-- ─── Student Profile Card ─── -->
+        <div class="profile-card">
+            <div class="profile-avatar">
+                {{ current_user.name[0] | upper }}
+            </div>
+            <div class="profile-details">
+                <div class="profile-item">
+                    <span class="p-icon">👤</span>
+                    <div>
+                        <div class="p-label">Name</div>
+                        <div class="p-value">{{ current_user.name }}</div>
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <span class="p-icon">📧</span>
+                    <div>
+                        <div class="p-label">Email</div>
+                        <div class="p-value">{{ current_user.email }}</div>
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <span class="p-icon">🆔</span>
+                    <div>
+                        <div class="p-label">Reg No</div>
+                        <div class="p-value">{{ current_user.registration_no }}</div>
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <span class="p-icon">📚</span>
+                    <div>
+                        <div class="p-label">Section</div>
+                        <div class="p-value">{{ current_user.section }}</div>
+                    </div>
+                </div>
+                <div class="profile-item">
+                    <span class="p-icon">🎓</span>
+                    <div>
+                        <div class="p-label">Semester</div>
+                        <div class="p-value">{{ current_user.semester }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── Main Analyzer Card ─── -->
+        <div class="main-card">
+            <div class="input-section">
+                <label for="student-response" class="input-label">
+                    <span class="label-icon">📝</span>
+                    Enter Your Response
+                </label>
+                <textarea id="student-response" class="response-input"
+                    placeholder="Type your response here… Share your understanding of the topic, explain your reasoning, or describe how confident you feel about the material."
+                    rows="6"></textarea>
+                <div class="char-counter">
+                    <span id="char-count">0</span> characters
+                </div>
+            </div>
+
+            <div class="button-section">
+                <button id="analyze-btn" class="analyze-btn">
+                    <span class="btn-icon">🔍</span>
+                    Analyze Confidence Level
+                </button>
+            </div>
+
+            <div id="result-container" class="result-container" style="display: none;">
+                <div class="result-header">
+                    <h3>📊 Analysis Result</h3>
+                </div>
+                <div id="result-content" class="result-content">
+                    <!-- Results populated by JS -->
+                </div>
+            </div>
+
+            <div class="examples-section">
+                <h4>💡 Try an Example Response</h4>
+                <div class="example-buttons">
+                    <button class="example-btn"
+                        data-text="I am absolutely certain about my answer. I have mastered this topic completely and can explain every step clearly. The concepts are well understood.">
+                        <span class="ex-dot" style="background:#28a745;"></span>High Confidence
+                    </button>
+                    <button class="example-btn"
+                        data-text="I think this might be correct. I've seen similar problems before but I need to review some concepts to be sure about the final answer.">
+                        <span class="ex-dot" style="background:#ff9800;"></span>Medium Confidence
+                    </button>
+                    <button class="example-btn"
+                        data-text="I'm really confused about this. I don't understand the material and need someone to explain it to me from the beginning. I feel lost.">
+                        <span class="ex-dot" style="background:#dc3545;"></span>Low Confidence
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── Prediction History Section ─── -->
+        <div class="history-card">
+            <div class="history-title">
+                📋 Your Prediction History
+            </div>
+
+            {% if history and history | length > 0 %}
+            <div class="history-table-wrap">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Input Text</th>
+                            <th>Prediction</th>
+                            <th>Confidence %</th>
+                            <th>Source</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in history %}
+                        <tr>
+                            <td class="row-num">{{ loop.index }}</td>
+                            <td class="input-text-cell" title="{{ item.input_text }}">
+                                {{ item.input_text[:60] }}{% if item.input_text | length > 60 %}…{% endif %}
+                            </td>
+                            <td>
+                                {% if 'High' in item.predicted_label %}
+                                <span class="pred-badge high">{{ item.predicted_label }}</span>
+                                {% elif 'Medium' in item.predicted_label %}
+                                <span class="pred-badge medium">{{ item.predicted_label }}</span>
+                                {% else %}
+                                <span class="pred-badge low">{{ item.predicted_label }}</span>
+                                {% endif %}
+                            </td>
+                            <td>
+                                <strong>{{ item.confidence_score }}%</strong>
+                            </td>
+                            <td>
+                                <span class="source-badge">
+                                    {% if item.source == 'Email' %}📧{% else %}🌐{% endif %}
+                                    {{ item.source }}
+                                </span>
+                            </td>
+                            <td class="date-cell">{{ item.created_at }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% else %}
+            <div class="empty-history">
+                <span class="empty-icon">📭</span>
+                <p>No predictions yet. Try analyzing a response above!</p>
+            </div>
+            {% endif %}
+        </div>
+
+        <!-- ─── Info Cards ─── -->
+        <div class="info-section">
+            <div class="info-card">
+                <span class="info-icon">🎯</span>
+                <h3>How It Works</h3>
+                <p>Our AI model analyzes the language patterns, certainty words, and sentence structures in your
+                    responses to determine confidence levels.</p>
+            </div>
+            <div class="info-card">
+                <span class="info-icon">📊</span>
+                <h3>Confidence Levels</h3>
+                <p>
+                    <span class="badge high">High</span> – Clear, certain language<br>
+                    <span class="badge medium">Medium</span> – Tentative, exploring language<br>
+                    <span class="badge low">Low</span> – Uncertain, questioning language
+                </p>
+            </div>
+            <div class="info-card">
+                <span class="info-icon">💡</span>
+                <h3>Educational Impact</h3>
+                <p>Helps identify areas where you need additional support, and enables teachers to customize learning
+                    approaches for better outcomes.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Student Confidence Detector &mdash; AI-Powered Learning Assistant
+        </div>
+    </div>
+
+    <script>
+        const textarea = document.getElementById('student-response');
+        const charCount = document.getElementById('char-count');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const resultContainer = document.getElementById('result-container');
+        const resultContent = document.getElementById('result-content');
+
+        // ── Character counter + auto-resize ──
+        textarea.addEventListener('input', function () {
+            charCount.textContent = this.value.length;
+            this.style.height = 'auto';
+            this.style.height = Math.min(this.scrollHeight, 240) + 'px';
+        });
+
+        // ── Analyze button ──
+        analyzeBtn.addEventListener('click', async function () {
+            const text = textarea.value.trim();
+
+            if (!text) {
+                showError('Please enter a response to analyze.');
+                return;
+            }
+
+            if (text.length < 10) {
+                showError('Please enter at least 10 characters for accurate analysis.');
+                return;
+            }
+
+            analyzeBtn.disabled = true;
+            analyzeBtn.innerHTML = '<span class="btn-icon">⏳</span> Analyzing…';
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: text })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    displayResult(data);
+                } else {
+                    showError(data.error || 'An error occurred during analysis.');
+                }
+            } catch (error) {
+                showError('Network error. Please check your connection and try again.');
+            } finally {
+                analyzeBtn.disabled = false;
+                analyzeBtn.innerHTML = '<span class="btn-icon">🔍</span> Analyze Confidence Level';
+            }
+        });
+
+        function displayResult(data) {
+            resultContainer.style.display = 'block';
+
+            const confidencePercent = data.confidence;
+
+            resultContent.innerHTML = `
+                <div class="result-badge" style="background: ${data.color}12; border-left-color: ${data.color}">
+                    <div class="confidence-label" style="color: ${data.color}">
+                        ${data.label}
+                    </div>
+                    <div class="confidence-bar-container">
+                        <div class="confidence-bar" style="width: 0%; background: ${data.color}">
+                            ${confidencePercent}%
+                        </div>
+                    </div>
+                    <div class="confidence-score">AI Confidence: <strong>${confidencePercent}%</strong></div>
+                    <div class="message">${data.message}</div>
+                </div>
+
+                <div class="feedback-section">
+                    <h4>🎯 Personalized Feedback</h4>
+                    <p>${getPersonalizedFeedback(data.label)}</p>
+                </div>
+            `;
+
+            // Animate the confidence bar
+            requestAnimationFrame(() => {
+                const bar = resultContent.querySelector('.confidence-bar');
+                if (bar) {
+                    requestAnimationFrame(() => {
+                        bar.style.width = confidencePercent + '%';
+                    });
+                }
+            });
+
+            resultContainer.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        function getPersonalizedFeedback(label) {
+            if (label === 'High Confidence') {
+                return "Excellent work! Your response shows strong understanding and mastery. Consider challenging yourself with advanced problems or helping peers who might be struggling with this concept.";
+            } else if (label === 'Medium Confidence') {
+                return "Good progress! You're on the right track. Try reviewing the key concepts, practicing more problems, and explaining your reasoning step-by-step to build stronger confidence.";
+            } else {
+                return "Keep going — learning takes time! I recommend reviewing the fundamentals, asking questions in class, practicing with simpler problems first, and seeking help from teachers or study groups.";
+            }
+        }
+
+        function showError(message) {
+            resultContainer.style.display = 'block';
+            resultContent.innerHTML = `
+                <div class="error-message">
+                    <span class="error-icon">⚠️</span>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+
+        // ── Example buttons ──
+        document.querySelectorAll('.example-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                textarea.value = this.dataset.text;
+                charCount.textContent = this.dataset.text.length;
+                textarea.style.height = 'auto';
+                textarea.style.height = Math.min(textarea.scrollHeight, 240) + 'px';
+                textarea.focus();
+            });
+        });
+    </script>
+</body>
+
+</html>

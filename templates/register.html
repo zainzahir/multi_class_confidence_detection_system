@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Confidence Detector - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px 15px;
+            overflow-y: auto;
+        }
+
+        /* Floating decorative shapes */
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            opacity: 0.07;
+            background: #fff;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::before {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+            animation: floatBubble 8s ease-in-out infinite;
+        }
+
+        body::after {
+            width: 300px;
+            height: 300px;
+            bottom: -80px;
+            left: -80px;
+            animation: floatBubble 10s ease-in-out infinite reverse;
+        }
+
+        @keyframes floatBubble {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-30px) scale(1.05); }
+        }
+
+        .register-container {
+            width: 100%;
+            max-width: 520px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .register-card {
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow:
+                0 25px 60px rgba(0, 0, 0, 0.15),
+                0 0 0 1px rgba(255, 255, 255, 0.1);
+            padding: 40px 38px 32px;
+            animation: cardSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
+        @keyframes cardSlideUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header */
+        .register-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .register-logo {
+            font-size: 48px;
+            margin-bottom: 8px;
+            display: block;
+            animation: logoPop 0.6s 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        @keyframes logoPop {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .register-header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 4px;
+        }
+
+        .register-header p {
+            font-size: 13px;
+            color: #a0aec0;
+            font-weight: 400;
+        }
+
+        /* Flash Messages */
+        .flash-messages {
+            margin-bottom: 18px;
+        }
+
+        .flash-message {
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+            animation: flashSlide 0.4s ease-out;
+        }
+
+        .flash-message.error {
+            background: linear-gradient(135deg, #fff5f5, #fed7d7);
+            color: #c53030;
+            border: 1px solid #feb2b2;
+        }
+
+        .flash-message.success {
+            background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+            color: #276749;
+            border: 1px solid #9ae6b4;
+        }
+
+        .flash-message.info {
+            background: linear-gradient(135deg, #ebf8ff, #bee3f8);
+            color: #2b6cb0;
+            border: 1px solid #90cdf4;
+        }
+
+        @keyframes flashSlide {
+            from { opacity: 0; transform: translateX(-15px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Form Groups */
+        .form-group {
+            margin-bottom: 18px;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 6px;
+            transition: color 0.3s;
+        }
+
+        .form-group label .required {
+            color: #e53e3e;
+            margin-left: 2px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 16px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: #2d3748;
+            background: #f7fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        .form-group input:hover,
+        .form-group select:hover {
+            border-color: #cbd5e0;
+            background: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #667eea;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group input.valid {
+            border-color: #48bb78;
+            background: #fff;
+        }
+
+        .form-group input.invalid {
+            border-color: #fc8181;
+            background: #fff;
+        }
+
+        .form-group input::placeholder {
+            color: #cbd5e0;
+            font-weight: 300;
+        }
+
+        /* Custom Select Styling */
+        .select-wrapper {
+            position: relative;
+        }
+
+        .select-wrapper::after {
+            content: '';
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 6px solid #a0aec0;
+            pointer-events: none;
+            transition: transform 0.3s;
+        }
+
+        .select-wrapper:focus-within::after {
+            transform: translateY(-50%) rotate(180deg);
+            border-top-color: #667eea;
+        }
+
+        .form-group select {
+            cursor: pointer;
+            padding-right: 40px;
+        }
+
+        .form-group select option {
+            font-family: 'Poppins', sans-serif;
+            padding: 8px;
+        }
+
+        /* Two Column Row */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        .form-row .form-group {
+            margin-bottom: 18px;
+        }
+
+        /* Validation Feedback */
+        .validation-feedback {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 11.5px;
+            font-weight: 500;
+            margin-top: 5px;
+            min-height: 18px;
+            transition: all 0.3s;
+        }
+
+        .validation-feedback.success {
+            color: #38a169;
+        }
+
+        .validation-feedback.error {
+            color: #e53e3e;
+        }
+
+        .validation-feedback .icon {
+            font-size: 13px;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        /* Submit Button */
+        .btn-submit {
+            width: 100%;
+            padding: 14px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-top: 6px;
+            letter-spacing: 0.3px;
+        }
+
+        .btn-submit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: left 0.6s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-submit:hover::before {
+            left: 100%;
+        }
+
+        .btn-submit:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Footer Link */
+        .register-footer {
+            text-align: center;
+            margin-top: 22px;
+            font-size: 13.5px;
+            color: #a0aec0;
+        }
+
+        .register-footer a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            position: relative;
+            transition: color 0.3s;
+        }
+
+        .register-footer a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 1px;
+            transition: width 0.3s ease;
+        }
+
+        .register-footer a:hover {
+            color: #764ba2;
+        }
+
+        .register-footer a:hover::after {
+            width: 100%;
+        }
+
+        /* Password Strength Hints */
+        .password-hint {
+            font-size: 11px;
+            color: #a0aec0;
+            margin-top: 4px;
+            font-weight: 400;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .register-card {
+                padding: 28px 22px 24px;
+                border-radius: 18px;
+            }
+
+            .register-header h1 {
+                font-size: 20px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+
+            .form-group input,
+            .form-group select {
+                padding: 11px 14px;
+                font-size: 13px;
+            }
+        }
+
+        /* Staggered animation for form groups */
+        .form-group,
+        .form-row {
+            opacity: 0;
+            animation: fieldFadeIn 0.5s ease forwards;
+        }
+
+        .form-group:nth-child(1) { animation-delay: 0.15s; }
+        .form-group:nth-child(2) { animation-delay: 0.22s; }
+        .form-group:nth-child(3) { animation-delay: 0.29s; }
+        .form-group:nth-child(4) { animation-delay: 0.36s; }
+        .form-group:nth-child(5) { animation-delay: 0.43s; }
+        .form-row { animation-delay: 0.50s; }
+        .btn-submit { animation: fieldFadeIn 0.5s 0.57s ease forwards; opacity: 0; }
+        .register-footer { animation: fieldFadeIn 0.5s 0.64s ease forwards; opacity: 0; }
+
+        @keyframes fieldFadeIn {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-card">
+            <!-- Header -->
+            <div class="register-header">
+                <span class="register-logo">🎓</span>
+                <h1>Create Your Account</h1>
+                <p>Join the Student Confidence Detector</p>
+            </div>
+
+            <!-- Flash Messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div class="flash-messages">
+                        {% for category, message in messages %}
+                            <div class="flash-message {{ category }}">
+                                {% if category == 'error' %}
+                                    ⚠️
+                                {% elif category == 'success' %}
+                                    ✅
+                                {% else %}
+                                    ℹ️
+                                {% endif %}
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+
+            <!-- Registration Form -->
+            <form action="{{ url_for('register') }}" method="POST" id="registerForm" novalidate>
+                <!-- Full Name -->
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Ahmed Khan"
+                        required
+                        autocomplete="name"
+                    >
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="ahmed@gmail.com"
+                        required
+                        autocomplete="email"
+                    >
+                </div>
+
+                <!-- Password -->
+                <div class="form-group">
+                    <label for="password">Password <span class="required">*</span></label>
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Minimum 8 characters"
+                        minlength="8"
+                        required
+                        autocomplete="new-password"
+                    >
+                    <div class="password-hint">Must be at least 8 characters long</div>
+                </div>
+
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password <span class="required">*</span></label>
+                    <input
+                        type="password"
+                        id="confirm_password"
+                        name="confirm_password"
+                        placeholder="Re-enter your password"
+                        required
+                        autocomplete="new-password"
+                    >
+                    <div class="validation-feedback" id="passwordMatchFeedback"></div>
+                </div>
+
+                <!-- Registration Number -->
+                <div class="form-group">
+                    <label for="registration_no">Registration Number <span class="required">*</span></label>
+                    <input
+                        type="text"
+                        id="registration_no"
+                        name="registration_no"
+                        placeholder="2024-CS-147"
+                        required
+                        autocomplete="off"
+                    >
+                    <div class="validation-feedback" id="regNoFeedback"></div>
+                </div>
+
+                <!-- Section & Semester Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="section">Section <span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select id="section" name="section" required>
+                                <option value="" disabled selected>Select Section</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="semester">Semester <span class="required">*</span></label>
+                        <div class="select-wrapper">
+                            <select id="semester" name="semester" required>
+                                <option value="" disabled selected>Select Semester</option>
+                                <option value="1st">1st</option>
+                                <option value="2nd">2nd</option>
+                                <option value="3rd">3rd</option>
+                                <option value="4th">4th</option>
+                                <option value="5th">5th</option>
+                                <option value="6th">6th</option>
+                                <option value="7th">7th</option>
+                                <option value="8th">8th</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    Create Account
+                </button>
+            </form>
+
+            <!-- Footer -->
+            <div class="register-footer">
+                Already have an account? <a href="{{ url_for('login') }}">Login here</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const regNoInput = document.getElementById('registration_no');
+            const regNoFeedback = document.getElementById('regNoFeedback');
+            const passwordInput = document.getElementById('password');
+            const confirmPasswordInput = document.getElementById('confirm_password');
+            const passwordMatchFeedback = document.getElementById('passwordMatchFeedback');
+            const form = document.getElementById('registerForm');
+
+            // ── Registration Number Validation ──
+            const regNoBaseRegex = /^(200[1-9]|20[1-2][0-9]|203[0-6])-(CS|CE|SE)-\d{3}$/i;
+
+            regNoInput.addEventListener('input', function () {
+                let value = this.value;
+
+                // Auto-uppercase the department code segment
+                // Matches the part after the first dash (letters portion)
+                value = value.replace(/^(\d{4}-)([a-zA-Z]{1,2})/, function (match, prefix, dept) {
+                    return prefix + dept.toUpperCase();
+                });
+                this.value = value;
+
+                validateRegNo(value);
+            });
+
+            regNoInput.addEventListener('blur', function () {
+                if (this.value.trim() !== '') {
+                    validateRegNo(this.value);
+                }
+            });
+
+            function validateRegNo(value) {
+                if (value.trim() === '') {
+                    regNoFeedback.innerHTML = '';
+                    regNoFeedback.className = 'validation-feedback';
+                    regNoInput.classList.remove('valid', 'invalid');
+                    return false;
+                }
+
+                // First check the base regex format
+                if (!regNoBaseRegex.test(value)) {
+                    regNoFeedback.innerHTML = '<span class="icon">✗</span> Format: YYYY-DD-XXX (e.g., 2024-CS-147)';
+                    regNoFeedback.className = 'validation-feedback error';
+                    regNoInput.classList.remove('valid');
+                    regNoInput.classList.add('invalid');
+                    return false;
+                }
+
+                // Then check the year doesn't exceed the current year
+                const yearPart = parseInt(value.split('-')[0], 10);
+                const currentYear = new Date().getFullYear();
+                if (yearPart > currentYear) {
+                    regNoFeedback.innerHTML = '<span class="icon">✗</span> Year cannot exceed ' + currentYear;
+                    regNoFeedback.className = 'validation-feedback error';
+                    regNoInput.classList.remove('valid');
+                    regNoInput.classList.add('invalid');
+                    return false;
+                }
+
+                // Valid
+                regNoFeedback.innerHTML = '<span class="icon">✓</span> Valid registration number';
+                regNoFeedback.className = 'validation-feedback success';
+                regNoInput.classList.remove('invalid');
+                regNoInput.classList.add('valid');
+                return true;
+            }
+
+            // ── Password Match Validation ──
+            function checkPasswordMatch() {
+                const pwd = passwordInput.value;
+                const confirmPwd = confirmPasswordInput.value;
+
+                if (confirmPwd === '') {
+                    passwordMatchFeedback.innerHTML = '';
+                    passwordMatchFeedback.className = 'validation-feedback';
+                    confirmPasswordInput.classList.remove('valid', 'invalid');
+                    return;
+                }
+
+                if (pwd === confirmPwd) {
+                    passwordMatchFeedback.innerHTML = '<span class="icon">✓</span> Passwords match';
+                    passwordMatchFeedback.className = 'validation-feedback success';
+                    confirmPasswordInput.classList.remove('invalid');
+                    confirmPasswordInput.classList.add('valid');
+                } else {
+                    passwordMatchFeedback.innerHTML = '<span class="icon">✗</span> Passwords do not match';
+                    passwordMatchFeedback.className = 'validation-feedback error';
+                    confirmPasswordInput.classList.remove('valid');
+                    confirmPasswordInput.classList.add('invalid');
+                }
+            }
+
+            confirmPasswordInput.addEventListener('input', checkPasswordMatch);
+            passwordInput.addEventListener('input', function () {
+                if (confirmPasswordInput.value !== '') {
+                    checkPasswordMatch();
+                }
+            });
+
+            // ── Form Submission Validation ──
+            form.addEventListener('submit', function (e) {
+                let isValid = true;
+                const errors = [];
+
+                // Name check
+                const name = document.getElementById('name').value.trim();
+                if (name === '') {
+                    errors.push('Full Name is required.');
+                    isValid = false;
+                }
+
+                // Email check
+                const email = document.getElementById('email').value.trim();
+                if (email === '' || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    errors.push('Please enter a valid email address.');
+                    isValid = false;
+                }
+
+                // Password length check
+                if (passwordInput.value.length < 8) {
+                    errors.push('Password must be at least 8 characters.');
+                    isValid = false;
+                }
+
+                // Password match check
+                if (passwordInput.value !== confirmPasswordInput.value) {
+                    errors.push('Passwords do not match.');
+                    isValid = false;
+                }
+
+                // Registration number check
+                if (!validateRegNo(regNoInput.value)) {
+                    errors.push('Please enter a valid registration number.');
+                    isValid = false;
+                }
+
+                // Section check
+                if (document.getElementById('section').value === '') {
+                    errors.push('Please select a section.');
+                    isValid = false;
+                }
+
+                // Semester check
+                if (document.getElementById('semester').value === '') {
+                    errors.push('Please select a semester.');
+                    isValid = false;
+                }
+
+                if (!isValid) {
+                    e.preventDefault();
+
+                    // Show first error as a visual cue
+                    let flashContainer = document.querySelector('.flash-messages');
+                    if (!flashContainer) {
+                        flashContainer = document.createElement('div');
+                        flashContainer.className = 'flash-messages';
+                        form.parentNode.insertBefore(flashContainer, form);
+                    }
+                    flashContainer.innerHTML = errors.map(function (err) {
+                        return '<div class="flash-message error">⚠️ ' + err + '</div>';
+                    }).join('');
+
+                    // Scroll to top of card
+                    document.querySelector('.register-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Student Confidence Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ===== Reset & Base ===== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* ===== Animations ===== */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* ===== Top Navigation Bar ===== */
+        .navbar {
+            background: linear-gradient(135deg, #2d1b69 0%, #44318d 50%, #5a3e9e 100%);
+            padding: 0 2rem;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+
+        .navbar-brand .brand-icon {
+            font-size: 1.5rem;
+        }
+
+        .navbar-brand .brand-sub {
+            font-weight: 300;
+            opacity: 0.85;
+            margin-left: 0.25rem;
+            font-size: 0.95rem;
+        }
+
+        .navbar-right {
+            display: flex;
+            align-items: center;
+            gap: 1.25rem;
+        }
+
+        .admin-name {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.9rem;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .admin-avatar {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .btn-logout {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.4rem 1.1rem;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-logout:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
+            transform: translateY(-1px);
+        }
+
+        /* ===== Flash Messages ===== */
+        .flash-container {
+            padding: 1rem 2rem 0;
+        }
+
+        .flash-message {
+            padding: 0.85rem 1.25rem;
+            border-radius: 10px;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            animation: slideUp 0.4s ease;
+            position: relative;
+        }
+
+        .flash-message.success {
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.12), rgba(40, 167, 69, 0.06));
+            color: #1e7e34;
+            border: 1px solid rgba(40, 167, 69, 0.25);
+        }
+
+        .flash-message.error, .flash-message.danger {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.12), rgba(220, 53, 69, 0.06));
+            color: #c82333;
+            border: 1px solid rgba(220, 53, 69, 0.25);
+        }
+
+        .flash-message.warning {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.15), rgba(255, 193, 7, 0.06));
+            color: #856404;
+            border: 1px solid rgba(255, 193, 7, 0.3);
+        }
+
+        .flash-message.info {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.12), rgba(102, 126, 234, 0.06));
+            color: #4a5cba;
+            border: 1px solid rgba(102, 126, 234, 0.25);
+        }
+
+        .flash-dismiss {
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0.5;
+            color: inherit;
+            transition: opacity 0.2s;
+        }
+
+        .flash-dismiss:hover { opacity: 1; }
+
+        /* ===== Main Content ===== */
+        .main-content {
+            padding: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            margin-bottom: 2rem;
+            animation: slideUp 0.5s ease;
+        }
+
+        .page-header h1 {
+            color: #fff;
+            font-size: 1.75rem;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .page-header p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            margin-top: 0.3rem;
+            font-weight: 300;
+        }
+
+        /* ===== Statistics Cards ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 0.6s ease backwards;
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0.1s; }
+        .stat-card:nth-child(2) { animation-delay: 0.2s; }
+        .stat-card:nth-child(3) { animation-delay: 0.3s; }
+        .stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            border-radius: 16px 16px 0 0;
+        }
+
+        .stat-card:nth-child(1)::before { background: linear-gradient(90deg, #667eea, #764ba2); }
+        .stat-card:nth-child(2)::before { background: linear-gradient(90deg, #f093fb, #f5576c); }
+        .stat-card:nth-child(3)::before { background: linear-gradient(90deg, #4facfe, #00f2fe); }
+        .stat-card:nth-child(4)::before { background: linear-gradient(90deg, #43e97b, #38f9d7); }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-card-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .stat-info h3 {
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-info .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d1b69;
+            line-height: 1;
+        }
+
+        .stat-icon {
+            font-size: 2.5rem;
+            opacity: 0.8;
+            filter: grayscale(0.1);
+        }
+
+        /* ===== Content Card (White Area) ===== */
+        .content-card {
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            animation: slideUp 0.7s ease backwards;
+            animation-delay: 0.4s;
+        }
+
+        /* ===== Tab Navigation ===== */
+        .tab-nav {
+            display: flex;
+            background: linear-gradient(135deg, #f8f9ff 0%, #f0f1f8 100%);
+            border-bottom: 2px solid #eee;
+            padding: 0 1rem;
+        }
+
+        .tab-btn {
+            padding: 1rem 1.75rem;
+            background: none;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #888;
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .tab-btn::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 3px 3px 0 0;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .tab-btn:hover {
+            color: #555;
+        }
+
+        .tab-btn.active {
+            color: #2d1b69;
+            font-weight: 600;
+        }
+
+        .tab-btn.active::after {
+            transform: scaleX(1);
+        }
+
+        .tab-icon {
+            font-size: 1.1rem;
+        }
+
+        /* ===== Tab Content ===== */
+        .tab-content {
+            display: none;
+            padding: 1.75rem;
+            animation: fadeIn 0.4s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ===== Search & Filter Bar ===== */
+        .filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .search-input {
+            flex: 1;
+            min-width: 250px;
+            padding: 0.7rem 1.2rem 0.7rem 2.8rem;
+            border: 2px solid #e8e8f0;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            background: #fafaff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23999' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.656a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 0.9rem center no-repeat;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+            background-color: #fff;
+        }
+
+        .filter-select {
+            padding: 0.7rem 2.2rem 0.7rem 1rem;
+            border: 2px solid #e8e8f0;
+            border-radius: 12px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.9rem;
+            background: #fafaff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: calc(100% - 0.8rem) center;
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+        }
+
+        /* ===== Tables ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+
+        .data-table thead {
+            background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+        }
+
+        .data-table th {
+            padding: 0.9rem 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #2d1b69;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+            border-bottom: 2px solid #e0d9f5;
+        }
+
+        .data-table td {
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid #f0f0f5;
+            color: #444;
+            vertical-align: middle;
+        }
+
+        .data-table tbody tr {
+            transition: all 0.2s ease;
+        }
+
+        .data-table tbody tr:nth-child(even) {
+            background-color: #fafaff;
+        }
+
+        .data-table tbody tr:hover {
+            background-color: #f0edff;
+        }
+
+        .data-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ===== Badges ===== */
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            text-transform: capitalize;
+        }
+
+        .badge-high {
+            background: rgba(40, 167, 69, 0.12);
+            color: #28a745;
+        }
+
+        .badge-medium {
+            background: rgba(255, 193, 7, 0.18);
+            color: #d4a106;
+        }
+
+        .badge-low {
+            background: rgba(220, 53, 69, 0.12);
+            color: #dc3545;
+        }
+
+        .badge-web {
+            background: rgba(102, 126, 234, 0.12);
+            color: #667eea;
+        }
+
+        .badge-email {
+            background: rgba(118, 75, 162, 0.12);
+            color: #764ba2;
+        }
+
+        .text-truncate {
+            max-width: 200px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+        }
+
+        /* ===== Email Sync Tab ===== */
+        .sync-card {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .sync-illustration {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .sync-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2d1b69;
+            margin-bottom: 0.75rem;
+        }
+
+        .sync-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .sync-info-box {
+            background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .sync-info-box h4 {
+            color: #2d1b69;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .sync-info-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sync-info-box ul li {
+            padding: 0.35rem 0;
+            font-size: 0.88rem;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .sync-info-box ul li::before {
+            content: '✓';
+            color: #667eea;
+            font-weight: 700;
+        }
+
+        .btn-sync {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            border: none;
+            border-radius: 14px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 24px rgba(102, 126, 234, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-sync::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-sync:hover::before {
+            left: 100%;
+        }
+
+        .btn-sync:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 36px rgba(102, 126, 234, 0.45);
+        }
+
+        .btn-sync:active {
+            transform: translateY(-1px);
+        }
+
+        .btn-sync:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-sync .spinner {
+            display: none;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: #fff;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        .btn-sync.loading .spinner { display: inline-block; }
+        .btn-sync.loading .btn-text { display: none; }
+        .btn-sync.loading .btn-icon { display: none; }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Sync Results */
+        .sync-results {
+            display: none;
+            margin-top: 2rem;
+            animation: slideUp 0.5s ease;
+        }
+
+        .sync-results.visible {
+            display: block;
+        }
+
+        .sync-results-card {
+            background: #fff;
+            border-radius: 14px;
+            border: 2px solid #e0d9f5;
+            padding: 1.5rem;
+            text-align: left;
+        }
+
+        .sync-results-card h4 {
+            color: #2d1b69;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .result-item {
+            background: linear-gradient(135deg, #f5f3ff, #ede9fe);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .result-item .result-number {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2d1b69;
+        }
+
+        .result-item .result-label {
+            font-size: 0.78rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.25rem;
+        }
+
+        .sync-error-msg {
+            display: none;
+            margin-top: 1rem;
+            padding: 0.85rem 1.25rem;
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.08), rgba(220, 53, 69, 0.04));
+            border: 1px solid rgba(220, 53, 69, 0.2);
+            border-radius: 10px;
+            color: #c82333;
+            font-size: 0.9rem;
+        }
+
+        .sync-success-msg {
+            display: none;
+            margin-top: 1rem;
+            padding: 0.85rem 1.25rem;
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.08), rgba(40, 167, 69, 0.04));
+            border: 1px solid rgba(40, 167, 69, 0.2);
+            border-radius: 10px;
+            color: #1e7e34;
+            font-size: 0.9rem;
+        }
+
+        /* ===== Empty States ===== */
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: #999;
+        }
+
+        .empty-state .empty-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .empty-state p {
+            font-size: 0.95rem;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 1100px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 1rem;
+                height: auto;
+                min-height: 56px;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+            }
+
+            .navbar-brand {
+                font-size: 1rem;
+            }
+
+            .navbar-brand .brand-sub {
+                display: none;
+            }
+
+            .main-content {
+                padding: 1.25rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .stat-card {
+                padding: 1.25rem;
+            }
+
+            .stat-info .stat-value {
+                font-size: 1.6rem;
+            }
+
+            .tab-nav {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                padding: 0 0.5rem;
+            }
+
+            .tab-btn {
+                padding: 0.85rem 1.1rem;
+                font-size: 0.85rem;
+                white-space: nowrap;
+            }
+
+            .tab-content {
+                padding: 1.25rem;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-input, .filter-select {
+                min-width: unset;
+                width: 100%;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 1.35rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .admin-name span {
+                display: none;
+            }
+
+            .btn-logout {
+                padding: 0.35rem 0.8rem;
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ===== Scrollbar Styling ===== */
+        .table-wrapper::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-track {
+            background: #f0f0f5;
+            border-radius: 3px;
+        }
+
+        .table-wrapper::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== Navigation Bar ===== -->
+    <nav class="navbar">
+        <a href="#" class="navbar-brand">
+            <span class="brand-icon">🎓</span>
+            Student Confidence Detector
+            <span class="brand-sub">— Admin Panel</span>
+        </a>
+        <div class="navbar-right">
+            <div class="admin-name">
+                <div class="admin-avatar">{{ current_user.name[0] | upper }}</div>
+                <span>{{ current_user.name }}</span>
+            </div>
+            <a href="{{ url_for('logout') }}" class="btn-logout">Logout</a>
+        </div>
+    </nav>
+
+    <!-- ===== Flash Messages ===== -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    <div class="flash-container">
+        {% for category, message in messages %}
+        <div class="flash-message {{ category }}">
+            {% if category == 'success' %}✅{% elif category == 'error' or category == 'danger' %}❌{% elif category == 'warning' %}⚠️{% else %}ℹ️{% endif %}
+            {{ message }}
+            <button class="flash-dismiss" onclick="this.parentElement.remove()">×</button>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    {% endwith %}
+
+    <!-- ===== Main Content ===== -->
+    <div class="main-content">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>📋 Admin Dashboard</h1>
+            <p>Manage students, view predictions, and sync email classifications.</p>
+        </div>
+
+        <!-- ===== Statistics Cards ===== -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-card-inner">
+                    <div class="stat-info">
+                        <h3>Total Students</h3>
+                        <div class="stat-value">{{ stats.total_students }}</div>
+                    </div>
+                    <div class="stat-icon">👥</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-inner">
+                    <div class="stat-info">
+                        <h3>Total Predictions</h3>
+                        <div class="stat-value">{{ stats.total_predictions }}</div>
+                    </div>
+                    <div class="stat-icon">📊</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-inner">
+                    <div class="stat-info">
+                        <h3>Avg Confidence</h3>
+                        <div class="stat-value">{{ stats.avg_confidence }}%</div>
+                    </div>
+                    <div class="stat-icon">📈</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-card-inner">
+                    <div class="stat-info">
+                        <h3>Email Predictions</h3>
+                        <div class="stat-value">{{ stats.email_predictions }}</div>
+                    </div>
+                    <div class="stat-icon">📧</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Content Card with Tabs ===== -->
+        <div class="content-card">
+
+            <!-- Tab Navigation -->
+            <div class="tab-nav">
+                <button class="tab-btn active" data-tab="students" onclick="switchTab('students', this)">
+                    <span class="tab-icon">👨‍🎓</span> Students
+                </button>
+                <button class="tab-btn" data-tab="predictions" onclick="switchTab('predictions', this)">
+                    <span class="tab-icon">🔮</span> Prediction History
+                </button>
+                <button class="tab-btn" data-tab="email-sync" onclick="switchTab('email-sync', this)">
+                    <span class="tab-icon">📬</span> Email Sync
+                </button>
+            </div>
+
+            <!-- ==================== STUDENTS TAB ==================== -->
+            <div class="tab-content active" id="tab-students">
+                <div class="filter-bar">
+                    <input type="text" class="search-input" id="studentSearch" placeholder="Search students by name, email, or registration no..." onkeyup="filterStudents()">
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table" id="studentsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Registration No</th>
+                                <th>Section</th>
+                                <th>Semester</th>
+                                <th>Joined Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for student in students %}
+                            <tr>
+                                <td>{{ loop.index }}</td>
+                                <td><strong>{{ student.name }}</strong></td>
+                                <td>{{ student.email }}</td>
+                                <td>{{ student.registration_no }}</td>
+                                <td>{{ student.section }}</td>
+                                <td>{{ student.semester }}</td>
+                                <td>{{ student.created_at.strftime('%b %d, %Y') if student.created_at else 'N/A' }}</td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="7">
+                                    <div class="empty-state">
+                                        <div class="empty-icon">👨‍🎓</div>
+                                        <p>No students registered yet.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==================== PREDICTION HISTORY TAB ==================== -->
+            <div class="tab-content" id="tab-predictions">
+                <div class="filter-bar">
+                    <input type="text" class="search-input" id="predictionSearch" placeholder="Search by student name or registration no..." onkeyup="filterPredictions()">
+                    <select class="filter-select" id="confidenceFilter" onchange="filterPredictions()">
+                        <option value="all">All Confidence Levels</option>
+                        <option value="high">High Confidence</option>
+                        <option value="medium">Medium Confidence</option>
+                        <option value="low">Low Confidence</option>
+                    </select>
+                    <select class="filter-select" id="sourceFilter" onchange="filterPredictions()">
+                        <option value="all">All Sources</option>
+                        <option value="web">Web</option>
+                        <option value="email">Email</option>
+                    </select>
+                </div>
+
+                <div class="table-wrapper">
+                    <table class="data-table" id="predictionsTable">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Student Name</th>
+                                <th>Reg No</th>
+                                <th>Section</th>
+                                <th>Input Text</th>
+                                <th>Prediction</th>
+                                <th>Confidence %</th>
+                                <th>Source</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for pred in predictions %}
+                            <tr data-confidence="{{ pred.predicted_label | lower }}" data-source="{{ pred.source | lower if pred.source else 'web' }}">
+                                <td>{{ loop.index }}</td>
+                                <td><strong>{{ pred.user.name }}</strong></td>
+                                <td>{{ pred.user.registration_no }}</td>
+                                <td>{{ pred.user.section }}</td>
+                                <td><span class="text-truncate" title="{{ pred.input_text }}">{{ pred.input_text[:50] }}{% if pred.input_text | length > 50 %}…{% endif %}</span></td>
+                                <td>
+                                    {% if pred.predicted_label | lower == 'high' %}
+                                        <span class="badge badge-high">High</span>
+                                    {% elif pred.predicted_label | lower == 'medium' %}
+                                        <span class="badge badge-medium">Medium</span>
+                                    {% else %}
+                                        <span class="badge badge-low">Low</span>
+                                    {% endif %}
+                                </td>
+                                <td><strong>{{ pred.confidence_score }}%</strong></td>
+                                <td>
+                                    {% if pred.source and pred.source | lower == 'email' %}
+                                        <span class="badge badge-email">📧 Email</span>
+                                    {% else %}
+                                        <span class="badge badge-web">🌐 Web</span>
+                                    {% endif %}
+                                </td>
+                                <td>{{ pred.created_at.strftime('%b %d, %Y') if pred.created_at else 'N/A' }}</td>
+                            </tr>
+                            {% else %}
+                            <tr>
+                                <td colspan="9">
+                                    <div class="empty-state">
+                                        <div class="empty-icon">🔮</div>
+                                        <p>No predictions recorded yet.</p>
+                                    </div>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==================== EMAIL SYNC TAB ==================== -->
+            <div class="tab-content" id="tab-email-sync">
+                <div class="sync-card">
+                    <div class="sync-illustration">📬</div>
+                    <h2>Email Sync &amp; Classification</h2>
+                    <p>
+                        Automatically fetch and classify student emails to determine their confidence levels.
+                        The system connects to configured email accounts, reads student messages, and runs
+                        each through the confidence detection model.
+                    </p>
+
+                    <div class="sync-info-box">
+                        <h4>🔄 How it works</h4>
+                        <ul>
+                            <li>Connects to the configured email server (IMAP)</li>
+                            <li>Fetches unread emails from registered students</li>
+                            <li>Runs each email body through the confidence classification model</li>
+                            <li>Stores predictions linked to the respective student accounts</li>
+                            <li>Results appear in the Prediction History tab with "Email" source badge</li>
+                        </ul>
+                    </div>
+
+                    <button class="btn-sync" id="syncBtn" onclick="syncEmails()">
+                        <span class="btn-icon">🔄</span>
+                        <span class="btn-text">Sync Student Emails Now</span>
+                        <span class="spinner"></span>
+                    </button>
+
+                    <!-- Sync Results -->
+                    <div class="sync-results" id="syncResults">
+                        <div class="sync-results-card">
+                            <h4>✅ Sync Complete</h4>
+                            <div class="results-grid">
+                                <div class="result-item">
+                                    <div class="result-number" id="emailsProcessed">0</div>
+                                    <div class="result-label">Emails Processed</div>
+                                </div>
+                                <div class="result-item">
+                                    <div class="result-number" id="emailsClassified">0</div>
+                                    <div class="result-label">Classified</div>
+                                </div>
+                                <div class="result-item">
+                                    <div class="result-number" id="emailsErrors">0</div>
+                                    <div class="result-label">Errors</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sync-success-msg" id="syncSuccessMsg"></div>
+                    <div class="sync-error-msg" id="syncErrorMsg"></div>
+                </div>
+            </div>
+
+        </div><!-- /content-card -->
+    </div><!-- /main-content -->
+
+    <!-- ===== JavaScript ===== -->
+    <script>
+        // ===== Tab Switching =====
+        function switchTab(tabId, btnEl) {
+            // Deactivate all tabs & content
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+            // Activate selected
+            btnEl.classList.add('active');
+            const content = document.getElementById('tab-' + tabId);
+            if (content) {
+                content.classList.add('active');
+                // Re-trigger animation
+                content.style.animation = 'none';
+                content.offsetHeight; // trigger reflow
+                content.style.animation = '';
+            }
+        }
+
+        // ===== Student Search/Filter =====
+        function filterStudents() {
+            const query = document.getElementById('studentSearch').value.toLowerCase();
+            const rows = document.querySelectorAll('#studentsTable tbody tr');
+
+            rows.forEach(row => {
+                if (row.querySelector('.empty-state')) return;
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(query) ? '' : 'none';
+            });
+        }
+
+        // ===== Prediction Filters =====
+        function filterPredictions() {
+            const query = document.getElementById('predictionSearch').value.toLowerCase();
+            const confidence = document.getElementById('confidenceFilter').value;
+            const source = document.getElementById('sourceFilter').value;
+            const rows = document.querySelectorAll('#predictionsTable tbody tr');
+
+            rows.forEach(row => {
+                if (row.querySelector('.empty-state')) return;
+
+                const text = row.textContent.toLowerCase();
+                const rowConfidence = row.getAttribute('data-confidence') || '';
+                const rowSource = row.getAttribute('data-source') || '';
+
+                const matchText = text.includes(query);
+                const matchConfidence = confidence === 'all' || rowConfidence === confidence;
+                const matchSource = source === 'all' || rowSource === source;
+
+                row.style.display = (matchText && matchConfidence && matchSource) ? '' : 'none';
+            });
+        }
+
+        // ===== Email Sync =====
+        async function syncEmails() {
+            const btn = document.getElementById('syncBtn');
+            const resultsDiv = document.getElementById('syncResults');
+            const successMsg = document.getElementById('syncSuccessMsg');
+            const errorMsg = document.getElementById('syncErrorMsg');
+
+            // Reset
+            btn.classList.add('loading');
+            btn.disabled = true;
+            resultsDiv.classList.remove('visible');
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+
+            try {
+                const response = await fetch('/admin/sync-emails', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Show results
+                    document.getElementById('emailsProcessed').textContent = data.emails_processed || 0;
+                    document.getElementById('emailsClassified').textContent = data.emails_classified || 0;
+                    document.getElementById('emailsErrors').textContent = data.errors || 0;
+                    resultsDiv.classList.add('visible');
+
+                    if (data.message) {
+                        successMsg.textContent = '✅ ' + data.message;
+                        successMsg.style.display = 'block';
+                    }
+                } else {
+                    errorMsg.textContent = '❌ ' + (data.error || data.message || 'An error occurred during email sync.');
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.textContent = '❌ Network error: Could not connect to the server. Please try again.';
+                errorMsg.style.display = 'block';
+            } finally {
+                btn.classList.remove('loading');
+                btn.disabled = false;
+            }
+        }
+
+        // ===== Auto-dismiss flash messages =====
+        document.addEventListener('DOMContentLoaded', () => {
+            const flashMessages = document.querySelectorAll('.flash-message');
+            flashMessages.forEach((msg, i) => {
+                setTimeout(() => {
+                    msg.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                    msg.style.opacity = '0';
+                    msg.style.transform = 'translateY(-10px)';
+                    setTimeout(() => msg.remove(), 500);
+                }, 5000 + (i * 500));
+            });
+        });
+    </script>
+
+</body>
+</html>

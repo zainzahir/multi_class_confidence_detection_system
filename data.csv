@@ -1,0 +1,21 @@
+text,confidence_level
+"I am absolutely certain about this solution and can explain it clearly",High Confidence
+"This seems correct based on my understanding of the concepts",High Confidence
+"I'm confident that my approach will work effectively",High Confidence
+"I have mastered this topic and can teach others",High Confidence
+"The answer is clear and I can defend my reasoning",High Confidence
+"I think this might be correct but I'm not entirely sure",Medium Confidence
+"I believe this answer is probably right, though I need to verify",Medium Confidence
+"I have some understanding but there are gaps in my knowledge",Medium Confidence
+"This could work but I'd like to double-check my approach",Medium Confidence
+"I'm reasonably confident but there might be better solutions",Medium Confidence
+"I'm really confused about this topic and need help",Low Confidence
+"I have no idea what the answer might be",Low Confidence
+"This doesn't make sense to me at all",Low Confidence
+"I'm struggling to understand this concept",Low Confidence
+"I would need more guidance to solve this problem",Low Confidence
+"I feel uncertain because I haven't practiced this much",Low Confidence
+"My understanding is incomplete and I need clarification",Low Confidence
+"I can solve this with complete accuracy and explain every step",High Confidence
+"I've seen similar problems before and I know how to approach this",High Confidence
+"I might need to review some parts before finalizing",Medium Confidence

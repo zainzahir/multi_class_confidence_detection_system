@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Confidence Detector - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    {% if config.GOOGLE_CLIENT_ID %}
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    {% endif %}
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        /* Animated background orbs */
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.3;
+            z-index: 0;
+            animation: floatOrb 8s ease-in-out infinite alternate;
+        }
+
+        body::before {
+            width: 400px;
+            height: 400px;
+            background: #a78bfa;
+            top: -100px;
+            left: -100px;
+        }
+
+        body::after {
+            width: 350px;
+            height: 350px;
+            background: #667eea;
+            bottom: -80px;
+            right: -80px;
+            animation-delay: 3s;
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes floatOrb {
+            0%   { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(60px, 40px) scale(1.15); }
+        }
+
+        /* Card entrance animation */
+        @keyframes fadeSlideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px) scale(0.97);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .login-card {
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            padding: 48px 40px 40px;
+            width: 100%;
+            max-width: 440px;
+            box-shadow:
+                0 8px 32px rgba(102, 126, 234, 0.18),
+                0 2px 8px rgba(0, 0, 0, 0.06);
+            animation: fadeSlideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+
+        /* Logo / Header */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .logo-emoji {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 12px;
+            animation: bounceIn 0.6s 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+        }
+
+        @keyframes bounceIn {
+            0%   { opacity: 0; transform: scale(0.3); }
+            60%  { transform: scale(1.08); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .logo-title {
+            font-size: 22px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.3;
+        }
+
+        .logo-subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+            font-weight: 400;
+            margin-top: 4px;
+        }
+
+        /* Flash Messages */
+        .flash-messages {
+            margin-bottom: 20px;
+        }
+
+        .flash-msg {
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            animation: fadeSlideUp 0.4s ease forwards;
+        }
+
+        .flash-msg.error,
+        .flash-msg.danger {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+        .flash-msg.success {
+            background: #f0fdf4;
+            color: #16a34a;
+            border: 1px solid #bbf7d0;
+        }
+
+        .flash-msg.info,
+        .flash-msg.warning {
+            background: #fffbeb;
+            color: #d97706;
+            border: 1px solid #fde68a;
+        }
+
+        .flash-icon {
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        /* Form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+            margin-bottom: 6px;
+            letter-spacing: 0.02em;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            color: #1e293b;
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            outline: none;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .form-group input::placeholder {
+            color: #94a3b8;
+            font-weight: 400;
+        }
+
+        .form-group input:focus {
+            border-color: #667eea;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.12);
+        }
+
+        .form-group input:hover:not(:focus) {
+            border-color: #cbd5e1;
+            background: #fff;
+        }
+
+        /* Login Button */
+        .btn-login {
+            width: 100%;
+            padding: 14px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.02em;
+            margin-top: 4px;
+        }
+
+        .btn-login::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.15),
+                transparent
+            );
+            transition: left 0.5s ease;
+        }
+
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-login:hover::before {
+            left: 100%;
+        }
+
+        .btn-login:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 24px 0;
+            gap: 12px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #e2e8f0;
+        }
+
+        .divider span {
+            font-size: 12px;
+            font-weight: 500;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* Google Button */
+        .btn-google {
+            width: 100%;
+            padding: 13px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+            font-weight: 500;
+            color: #3c4043;
+            background: #fff;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .btn-google:hover {
+            border-color: #4285f4;
+            background: #f8fafc;
+            box-shadow: 0 4px 14px rgba(66, 133, 244, 0.15);
+            transform: translateY(-1px);
+        }
+
+        .btn-google:active {
+            transform: translateY(0);
+        }
+
+        .btn-google svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        /* Register Link */
+        .register-link {
+            text-align: center;
+            margin-top: 28px;
+            font-size: 13px;
+            color: #94a3b8;
+        }
+
+        .register-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        .register-link a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 480px) {
+            .login-card {
+                padding: 36px 24px 32px;
+                border-radius: 20px;
+            }
+
+            .logo-emoji {
+                font-size: 40px;
+            }
+
+            .logo-title {
+                font-size: 19px;
+            }
+
+            .form-group input {
+                padding: 12px 14px;
+                font-size: 14px;
+            }
+
+            .btn-login,
+            .btn-google {
+                padding: 12px;
+            }
+        }
+
+        /* Subtle floating particles (decorative) */
+        .particle {
+            position: fixed;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.15);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle:nth-child(1) {
+            width: 6px; height: 6px;
+            top: 15%; left: 10%;
+            animation: drift 12s ease-in-out infinite;
+        }
+        .particle:nth-child(2) {
+            width: 8px; height: 8px;
+            top: 70%; left: 85%;
+            animation: drift 15s ease-in-out infinite reverse;
+        }
+        .particle:nth-child(3) {
+            width: 5px; height: 5px;
+            top: 40%; left: 75%;
+            animation: drift 10s ease-in-out infinite 2s;
+        }
+        .particle:nth-child(4) {
+            width: 7px; height: 7px;
+            top: 80%; left: 20%;
+            animation: drift 14s ease-in-out infinite 1s;
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.4; }
+            25%      { transform: translate(30px, -20px) rotate(90deg); opacity: 0.7; }
+            50%      { transform: translate(-15px, -40px) rotate(180deg); opacity: 0.5; }
+            75%      { transform: translate(20px, -10px) rotate(270deg); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Decorative particles -->
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+
+    <div class="login-card">
+        <!-- Logo -->
+        <div class="logo-section">
+            <span class="logo-emoji">🎓</span>
+            <div class="logo-title">Student Confidence Detector</div>
+            <div class="logo-subtitle">Sign in to your account</div>
+        </div>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for category, message in messages %}
+                        <div class="flash-msg {{ category }}">
+                            {% if category == 'error' or category == 'danger' %}
+                                <span class="flash-icon">⚠️</span>
+                            {% elif category == 'success' %}
+                                <span class="flash-icon">✅</span>
+                            {% else %}
+                                <span class="flash-icon">ℹ️</span>
+                            {% endif %}
+                            <span>{{ message }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <!-- Login Form -->
+        <form action="{{ url_for('login') }}" method="POST" autocomplete="on">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    required
+                    autocomplete="email"
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter your password"
+                    required
+                    autocomplete="current-password"
+                >
+            </div>
+
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+
+        {% if config.GOOGLE_CLIENT_ID %}
+        <!-- Google Sign-In -->
+        <div class="divider"><span>or</span></div>
+
+        <button type="button" class="btn-google" id="googleSignInBtn" onclick="handleGoogleSignIn()">
+            <svg viewBox="0 0 48 48">
+                <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
+                <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
+                <path fill="#FBBC05" d="M10.53 28.59a14.5 14.5 0 0 1 0-9.18l-7.98-6.19a24.0 24.0 0 0 0 0 21.56l7.98-6.19z"/>
+                <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/>
+                <path fill="none" d="M0 0h48v48H0z"/>
+            </svg>
+            Sign in with Google
+        </button>
+
+        <div id="g_id_onload"
+             data-client_id="{{ config.GOOGLE_CLIENT_ID }}"
+             data-callback="onGoogleSignIn"
+             data-auto_prompt="false"
+             style="display:none;">
+        </div>
+
+        <script>
+            function onGoogleSignIn(response) {
+                // Post the credential token to the server
+                fetch('/login/google', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ credential: response.credential })
+                })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        window.location.href = data.redirect || '/';
+                    } else {
+                        // Show error as a flash-style message
+                        showFlashMessage(data.message || 'Google sign-in failed. Please try again.', 'error');
+                    }
+                })
+                .catch(err => {
+                    console.error('Google sign-in error:', err);
+                    showFlashMessage('An error occurred during Google sign-in. Please try again.', 'error');
+                });
+            }
+
+            function handleGoogleSignIn() {
+                // Trigger Google Identity Services prompt
+                google.accounts.id.initialize({
+                    client_id: '{{ config.GOOGLE_CLIENT_ID }}',
+                    callback: onGoogleSignIn
+                });
+                google.accounts.id.prompt();
+            }
+
+            function showFlashMessage(message, category) {
+                const container = document.querySelector('.flash-messages') || createFlashContainer();
+                const icons = { error: '⚠️', danger: '⚠️', success: '✅', info: 'ℹ️' };
+                const msg = document.createElement('div');
+                msg.className = 'flash-msg ' + category;
+                msg.innerHTML = '<span class="flash-icon">' + (icons[category] || 'ℹ️') + '</span><span>' + message + '</span>';
+                container.appendChild(msg);
+
+                // Auto-remove after 6 seconds
+                setTimeout(() => {
+                    msg.style.opacity = '0';
+                    msg.style.transform = 'translateY(-10px)';
+                    msg.style.transition = 'all 0.3s ease';
+                    setTimeout(() => msg.remove(), 300);
+                }, 6000);
+            }
+
+            function createFlashContainer() {
+                const container = document.createElement('div');
+                container.className = 'flash-messages';
+                const form = document.querySelector('form');
+                form.parentNode.insertBefore(container, form);
+                return container;
+            }
+        </script>
+        {% endif %}
+
+        <!-- Register Link -->
+        <div class="register-link">
+            Don't have an account? <a href="{{ url_for('register') }}">Register here</a>
+        </div>
+    </div>
+</body>
+</html>
