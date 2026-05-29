@@ -54,6 +54,10 @@ class User(UserMixin, db.Model):
     is_google_user = db.Column(db.Boolean, default=False)
     created_at = db.Column(db.DateTime, default=datetime.utcnow)
     
+    # Password Reset fields
+    reset_token = db.Column(db.String(100), unique=True, nullable=True)
+    reset_token_expiry = db.Column(db.DateTime, nullable=True)
+    
     # Relationship
     responses = db.relationship('ResponseHistory', backref='user', lazy=True)
     
@@ -371,6 +375,162 @@ def logout():
     flash('You have been logged out.', 'info')
     return redirect(url_for('login'))
 
+
+# ─── Routes: Password Management ─────────────────────────────────────────────
+
+@app.route('/change-password', methods=['POST'])
+@login_required
+def change_password():
+    """Handle password change requests from logged in users."""
+    try:
+        current_password = request.form.get('current_password', '')
+        new_password = request.form.get('new_password', '')
+        confirm_password = request.form.get('confirm_password', '')
+        
+        if not current_password or not new_password or not confirm_password:
+            return jsonify({'success': False, 'message': 'All fields are required.'}), 400
+            
+        if not current_user.check_password(current_password):
+            return jsonify({'success': False, 'message': 'Incorrect current password.'}), 400
+            
+        if new_password != confirm_password:
+            return jsonify({'success': False, 'message': 'New passwords do not match.'}), 400
+            
+        if len(new_password) < 8:
+            return jsonify({'success': False, 'message': 'Password must be at least 8 characters long.'}), 400
+            
+        current_user.set_password(new_password)
+        db.session.commit()
+        return jsonify({'success': True, 'message': 'Password changed successfully!'})
+    except Exception as e:
+        return jsonify({'success': False, 'message': f'Error: {str(e)}'}), 500
+
+
+def send_reset_email(to_email, reset_url):
+    """SMTP email sending helper."""
+    import smtplib
+    from email.mime.text import MIMEText
+    from email.mime.multipart import MIMEMultipart
+    
+    sender_email = app.config.get('TEACHER_EMAIL', '')
+    sender_password = app.config.get('TEACHER_EMAIL_PASSWORD', '')
+    
+    if not sender_email or not sender_password:
+        return False
+        
+    try:
+        msg = MIMEMultipart()
+        msg['From'] = f"Student Confidence Detector <{sender_email}>"
+        msg['To'] = to_email
+        msg['Subject'] = "Password Reset Request"
+        
+        body = f"""Hello,
+
+You requested a password reset for your Student Confidence Detector account.
+Please click the link below to reset your password:
+
+{reset_url}
+
+This link will expire in 1 hour.
+If you did not make this request, simply ignore this email.
+
+Regards,
+AI Support Team"""
+        
+        msg.attach(MIMEText(body, 'plain'))
+        
+        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server.starttls()
+        server.login(sender_email, sender_password)
+        server.sendmail(sender_email, to_email, msg.as_string())
+        server.quit()
+        return True
+    except Exception as e:
+        print(f"[ERROR] SMTP Send failed: {str(e)}")
+        return False
+
+
+@app.route('/forgot-password', methods=['GET', 'POST'])
+def forgot_password():
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+        
+    if request.method == 'POST':
+        email_input = request.form.get('email', '').strip().lower()
+        if not email_input:
+            flash('Please enter your email address.', 'error')
+            return redirect(url_for('forgot_password'))
+            
+        user = User.query.filter_by(email=email_input).first()
+        if user:
+            import secrets
+            from datetime import datetime, timedelta
+            
+            # Generate token and expiry
+            token = secrets.token_urlsafe(32)
+            user.reset_token = token
+            user.reset_token_expiry = datetime.utcnow() + timedelta(hours=1)
+            db.session.commit()
+            
+            # Create reset URL
+            reset_url = url_for('reset_password', token=token, _external=True)
+            
+            # Send Email
+            email_sent = send_reset_email(user.email, reset_url)
+            
+            if email_sent:
+                flash('A password reset link has been sent to your email.', 'success')
+            else:
+                # Fallback message for environments blocking SMTP (like PythonAnywhere Free Tier)
+                flash(f'Reset link generated successfully! (SMTP block fallback - Reset URL: {reset_url})', 'info')
+        else:
+            # For security reasons, don't reveal that the user does not exist
+            flash('If the email is registered, a reset link has been sent.', 'success')
+            
+        return redirect(url_for('login'))
+        
+    return render_template('forgot_password.html')
+
+
+@app.route('/reset-password/<token>', methods=['GET', 'POST'])
+def reset_password(token):
+    if current_user.is_authenticated:
+        return redirect(url_for('home'))
+        
+    from datetime import datetime
+    user = User.query.filter(User.reset_token == token, User.reset_token_expiry > datetime.utcnow()).first()
+    
+    if not user:
+        flash('Invalid or expired reset token.', 'error')
+        return redirect(url_for('login'))
+        
+    if request.method == 'POST':
+        password = request.form.get('password', '')
+        confirm_password = request.form.get('confirm_password', '')
+        
+        if not password or not confirm_password:
+            flash('All fields are required.', 'error')
+            return render_template('reset_password.html', token=token)
+            
+        if password != confirm_password:
+            flash('Passwords do not match.', 'error')
+            return render_template('reset_password.html', token=token)
+            
+        if len(password) < 8:
+            flash('Password must be at least 8 characters long.', 'error')
+            return render_template('reset_password.html', token=token)
+            
+        # Update password and clear token
+        user.set_password(password)
+        user.reset_token = None
+        user.reset_token_expiry = None
+        db.session.commit()
+        
+        flash('Your password has been reset successfully! Please login.', 'success')
+        return redirect(url_for('login'))
+        
+    return render_template('reset_password.html', token=token)
+
 # ─── Routes: Student Dashboard ──────────────────────────────────────────────
 
 @app.route('/')
@@ -467,17 +627,17 @@ def sync_emails():
 
 def seed_admin():
     """Create a default admin account if none exists."""
-    admin = User.query.filter_by(role='admin').first()
+    admin = User.query.filter_by(email='zainzahir.pk@gmail.com').first()
     if not admin:
         admin = User(
             name='Admin',
-            email='admin@detector.com',
+            email='zainzahir.pk@gmail.com',
             role='admin'
         )
-        admin.set_password('Admin123!')
+        admin.set_password('ZainAdmin123!')
         db.session.add(admin)
         db.session.commit()
-        print("[SUCCESS] Default admin account created: admin@detector.com / Admin123!")
+        print("[SUCCESS] Default admin account created: zainzahir.pk@gmail.com / ZainAdmin123!")
 
 
 # ─── Create .env template if it doesn't exist ───────────────────────────────

@@ -192,5 +192,84 @@ class FlaskAppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
         self.assertIn(b'Please enter at least 10 characters', response.data)
 
+    def test_password_management(self):
+        """Test password change, forgot, and reset flows."""
+        # 1. Log in student
+        login_res = self.app.post('/login', data={
+            'email': 'student_test@detector.com',
+            'password': 'StudentPass123!'
+        }, follow_redirects=True)
+        self.assertIn(b'Student Confidence Detector', login_res.data)
+        
+        # 2. Change password successfully
+        change_res = self.app.post('/change-password', data={
+            'current_password': 'StudentPass123!',
+            'new_password': 'NewStudentPass123!',
+            'confirm_password': 'NewStudentPass123!'
+        })
+        self.assertEqual(change_res.status_code, 200)
+        data = json.loads(change_res.data)
+        self.assertTrue(data['success'])
+        self.assertEqual(data['message'], 'Password changed successfully!')
+        
+        # 3. Log out
+        self.app.get('/logout')
+        
+        # 4. Try logging in with old password
+        login_old = self.app.post('/login', data={
+            'email': 'student_test@detector.com',
+            'password': 'StudentPass123!'
+        }, follow_redirects=True)
+        self.assertIn(b'Invalid email or password', login_old.data)
+        
+        # 5. Log in with new password
+        login_new = self.app.post('/login', data={
+            'email': 'student_test@detector.com',
+            'password': 'NewStudentPass123!'
+        }, follow_redirects=True)
+        self.assertIn(b'Student Confidence Detector', login_new.data)
+        
+        # Log out to test forgot/reset password
+        self.app.get('/logout')
+        
+        # 6. Forgot password (request reset token)
+        forgot_res = self.app.post('/forgot-password', data={
+            'email': 'student_test@detector.com'
+        }, follow_redirects=True)
+        self.assertEqual(forgot_res.status_code, 200)
+        # Should flash success/info message
+        self.assertIn(b'Reset link generated successfully', forgot_res.data)
+        
+        # Retrieve token from db
+        with app.app_context():
+            user = User.query.filter_by(email='student_test@detector.com').first()
+            self.assertIsNotNone(user.reset_token)
+            token = user.reset_token
+            
+        # 7. Reset password using the token
+        reset_get = self.app.get(f'/reset-password/{token}')
+        self.assertEqual(reset_get.status_code, 200)
+        self.assertIn(b'Reset Password', reset_get.data)
+        
+        reset_post = self.app.post(f'/reset-password/{token}', data={
+            'password': 'ResetStudentPass123!',
+            'confirm_password': 'ResetStudentPass123!'
+        }, follow_redirects=True)
+        self.assertEqual(reset_post.status_code, 200)
+        self.assertIn(b'Your password has been reset successfully', reset_post.data)
+        
+        # Verify token is cleared in db
+        with app.app_context():
+            user = User.query.filter_by(email='student_test@detector.com').first()
+            self.assertIsNone(user.reset_token)
+            self.assertIsNone(user.reset_token_expiry)
+            
+        # 8. Log in with the reset password
+        login_reset = self.app.post('/login', data={
+            'email': 'student_test@detector.com',
+            'password': 'ResetStudentPass123!'
+        }, follow_redirects=True)
+        self.assertIn(b'Student Confidence Detector', login_reset.data)
+
 if __name__ == '__main__':
     unittest.main()
