@@ -128,6 +128,10 @@ def fetch_and_classify_emails(app, db, User, ResponseHistory, predict_confidence
         results['success'] = False
         results['message'] = f'Email sync error: {str(e)}'
     
+    # Map keys to match the frontend expectations
+    results['emails_processed'] = results.get('processed', 0)
+    results['emails_classified'] = results.get('classified', 0)
+    
     return results
 
 
