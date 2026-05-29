@@ -497,13 +497,15 @@ TEACHER_EMAIL_PASSWORD=
         print("[INFO] Created .env template file. Please configure your settings.")
 
 
+# ─── Initialize Database at Import Time ─────────────────────────────────────
+
+with app.app_context():
+    db.create_all()
+    seed_admin()
+
+
 # ─── Main ───────────────────────────────────────────────────────────────────
 
 if __name__ == '__main__':
     create_env_template()
-    
-    with app.app_context():
-        db.create_all()
-        seed_admin()
-    
     app.run(debug=True, host='127.0.0.1', port=5000)
