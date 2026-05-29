@@ -1098,6 +1098,12 @@
                                     <div class="result-label">Errors</div>
                                 </div>
                             </div>
+                            
+                            <!-- Logs/details section -->
+                            <div id="syncDetailsList" style="margin-top: 1.5rem; display: none; text-align: left;">
+                                <h5 style="color: #2d1b69; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; border-top: 1px solid #eee; padding-top: 1rem;">Sync Logs / Error Messages:</h5>
+                                <ul id="syncDetailsUL" style="font-size: 0.82rem; color: #555; padding-left: 1.2rem; line-height: 1.6; list-style-type: square;"></ul>
+                            </div>
                         </div>
                     </div>
 
@@ -1194,6 +1200,21 @@
                     document.getElementById('emailsClassified').textContent = data.emails_classified || 0;
                     document.getElementById('emailsErrors').textContent = data.errors || 0;
                     resultsDiv.classList.add('visible');
+
+                    // Display details logs
+                    const detailsList = document.getElementById('syncDetailsList');
+                    const detailsUL = document.getElementById('syncDetailsUL');
+                    detailsUL.innerHTML = '';
+                    if (data.details && data.details.length > 0) {
+                        data.details.forEach(detail => {
+                            const li = document.createElement('li');
+                            li.textContent = detail;
+                            detailsUL.appendChild(li);
+                        });
+                        detailsList.style.display = 'block';
+                    } else {
+                        detailsList.style.display = 'none';
+                    }
 
                     if (data.message) {
                         successMsg.textContent = '✅ ' + data.message;
