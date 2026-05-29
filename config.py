@@ -8,7 +8,12 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY', 'dev-secret-key-change-in-production')
     
     # Database
-    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL', 'sqlite:///confidence_detector.db')
+    database_url = os.environ.get('DATABASE_URL')
+    if not database_url:
+        base_dir = os.path.abspath(os.path.dirname(__file__))
+        # Make sure database is in the instance folder of the project directory
+        database_url = f"sqlite:///{os.path.join(base_dir, 'instance', 'confidence_detector.db')}"
+    SQLALCHEMY_DATABASE_URI = database_url
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     
     # Google OAuth

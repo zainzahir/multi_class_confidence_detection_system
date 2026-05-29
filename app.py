@@ -86,7 +86,10 @@ def load_user(user_id):
 # ─── Load ML Model ──────────────────────────────────────────────────────────
 
 def load_model():
-    with open('model.pkl', 'rb') as file:
+    import os
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    model_path = os.path.join(base_dir, 'model.pkl')
+    with open(model_path, 'rb') as file:
         saved_objects = pickle.load(file)
     return saved_objects
 
