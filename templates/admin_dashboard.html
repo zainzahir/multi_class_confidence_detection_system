@@ -1162,7 +1162,7 @@
                 const rowSource = row.getAttribute('data-source') || '';
 
                 const matchText = text.includes(query);
-                const matchConfidence = confidence === 'all' || rowConfidence === confidence;
+                const matchConfidence = confidence === 'all' || rowConfidence.includes(confidence);
                 const matchSource = source === 'all' || rowSource === source;
 
                 row.style.display = (matchText && matchConfidence && matchSource) ? '' : 'none';
