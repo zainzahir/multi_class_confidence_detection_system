@@ -941,6 +941,69 @@
             cursor: pointer;
             box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
         }
+
+        /* ===== Toggle Switch & AI Trainer Styles ===== */
+        .switch-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+            background: #f8fafc;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .switch-label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 48px;
+            height: 24px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #cbd5e1;
+            transition: .4s;
+            border-radius: 24px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: #10b981;
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
     </style>
 </head>
 <body>
@@ -1039,6 +1102,9 @@
                 </button>
                 <button class="tab-btn" data-tab="email-sync" onclick="switchTab('email-sync', this)">
                     <span class="tab-icon">📬</span> Email Sync
+                </button>
+                <button class="tab-btn" data-tab="model-trainer" onclick="switchTab('model-trainer', this)">
+                    <span class="tab-icon">🧠</span> AI Predictor & Trainer
                 </button>
             </div>
 
@@ -1218,6 +1284,105 @@
 
                     <div class="sync-success-msg" id="syncSuccessMsg"></div>
                     <div class="sync-error-msg" id="syncErrorMsg"></div>
+                </div>
+            </div>
+
+            <!-- ==================== AI MODEL TRAINER TAB ==================== -->
+            <div class="tab-content" id="tab-model-trainer">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 1rem;">
+                    
+                    <!-- Left Panel: Live Predictor with Feedback -->
+                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.5rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                        <h4 style="color: #2d1b69; margin-top: 0; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                            <span>🔮</span> Live Predictor & Feedback
+                        </h4>
+                        
+                        <div class="switch-container">
+                            <label class="switch">
+                                <input type="checkbox" id="learningModeToggle" checked onchange="toggleLearningMode()">
+                                <span class="slider"></span>
+                            </label>
+                            <span class="switch-label">Enable Learning Mode (Ask Feedback)</span>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.25rem;">
+                            <label for="admin-predict-text" style="display: block; font-size: 0.85rem; font-weight: 600; color: #475569; margin-bottom: 6px;">Enter Text to Test & Predict</label>
+                            <textarea id="admin-predict-text" style="width: 100%; min-height: 120px; padding: 0.75rem; border: 2px solid #e2e8f0; border-radius: 10px; font-family: inherit; font-size: 0.9rem; resize: vertical; box-sizing: border-box;" placeholder="Type or paste sample text here..."></textarea>
+                        </div>
+                        
+                        <button type="button" class="btn-modal-submit" id="admin-predict-btn" onclick="runAdminPrediction()" style="width: 100%; border-radius: 10px; padding: 0.75rem;">
+                            🔍 Analyze Text
+                        </button>
+                        
+                        <!-- Prediction Result Box -->
+                        <div id="admin-result-box" style="display: none; margin-top: 1.5rem; border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">
+                            <h5 style="margin: 0 0 10px 0; font-size: 0.95rem; color: #334155;">Analysis Result:</h5>
+                            <div id="admin-result-badge" style="padding: 1rem; border-radius: 10px; margin-bottom: 1rem;">
+                                <div id="admin-result-label" style="font-weight: 700; font-size: 1.1rem; margin-bottom: 8px;"></div>
+                                <div style="background: rgba(0,0,0,0.05); height: 16px; border-radius: 8px; overflow: hidden; margin-bottom: 6px; position: relative;">
+                                    <div id="admin-result-bar" style="height: 100%; width: 0%; transition: width 0.5s ease; display: flex; align-items: center; justify-content: center; color: white; font-size: 0.75rem; font-weight: bold;"></div>
+                                </div>
+                                <div id="admin-result-score" style="font-size: 0.85rem; color: #555;"></div>
+                            </div>
+                            
+                            <!-- Feedback Section -->
+                            <div id="admin-feedback-section" style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 10px; padding: 1rem; display: none;">
+                                <div style="font-weight: 600; font-size: 0.88rem; color: #334155; margin-bottom: 10px; display: flex; align-items: center; gap: 6px;">
+                                    <span>🤔</span> Was this prediction correct?
+                                </div>
+                                <div style="display: flex; gap: 8px; margin-bottom: 10px;">
+                                    <button onclick="saveFeedback(true)" class="btn-modal-submit" style="background: #28a745; font-size: 0.82rem; padding: 6px 14px; border-radius: 6px; box-shadow: none;">Yes, Save to Dataset</button>
+                                    <button onclick="showCorrectionSelect()" class="btn-modal-cancel" style="background: #dc3545; color: white; font-size: 0.82rem; padding: 6px 14px; border-radius: 6px;">No, Correct it</button>
+                                </div>
+                                
+                                <div id="correction-select-container" style="display: none; border-top: 1px dashed #cbd5e1; padding-top: 10px; margin-top: 10px;">
+                                    <label for="correct-label-select" style="display: block; font-size: 0.8rem; font-weight: 600; color: #475569; margin-bottom: 4px;">Select Sahi (Correct) Category:</label>
+                                    <div style="display: flex; gap: 8px;">
+                                        <select id="correct-label-select" style="flex: 1; padding: 4px 8px; border-radius: 6px; border: 1px solid #cbd5e1; font-size: 0.85rem;">
+                                            <option value="High Confidence">High Confidence</option>
+                                            <option value="Medium Confidence">Medium Confidence</option>
+                                            <option value="Low Confidence">Low Confidence</option>
+                                        </select>
+                                        <button onclick="saveFeedback(false)" class="btn-modal-submit" style="font-size: 0.82rem; padding: 6px 12px; border-radius: 6px; box-shadow: none;">Save Corrected</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="feedback-success-msg" class="sync-success-msg" style="margin-top: 10px; display: none;"></div>
+                            <div id="feedback-error-msg" class="sync-error-msg" style="margin-top: 10px; display: none;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right Panel: Training Stats & retrain trigger -->
+                    <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);">
+                        <div>
+                            <h4 style="color: #2d1b69; margin-top: 0; margin-bottom: 1.5rem; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                                <span>🧠</span> AI Training Center
+                            </h4>
+                            
+                            <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-bottom: 2rem;">
+                                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem;">
+                                    <div style="font-size: 0.8rem; text-transform: uppercase; color: #64748b; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 4px;">Dataset Size</div>
+                                    <div id="trainer-dataset-size" style="font-size: 1.8rem; font-weight: 800; color: #1e293b;">Loading...</div>
+                                    <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 4px;">Total training examples in dataset.csv</div>
+                                </div>
+                                <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem;">
+                                    <div style="font-size: 0.8rem; text-transform: uppercase; color: #64748b; font-weight: 700; letter-spacing: 0.5px; margin-bottom: 4px;">Latest Model Accuracy</div>
+                                    <div id="trainer-model-accuracy" style="font-size: 1.8rem; font-weight: 800; color: #10b981;">Loading...</div>
+                                    <div style="font-size: 0.78rem; color: #94a3b8; margin-top: 4px;">Accuracy measured on 20% validation split</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <button type="button" class="btn-modal-submit" id="retrain-model-btn" onclick="triggerRetrain()" style="width: 100%; border-radius: 10px; padding: 0.85rem; font-weight: 600; font-size: 0.95rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                                🚀 Retrain AI Model Now
+                            </button>
+                            
+                            <div id="retrain-success-msg" class="sync-success-msg" style="margin-top: 1rem;"></div>
+                            <div id="retrain-error-msg" class="sync-error-msg" style="margin-top: 1rem;"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -1429,6 +1594,9 @@
 
         // ===== Auto-dismiss flash messages =====
         document.addEventListener('DOMContentLoaded', () => {
+            // Load initial AI training stats
+            loadTrainingStats();
+
             const flashMessages = document.querySelectorAll('.flash-message');
             flashMessages.forEach((msg, i) => {
                 setTimeout(() => {
@@ -1439,6 +1607,181 @@
                 }, 5000 + (i * 500));
             });
         });
+
+        // ===== AI Predictor & Trainer Javascript =====
+        let lastPredictedLabel = '';
+        let lastPredictedText = '';
+
+        function toggleLearningMode() {
+            const isEnabled = document.getElementById('learningModeToggle').checked;
+            const feedbackSection = document.getElementById('admin-feedback-section');
+            if (document.getElementById('admin-result-box').style.display === 'block') {
+                feedbackSection.style.display = isEnabled ? 'block' : 'none';
+            }
+        }
+
+        async function runAdminPrediction() {
+            const textarea = document.getElementById('admin-predict-text');
+            const text = textarea.value.trim();
+            const btn = document.getElementById('admin-predict-btn');
+            const resultBox = document.getElementById('admin-result-box');
+            const feedbackSection = document.getElementById('admin-feedback-section');
+
+            if (!text) {
+                alert('Please enter some text to analyze.');
+                return;
+            }
+
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Analyzing…';
+            
+            // Reset feedback elements
+            document.getElementById('feedback-success-msg').style.display = 'none';
+            document.getElementById('feedback-error-msg').style.display = 'none';
+            document.getElementById('correction-select-container').style.display = 'none';
+
+            try {
+                const response = await fetch('/predict', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text: text })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    lastPredictedText = text;
+                    lastPredictedLabel = data.label;
+
+                    resultBox.style.display = 'block';
+                    
+                    const labelEl = document.getElementById('admin-result-label');
+                    const barEl = document.getElementById('admin-result-bar');
+                    const scoreEl = document.getElementById('admin-result-score');
+                    const badgeEl = document.getElementById('admin-result-badge');
+
+                    labelEl.textContent = data.label;
+                    labelEl.style.color = data.color;
+                    
+                    badgeEl.style.background = data.color + '12';
+                    badgeEl.style.borderLeft = '4px solid ' + data.color;
+
+                    barEl.style.width = '0%';
+                    barEl.style.background = data.color;
+                    barEl.textContent = data.confidence + '%';
+                    
+                    scoreEl.innerHTML = 'AI Confidence Score: <strong>' + data.confidence + '%</strong>';
+
+                    setTimeout(() => {
+                        barEl.style.width = data.confidence + '%';
+                    }, 50);
+
+                    // Show or hide feedback based on toggle
+                    const learningMode = document.getElementById('learningModeToggle').checked;
+                    feedbackSection.style.display = learningMode ? 'block' : 'none';
+
+                } else {
+                    alert(data.error || 'An error occurred during prediction.');
+                }
+            } catch (err) {
+                alert('Network error. Please try again.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '🔍 Analyze Text';
+            }
+        }
+
+        function showCorrectionSelect() {
+            document.getElementById('correction-select-container').style.display = 'block';
+        }
+
+        async function saveFeedback(isCorrect) {
+            const feedbackSection = document.getElementById('admin-feedback-section');
+            const successMsg = document.getElementById('feedback-success-msg');
+            const errorMsg = document.getElementById('feedback-error-msg');
+            
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            
+            let targetLabel = lastPredictedLabel;
+            if (!isCorrect) {
+                targetLabel = document.getElementById('correct-label-select').value;
+            }
+
+            try {
+                const response = await fetch('/admin/save-feedback', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        text: lastPredictedText,
+                        label: targetLabel
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    successMsg.textContent = '✅ ' + (data.message || 'Saved to dataset!');
+                    successMsg.style.display = 'block';
+                    feedbackSection.style.display = 'none';
+                    loadTrainingStats();
+                } else {
+                    errorMsg.textContent = '❌ ' + (data.error || 'Failed to save feedback.');
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.textContent = '❌ Network error. Could not save feedback.';
+                errorMsg.style.display = 'block';
+            }
+        }
+
+        async function loadTrainingStats() {
+            try {
+                const response = await fetch('/admin/training-stats');
+                const data = await response.json();
+
+                if (response.ok) {
+                    document.getElementById('trainer-dataset-size').textContent = data.dataset_size;
+                    document.getElementById('trainer-model-accuracy').textContent = data.accuracy;
+                }
+            } catch (err) {
+                console.error('Error fetching training stats:', err);
+            }
+        }
+
+        async function triggerRetrain() {
+            const btn = document.getElementById('retrain-model-btn');
+            const successMsg = document.getElementById('retrain-success-msg');
+            const errorMsg = document.getElementById('retrain-error-msg');
+
+            successMsg.style.display = 'none';
+            errorMsg.style.display = 'none';
+            btn.disabled = true;
+            btn.innerHTML = '⏳ Retraining Model...';
+
+            try {
+                const response = await fetch('/admin/retrain', {
+                    method: 'POST'
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    successMsg.textContent = '✅ ' + (data.message || 'Model retrained successfully!');
+                    successMsg.style.display = 'block';
+                    loadTrainingStats();
+                } else {
+                    errorMsg.textContent = '❌ ' + (data.error || 'Retraining failed.');
+                    errorMsg.style.display = 'block';
+                }
+            } catch (err) {
+                errorMsg.textContent = '❌ Network error. Please try again.';
+                errorMsg.style.display = 'block';
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '🚀 Retrain AI Model Now';
+            }
+        }
     </script>
 
 </body>

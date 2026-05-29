@@ -192,6 +192,38 @@ class FlaskAppTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 400)
         self.assertIn(b'Please enter at least 10 characters', response.data)
 
+    def test_ai_model_trainer(self):
+        """Test AI model training stats, saving feedback, and retraining endpoints."""
+        # Log in as admin
+        self.app.post('/login', data={
+            'email': 'admin_test@detector.com',
+            'password': 'AdminPass123!'
+        })
+        
+        # 1. Check training stats
+        stats_res = self.app.get('/admin/training-stats')
+        self.assertEqual(stats_res.status_code, 200)
+        data = json.loads(stats_res.data)
+        self.assertIn('dataset_size', data)
+        self.assertIn('accuracy', data)
+        
+        # 2. Save feedback (correct prediction)
+        feedback_res = self.app.post('/admin/save-feedback', data=json.dumps({
+            'text': 'This is a brand new test sample for model training.',
+            'label': 'High Confidence'
+        }), content_type='application/json')
+        self.assertEqual(feedback_res.status_code, 200)
+        fdata = json.loads(feedback_res.data)
+        self.assertTrue(fdata['success'])
+        
+        # 3. Retrain model
+        retrain_res = self.app.post('/admin/retrain')
+        self.assertEqual(retrain_res.status_code, 200)
+        rdata = json.loads(retrain_res.data)
+        self.assertTrue(rdata['success'])
+        self.assertIn('accuracy', rdata)
+        self.assertIn('dataset_size', rdata)
+
     def test_password_management(self):
         """Test password change, forgot, and reset flows."""
         # 1. Log in student
