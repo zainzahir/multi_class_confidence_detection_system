@@ -1019,9 +1019,9 @@
                                 <td>{{ pred.user.section }}</td>
                                 <td><span class="text-truncate" title="{{ pred.input_text }}">{{ pred.input_text[:50] }}{% if pred.input_text | length > 50 %}…{% endif %}</span></td>
                                 <td>
-                                    {% if pred.predicted_label | lower == 'high' %}
+                                    {% if 'high' in pred.predicted_label | lower %}
                                         <span class="badge badge-high">High</span>
-                                    {% elif pred.predicted_label | lower == 'medium' %}
+                                    {% elif 'medium' in pred.predicted_label | lower %}
                                         <span class="badge badge-medium">Medium</span>
                                     {% else %}
                                         <span class="badge badge-low">Low</span>
