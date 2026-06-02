@@ -19,3 +19,49 @@ text,confidence_level
 "I can solve this with complete accuracy and explain every step",High Confidence
 "I've seen similar problems before and I know how to approach this",High Confidence
 "I might need to review some parts before finalizing",Medium Confidence
+"mujhe poora yakeen hai ye sahi hai",High Confidence
+"ye bilkul sahi answer hai",High Confidence
+"maine saare steps sahi kiye hain",High Confidence
+"concept bilkul clear hai mujhe",High Confidence
+"mujhe is topic par poori grip hai",High Confidence
+"bilkul sahi samajh aayi hai mujhe",High Confidence
+"easy tha main araam se kar sakta hoon",High Confidence
+"koi doubt nahi hai mujhe isme",High Confidence
+"meri understanding bilkul perfect hai",High Confidence
+"bina kisi shak ke ye sahi hai",High Confidence
+"main isey doosron ko bhi samjha sakta hoon",High Confidence
+"haji bilkul 100% sahi hai",High Confidence
+"mujhe bilkul confirm pata hai",High Confidence
+"maine ache se samjha hai ye topic",High Confidence
+"main confirm hoon ye answer right hai",High Confidence
+"mujhe thoda boht samajh aaya hai",Medium Confidence
+"shayad ye sahi hai par check karna parega",Medium Confidence
+"thodi confusion hai lekin sahi lag raha hai",Medium Confidence
+"kuch concepts samajh aaye hain kuch nahi",Medium Confidence
+"main confirm nahi hoon lekin shayad sahi ho",Medium Confidence
+"mujhe thoda aur practice ki zaroorat hai",Medium Confidence
+"concepts thode clear hain lekin poore nahi",Medium Confidence
+"kuch cheezein bhol rahi hain mujhe",Medium Confidence
+"maybe ye sahi ho par confirm nahi",Medium Confidence
+"koshish ki hai par poora yakeen nahi hai",Medium Confidence
+"thoda mushkil laga par samajh aa gaya thoda",Medium Confidence
+"aadha samajh aaya hai aadha nahi",Medium Confidence
+"kuch points clear hain aur kuch me doubt hai",Medium Confidence
+"mujhse thodi galti ho sakti hai isme",Medium Confidence
+"check karna parega par lagta hai thik hai",Medium Confidence
+"mujhe bilkul samajh nahi aaya",Low Confidence
+"boht mushkil hai ye topic mere liye",Low Confidence
+"mujhe kuch bhi samajh nahi aa raha",Low Confidence
+"mujhe boht confusion ho rahi hai",Low Confidence
+"main completely blank hoon isme",Low Confidence
+"mujhse ye nahi ho raha boht tough hai",Low Confidence
+"meri samajh se bahar hai ye sab",Low Confidence
+"help chahiye mujhe kuch samajh nahi aa raha",Low Confidence
+"koi concept clear nahi hai mera isme",Low Confidence
+"mujhe bilkul yakeen nahi hai apne answer par",Low Confidence
+"sab sir ke oopar se guzar gaya",Low Confidence
+"zero samajh aayi hai mujhe",Low Confidence
+"mujhe is topic par boht doubt hai kuch samajh nahi aya",Low Confidence
+"boht mushkil lag raha hai ye question",Low Confidence
+"bilkul palle nahi para ye concept",Low Confidence
+This is a brand new test sample for model training.,High Confidence
