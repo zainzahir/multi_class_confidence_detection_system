@@ -94,6 +94,7 @@ print("\nTraining Logistic Regression model...")
 # Use 'lbfgs' solver which supports multiclass classification
 # Other options: 'newton-cg', 'sag', 'saga'
 model = LogisticRegression(
+    C=50.0,
     solver='lbfgs',     # 'lbfgs' supports multiclass
     max_iter=1000,
     random_state=42

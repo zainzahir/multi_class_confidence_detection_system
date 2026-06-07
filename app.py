@@ -675,7 +675,7 @@ def run_model_training():
     else:
         X_train, X_test, y_train, y_test = X_features, X_features, y_numeric, y_numeric
         
-    model_lr = LogisticRegression(solver='lbfgs', max_iter=1000, random_state=42)
+    model_lr = LogisticRegression(C=50.0, solver='lbfgs', max_iter=1000, random_state=42)
     model_lr.fit(X_train, y_train)
     
     # Evaluate model
