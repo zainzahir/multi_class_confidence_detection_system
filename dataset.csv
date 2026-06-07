@@ -1,196 +1,1742 @@
 text,confidence_level
-I am absolutely certain about this solution and can explain it clearly.,High Confidence
-This seems correct based on my understanding of the concepts.,High Confidence
-I'm confident that my approach will work effectively.,High Confidence
-I have mastered this topic and can teach others.,High Confidence
-The answer is clear and I can defend my reasoning.,High Confidence
-I can solve this with complete accuracy and explain every step.,High Confidence
-I've seen similar problems before and I know how to approach this.,High Confidence
-I am 100% sure about the accuracy of this statement.,High Confidence
-I understand this concept completely and have no doubts.,High Confidence
-"This is the correct method, I am positive about it.",High Confidence
-I have a strong grip on this subject matter.,High Confidence
-I can easily prove why this answer is correct.,High Confidence
-I solved this without any hesitation or difficulty.,High Confidence
-My solution is correct because I checked all parameters.,High Confidence
-I am fully prepared to explain this logic in detail.,High Confidence
-There is no doubt that this is the right answer.,High Confidence
-I have verified this formula and it works perfectly.,High Confidence
-I am absolutely sure of the output here.,High Confidence
-This is extremely easy for me to solve.,High Confidence
-I fully understand the underlying principles of this topic.,High Confidence
-I have clear and concrete reasoning behind this solution.,High Confidence
-I can confidently say this is the correct answer.,High Confidence
-I have successfully resolved similar issues in the past.,High Confidence
-I am certain that my calculations are accurate.,High Confidence
-This concept is clear and straightforward to apply.,High Confidence
-I am positive that this approach is the most efficient.,High Confidence
-I have a thorough understanding of the material.,High Confidence
-My analysis is complete and fully correct.,High Confidence
-I am fully confident in the validity of these results.,High Confidence
-I can explain this code line by line with ease.,High Confidence
-I am completely sure this is the right way to do it.,High Confidence
-The logic here is sound and correct.,High Confidence
-I have solved this problem multiple times successfully.,High Confidence
-I have a solid understanding of how this works.,High Confidence
-I am absolutely confident in my performance on this test.,High Confidence
-This is correct without any doubt.,High Confidence
-I am very confident in my understanding of this chapter.,High Confidence
-I have zero doubts about this specific topic.,High Confidence
-The reasoning is mathematically sound and correct.,High Confidence
-I know exactly how to solve this type of equation.,High Confidence
-I am perfectly clear about this concept.,High Confidence
-I can write this program without looking at any references.,High Confidence
-"This is correct, I have verified it with the notes.",High Confidence
-"I am sure about this, I tested it myself.",High Confidence
-My knowledge on this is solid and complete.,High Confidence
-I have full confidence in my answers.,High Confidence
-I am certain about the logic used here.,High Confidence
-This is definitely correct.,High Confidence
-I have complete clarity on this subject.,High Confidence
-I am sure I did this correctly.,High Confidence
-I think this might be correct but I'm not entirely sure.,Medium Confidence
-"I believe this answer is probably right, though I need to verify.",Medium Confidence
-I have some understanding but there are gaps in my knowledge.,Medium Confidence
-This could work but I'd like to double-check my approach.,Medium Confidence
-I'm reasonably confident but there might be better solutions.,Medium Confidence
-I might need to review some parts before finalizing.,Medium Confidence
-"I think I understand the basic idea, but the details are a bit fuzzy.",Medium Confidence
-"I am mostly sure, but I have a few questions.",Medium Confidence
-"This seems correct, but I should check the textbook again.",Medium Confidence
-"I have a general idea of how to solve this, but I'm not certain.",Medium Confidence
-"I believe I followed the correct steps, hopefully.",Medium Confidence
-"I'm relatively sure about the first half, but not the second.",Medium Confidence
-"This is probably correct, but I'm open to correction.",Medium Confidence
-"I think I did it right, but I need to test it first.",Medium Confidence
-"I have a decent understanding, though some points are unclear.",Medium Confidence
-I am partially confident in this response.,Medium Confidence
-"I think I got the correct output, but I'm not 100% sure.",Medium Confidence
-I have a basic understanding of this topic.,Medium Confidence
-"This seems like the right way, but it could be wrong.",Medium Confidence
-I am somewhat sure about this solution.,Medium Confidence
-I might have made a small mistake in the calculations.,Medium Confidence
-"I think I understand the concept, but I need more practice.",Medium Confidence
-"This approach works, but there might be a simpler one.",Medium Confidence
-I am moderately confident about this.,Medium Confidence
-"I believe this is correct, but I want to verify with friends.",Medium Confidence
-I think this is the right formula to use.,Medium Confidence
-I have a fair understanding of this concept.,Medium Confidence
-"I am mostly confident, just slightly unsure of the last step.",Medium Confidence
-"This is likely correct, though I have some minor doubts.",Medium Confidence
-I have a rough understanding of this topic.,Medium Confidence
-"I think I know how to do this, but I'm hesitant.",Medium Confidence
-I am reasonably sure this is the right answer.,Medium Confidence
-"I have some doubts, but this seems like the best guess.",Medium Confidence
-I think I followed the instructions correctly.,Medium Confidence
-I am somewhat confident in my reasoning.,Medium Confidence
-This is probably the correct way to solve it.,Medium Confidence
-"I have a general understanding, but I need to study more.",Medium Confidence
-"I think this is correct, but let me check again.",Medium Confidence
-I am fairly confident in this solution.,Medium Confidence
-"I think I have the right concept, but my math might be off.",Medium Confidence
-"I am mostly sure about this, but not completely.",Medium Confidence
-I have a basic grasp of the theory here.,Medium Confidence
-"This seems reasonable, but I'm not positive.",Medium Confidence
-"I think I solved it, but I need feedback.",Medium Confidence
-I am somewhat sure of the steps I took.,Medium Confidence
-This is likely the correct answer.,Medium Confidence
-"I think I got it, but it was a bit confusing.",Medium Confidence
-I have some confidence in this answer.,Medium Confidence
-I think this is how it works.,Medium Confidence
-I am fairly sure about this.,Medium Confidence
-I'm really confused about this topic and need help.,Low Confidence
-I have no idea what the answer might be.,Low Confidence
-This doesn't make sense to me at all.,Low Confidence
-I'm struggling to understand this concept.,Low Confidence
-I would need more guidance to solve this problem.,Low Confidence
-I feel uncertain because I haven't practiced this much.,Low Confidence
-My understanding is incomplete and I need clarification.,Low Confidence
-I am completely lost on how to solve this.,Low Confidence
-This is too difficult for me to understand right now.,Low Confidence
-I am very unsure about my answer here.,Low Confidence
-I don't think I understand this topic well enough.,Low Confidence
-"I am guessing the answer, I have no clue.",Low Confidence
-I find this concept extremely confusing.,Low Confidence
-I need someone to explain this to me from the beginning.,Low Confidence
-I am completely blank on this question.,Low Confidence
-I don't know where to start with this problem.,Low Confidence
-I am not confident at all in this solution.,Low Confidence
-"I think my answer is incorrect, I don't understand it.",Low Confidence
-I am having a lot of trouble with this subject.,Low Confidence
-I don't understand the logic behind this formula.,Low Confidence
-I am very confused about the instructions.,Low Confidence
-I don't have a good grasp of this concept.,Low Confidence
-I am totally unsure about this.,Low Confidence
-I don't know how to apply this theory.,Low Confidence
-I am struggling to keep up with this class.,Low Confidence
-I have a lot of doubts about this topic.,Low Confidence
-I don't think I did this right at all.,Low Confidence
-I am completely uncertain about this approach.,Low Confidence
-I don't know the correct method for this.,Low Confidence
-I am failing to understand the basics here.,Low Confidence
-I am extremely unsure about the results.,Low Confidence
-I don't understand what this question is asking.,Low Confidence
-I am completely confused by this diagram.,Low Confidence
-I don't know how to solve this equation.,Low Confidence
-I am very unconfident in my skills.,Low Confidence
-I have zero understanding of this lesson.,Low Confidence
-I am totally lost in this chapter.,Low Confidence
-"I don't think this is correct, but I don't know the alternative.",Low Confidence
-I am struggling with the homework questions.,Low Confidence
-I don't understand this code at all.,Low Confidence
-I am very doubtful about this answer.,Low Confidence
-I have no confidence in this solution.,Low Confidence
-This is way over my head.,Low Confidence
-I am totally confused.,Low Confidence
-I don't understand any of this.,Low Confidence
-I have no idea.,Low Confidence
-I am extremely confused.,Low Confidence
-I don't know what to do.,Low Confidence
-I am very uncertain.,Low Confidence
-I don't understand.,Low Confidence
-mujhe poora yakeen hai ye sahi hai,High Confidence
-ye bilkul sahi answer hai,High Confidence
-maine saare steps sahi kiye hain,High Confidence
-concept bilkul clear hai mujhe,High Confidence
-mujhe is topic par poori grip hai,High Confidence
-bilkul sahi samajh aayi hai mujhe,High Confidence
-easy tha main araam se kar sakta hoon,High Confidence
-koi doubt nahi hai mujhe isme,High Confidence
-meri understanding bilkul perfect hai,High Confidence
-bina kisi shak ke ye sahi hai,High Confidence
-main isey doosron ko bhi samjha sakta hoon,High Confidence
-haji bilkul 100% sahi hai,High Confidence
-mujhe bilkul confirm pata hai,High Confidence
-maine ache se samjha hai ye topic,High Confidence
-main confirm hoon ye answer right hai,High Confidence
-mujhe thoda boht samajh aaya hai,Medium Confidence
-shayad ye sahi hai par check karna parega,Medium Confidence
-thodi confusion hai lekin sahi lag raha hai,Medium Confidence
-kuch concepts samajh aaye hain kuch nahi,Medium Confidence
-main confirm nahi hoon lekin shayad sahi ho,Medium Confidence
-mujhe thoda aur practice ki zaroorat hai,Medium Confidence
-concepts thode clear hain lekin poore nahi,Medium Confidence
-kuch cheezein bhol rahi hain mujhe,Medium Confidence
-maybe ye sahi ho par confirm nahi,Medium Confidence
-koshish ki hai par poora yakeen nahi hai,Medium Confidence
-thoda mushkil laga par samajh aa gaya thoda,Medium Confidence
-aadha samajh aaya hai aadha nahi,Medium Confidence
-kuch points clear hain aur kuch me doubt hai,Medium Confidence
-mujhse thodi galti ho sakti hai isme,Medium Confidence
-check karna parega par lagta hai thik hai,Medium Confidence
-mujhe bilkul samajh nahi aaya,Low Confidence
+It looks like this should be correct although I need some review later tonight.,Medium Confidence
+I believe this is likely to be right though I need to review with the textbook.,Medium Confidence
+I became stuck on this assignment.,Low Confidence
+"I have no idea about this topic, it is extremely perplexed.",Low Confidence
+Maybe it is right but I want to verify.,Medium Confidence
+"Confidently satisfied, I am fully sure with this calculation.",High Confidence
+"I have no idea on this assignment, it is severely clueless.",Low Confidence
+I suspect this should be correct although I need some review just in case.,Medium Confidence
+"It could be acceptable, but I'm not 100% sure.",Medium Confidence
+mostly true but minor errors possible,Medium Confidence
+I am completely and utterly completely disoriented on this coding block and I need someone to explain it.,Low Confidence
+"Clearly accurate, I am sure about this solution.",High Confidence
+"It is likely to be accurate, but there are gaps in my knowledge.",Medium Confidence
+I think it is passable though I have some doubts.,Medium Confidence
+"I have no idea on this question, it is severely struggling.",Low Confidence
+"I have no idea with this math equation, it is dreadfully perplexed.",Low Confidence
+"Undoubtedly, I am confident about my performance.",High Confidence
+"Fully knowledgeable, I am 100% sure I am sure regarding this concept.",High Confidence
+"please help me, i am clueless",Low Confidence
+The problem is I am deeply perplexed about this topic since it is way too complicated.,Low Confidence
+"Certainly accurate, We are sure with this approach.",High Confidence
+My analysis shows I am knowledgeable regarding this concept.,High Confidence
+kuch samajh nahi aya bilkul sir ke upar se gaya,Low Confidence
+I suspect it is reasonable but I have some minor hesitation.,Medium Confidence
+I am completely and utterly completely doubtful what the answer is and I want guidance.,Low Confidence
 boht mushkil hai ye topic mere liye,Low Confidence
-mujhe kuch bhi samajh nahi aa raha,Low Confidence
-mujhe boht confusion ho rahi hai,Low Confidence
-main completely blank hoon isme,Low Confidence
-mujhse ye nahi ho raha boht tough hai,Low Confidence
-meri samajh se bahar hai ye sab,Low Confidence
-help chahiye mujhe kuch samajh nahi aa raha,Low Confidence
+I feel confused with this basic concept.,Low Confidence
+I think this could potentially be satisfactory though I need to review with the textbook.,Medium Confidence
+I'm under the impression it is right but I'm not 100% sure.,Medium Confidence
+The problem is I am extremely puzzled on this coding block and it is very frustrating.,Low Confidence
+"not fully sure, but seems correct",Medium Confidence
+I am totally doubtful with this math equation.,Low Confidence
+My analysis shows I am sure on this test.,High Confidence
+"It seems to be fine, but let me double-check.",Medium Confidence
+Probably I am this appears satisfactory but I need to check with my classmates.,Medium Confidence
+I feel dreadfully confused what is going on here and I don't know what to do.,Low Confidence
+I feel clear about this solution.,High Confidence
+I can easily completely confident concerning this subject and I can teach others.,High Confidence
+"Entirely competent, I can easily sure about the code logic.",High Confidence
+It seems this seems to be reasonable but I should double check just in case.,Medium Confidence
+mje guide kren mje bilkul ni pta iska,Low Confidence
+"easily done, no doubt about it",High Confidence
+"It looks reasonable, though I need to review.",Medium Confidence
+I have stuck how to solve this.,Low Confidence
+I think this appears correct but let me double-check against the answers key.,Medium Confidence
+I can easily perfectly confident about the code logic and I can teach others.,High Confidence
+I have deeply uncertain regarding this method and I am failing to understand.,Low Confidence
+I guess it is passable but I should double check.,Medium Confidence
+I believe this is likely to be decent but I want to verify before submitting it.,Medium Confidence
+I am fully correct with this approach.,High Confidence
+I am definitely entirely secure about my performance and the results prove it.,High Confidence
+My analysis shows I am fully correct about this solution as the logic is flawless.,High Confidence
+I am fully extremely certain with this approach and it makes perfect sense.,High Confidence
 koi concept clear nahi hai mera isme,Low Confidence
-mujhe bilkul yakeen nahi hai apne answer par,Low Confidence
-sab sir ke oopar se guzar gaya,Low Confidence
-zero samajh aayi hai mujhe,Low Confidence
+I feel perfectly accurate on this test and I verified it twice.,High Confidence
+I have clearly totally certain about my performance and can explain it clearly.,High Confidence
+I guess I might be it is right but there are gaps in my knowledge.,Medium Confidence
+"Definitely competent, I am sure about this solution.",High Confidence
+"I have no idea on this coding block, it is deeply struggling.",Low Confidence
+I suppose this appears right but I have some minor hesitation with the textbook.,Medium Confidence
+We are fully expert concerning this subject because it is easy.,High Confidence
+The problem is I am utterly lost with this basic concept and I am failing to understand.,Low Confidence
+"It is likely correct, but let me double-check.",Medium Confidence
+"I have no idea with this basic concept, it is hopelessly uncertain.",Low Confidence
+"I have no idea on this coding block, it is really disoriented.",Low Confidence
+i don't understand anything in this lecture,Low Confidence
+We are certain of my answer.,High Confidence
+I am puzzled with this basic concept.,Low Confidence
+"It could be decent, although I need some review.",Medium Confidence
+I think this is likely to be reasonable but let me double-check later tonight.,Medium Confidence
+i have zero ideas to resolve this error,Low Confidence
+Probably I am this looks decent but let me double-check against the answers key.,Medium Confidence
+I have clearly 100% secure on this homework as the logic is flawless.,High Confidence
+"It could be plausible, but I should double check.",Medium Confidence
+I am fully competent with this calculation.,High Confidence
+The student is totally uncertain on this coding block and I want guidance.,Low Confidence
+I have completely satisfied on this test.,High Confidence
+I think this is probably reasonable but there are gaps in my knowledge with the class reference.,Medium Confidence
+It looks like this should be accurate but I'm not 100% sure against the answers key.,Medium Confidence
+"It seems to be acceptable, but I need to check.",Medium Confidence
+I think it is correct though I want to verify the details.,Medium Confidence
+"I have no idea about this difficult formula, it is dreadfully lost.",Low Confidence
+"Totally positive, I absolutely feel sure with this calculation.",High Confidence
+I have completely clear-headed about the code logic.,High Confidence
+"It seems to be ok, though I need to review.",Medium Confidence
+I am accurate about my performance.,High Confidence
+I suspect it is correct but let me double-check.,Medium Confidence
+"I have no idea what the answer is, it is completely perplexed.",Low Confidence
+"It appears plausible, but I need to check.",Medium Confidence
+"I have no idea what is going on here, it is totally lost.",Low Confidence
+"check kr k btaunga, abi half clear h",Medium Confidence
+I have completely accurate with this solution set.,High Confidence
+The student is blank about this topic.,Low Confidence
+Probably this appears satisfactory although I need some review with my classmates.,Medium Confidence
+Probably it is right but there are gaps in my knowledge.,Medium Confidence
+My analysis shows I am thoroughly clear-headed about my performance and I verified it twice.,High Confidence
+I am totally confused how to solve this.,Low Confidence
+meri samajh se bahar hai ye sab,Low Confidence
+I became stuck how to solve this.,Low Confidence
+I am totally lost how to solve this.,Low Confidence
+I am completely and utterly uncertain about this topic.,Low Confidence
+"100% competent, I have clearly sure on this test.",High Confidence
+I am totally clear-headed with this approach and I verified it twice.,High Confidence
+The student is uncertain how to solve this.,Low Confidence
+I think this could potentially be accurate but I need to check with the textbook.,Medium Confidence
+"It seems to be plausible, but there are gaps in my knowledge.",Medium Confidence
+mujhe lagta hai maine isey sahi handle kiya hai,Medium Confidence
+I think this seems to be decent though I need to review before submitting it.,Medium Confidence
+Probably this seems to be accurate though I have some doubts in my notes.,Medium Confidence
+"It is likely to be decent, but I'm not 100% sure.",Medium Confidence
+kuch concepts samajh aaye hain kuch nahi,Medium Confidence
+The student is hopelessly doubtful with this basic concept because it is too hard.,Low Confidence
+I am puzzled on this question.,Low Confidence
+mje kuch smjh ni a rha kia kron,Low Confidence
+"I have no idea on this coding block, it is really befuddled.",Low Confidence
+"I have no idea on this assignment, it is severely lost.",Low Confidence
+I am totally extremely struggling about this difficult formula since it is way too complicated.,Low Confidence
+"I have no idea about this difficult formula, it is completely uncertain.",Low Confidence
+Probably I am it is satisfactory but I want to verify.,Medium Confidence
+I guess I might be this is likely accurate but I should double check against the answers key.,Medium Confidence
+I feel totally puzzled regarding this method and it makes no sense.,Low Confidence
+I am fully definitely confident of my answer and there is no doubt.,High Confidence
+The student is blank regarding this method.,Low Confidence
+I became frustrated on this assignment.,Low Confidence
+I feel prepared with this approach.,High Confidence
+We are satisfied with this approach.,High Confidence
+I feel completely utterly befuddled on this coding block and it is very frustrating.,Low Confidence
+I am stuck about this difficult formula.,Low Confidence
+"I have no idea on this assignment, it is totally uncertain.",Low Confidence
+i have zero knowledge about this,Low Confidence
+I am completely and utterly severely disoriented what is going on here and it makes no sense.,Low Confidence
+I am 100% sure I am undoubtedly correct about the code logic and the results prove it.,High Confidence
+I've got really puzzled on this assignment and it is very frustrating.,Low Confidence
+I believe it is ok but I want to verify.,Medium Confidence
+clueless about what the teacher is saying,Low Confidence
+I assume this might be passable although I need some review with the textbook.,Medium Confidence
+The problem is I am disoriented what is going on here.,Low Confidence
+My analysis shows I am prepared that this is correct.,High Confidence
+"Genuinely certain, I am sure on this test.",High Confidence
+"It is probably decent, although I need some review.",Medium Confidence
+I suspect it is satisfactory but let me double-check.,Medium Confidence
+"Totally clear-headed, My analysis shows I am sure concerning this subject.",High Confidence
+i think i am close to the solution,Medium Confidence
+The student is clueless what is going on here.,Low Confidence
+koshish to achi thi par aakhri step complex tha,Medium Confidence
+My analysis shows I am 100% secure on this homework and the results prove it.,High Confidence
+"It could be correct, but I need to check.",Medium Confidence
+My analysis shows I am competent concerning this subject.,High Confidence
+I became totally confused how to solve this and I want guidance.,Low Confidence
+We are genuinely certain about the code logic as the logic is flawless.,High Confidence
+We are completely sure of my answer and the results prove it.,High Confidence
+"It appears satisfactory, though I want to verify the details.",Medium Confidence
+"Undoubtedly, I am accurate with this approach.",High Confidence
+We are clear-headed with this approach.,High Confidence
+The problem is I am blank regarding this method.,Low Confidence
+"zero grip, completely lost",Low Confidence
+Maybe this appears correct though I need to review before submitting it.,Medium Confidence
+"Absolutely expert, My analysis shows I am sure of my answer.",High Confidence
+poora concept clear he sir,High Confidence
+The problem is I am frustrated regarding this method.,Low Confidence
+I am completely and utterly utterly disoriented what the answer is and I want guidance.,Low Confidence
+"It is likely to be accurate, although I need some review.",Medium Confidence
+"Clearly certain, I can easily sure about my performance.",High Confidence
+The team is completely satisfied with this approach and I verified it twice.,High Confidence
+"Totally satisfied, I feel sure about my performance.",High Confidence
+I am definitely confident about this solution.,High Confidence
+"It might be acceptable, although I need some review.",Medium Confidence
+"I have no idea with this basic concept, it is utterly struggling.",Low Confidence
+I am secure with this solution set.,High Confidence
+I'm under the impression this is likely to be decent but let me double-check with my classmates.,Medium Confidence
+"mostly correct hai, bas thoda sa doubt hai",Medium Confidence
+I am fully perfectly competent that this is correct without any hesitation.,High Confidence
+I'm under the impression this should be decent though I want to verify the details with my classmates.,Medium Confidence
+concept clear h but solution m confusion h,Medium Confidence
+"I have no idea about this topic, it is utterly frustrated.",Low Confidence
+I am completely and utterly blank with this basic concept.,Low Confidence
+mujhe poora bharosa hai apne solution par,High Confidence
+I am definitely thoroughly competent with this approach because it is easy.,High Confidence
+"Thoroughly sure, I have completely sure concerning this subject.",High Confidence
+"I have no idea on this question, it is dreadfully disoriented.",Low Confidence
+"please explain this from scratch, i am lost",Low Confidence
+"It appears satisfactory, but I need to check.",Medium Confidence
+It seems it is passable but I have some minor hesitation.,Medium Confidence
+The team is confidently knowledgeable about my performance and I can teach others.,High Confidence
+I am 100% sure I am satisfied with this calculation.,High Confidence
+I have completely expert concerning this subject.,High Confidence
+Probably this is likely to be passable but I have some minor hesitation with my teacher.,Medium Confidence
+I can easily undoubtedly knowledgeable with this approach and can explain it clearly.,High Confidence
+I feel hopelessly stuck regarding this method and it is very frustrating.,Low Confidence
+meri understanding bilkul perfect hai,High Confidence
+"Genuinely confident, I absolutely feel sure that this is correct.",High Confidence
+I suspect it is reasonable but I'm not 100% sure.,Medium Confidence
+It seems it is right but I want to verify.,Medium Confidence
+umeed to hai sahi hoga par guarantee nahi,Medium Confidence
+"I have no idea about this topic, it is severely overwhelmed.",Low Confidence
+The student is uncertain on this question.,Low Confidence
+concept samajh aa raha hai thoda thoda,Medium Confidence
+mujhe bilkul samajh nahi aaya,Low Confidence
+"I have no idea on this coding block, it is utterly overwhelmed.",Low Confidence
+I assume it is fine though I need to review.,Medium Confidence
+aaj class me thoda samajh aya tha,Medium Confidence
+is subject pr meri command boht achi hai,High Confidence
+I feel prepared about the code logic.,High Confidence
+"I have no idea regarding this method, it is severely doubtful.",Low Confidence
+"Confidently expert, Undoubtedly, I am sure regarding this concept.",High Confidence
+It seems it is fine but I have some minor hesitation.,Medium Confidence
+maybe option a or b me se koi aik hai,Medium Confidence
+"It could potentially be acceptable, but I have some minor hesitation.",Medium Confidence
+I think it is right although I need some review.,Medium Confidence
+I am confused on this coding block.,Low Confidence
+"I have no idea with this basic concept, it is totally perplexed.",Low Confidence
+I have clearly positive about the topic.,High Confidence
+I am totally completely frustrated what the answer is and I need clarification.,Low Confidence
+I guess I might be it is fine but there are gaps in my knowledge.,Medium Confidence
+"Clearly satisfied, I am 100% sure I am sure on this homework.",High Confidence
+I'm under the impression it is decent though I want to verify the details.,Medium Confidence
+I feel completely puzzled about this difficult formula.,Low Confidence
+"I have no idea about this topic, it is hopelessly blank.",Low Confidence
+mje lagta h ye sahi h pr guarantee ni,Medium Confidence
+"I have no idea what the answer is, it is hopelessly puzzled.",Low Confidence
+I assume this appears decent but I'm not 100% sure with my classmates.,Medium Confidence
+I feel completely frustrated with this basic concept.,Low Confidence
+"It is likely to be acceptable, though I have some doubts.",Medium Confidence
+I am fully clear-headed about the code logic.,High Confidence
+"i think ye sahi hai, but check kr lena",Medium Confidence
+I'm under the impression it is satisfactory though I want to verify the details.,Medium Confidence
+I am totally confused what is going on here.,Low Confidence
+I've got totally disoriented on this coding block because it is too hard.,Low Confidence
+"Absolutely knowledgeable, We are sure about my performance.",High Confidence
+"Thoroughly on track, We are sure with this calculation.",High Confidence
+The student is really doubtful on this coding block and it is very frustrating.,Low Confidence
+"It is probably fine, but there are gaps in my knowledge.",Medium Confidence
+"I have no idea with this math equation, it is completely stuck.",Low Confidence
+"Thoroughly clear-headed, I am 100% sure I am sure regarding this concept.",High Confidence
+I have hopelessly confused on this assignment and I want guidance.,Low Confidence
+"It could potentially be correct, but I'm not 100% sure.",Medium Confidence
+"It could be decent, but I want to verify.",Medium Confidence
+I guess this looks correct although I need some review against the answers key.,Medium Confidence
+"It should be plausible, though I need to review.",Medium Confidence
+mujhe to lagta he ye boht heavy level maths he,Low Confidence
+"Absolutely on track, My analysis shows I am sure of my answer.",High Confidence
+concept ok hai full confidence hai,High Confidence
+I feel disoriented with this math equation.,Low Confidence
+My analysis shows I am sure about my performance.,High Confidence
+The team is confidently prepared with this calculation as the logic is solid.,High Confidence
+I am totally really struggling about this difficult formula because it is too hard.,Low Confidence
+check karna parega par lagta hai thik hai,Medium Confidence
+"I have no idea how to solve this, it is extremely confused.",Low Confidence
+maybe i need to revise this once more,Medium Confidence
+The student is severely puzzled about this difficult formula so I am guessing the answer.,Low Confidence
+maine har step double check kiya hai,High Confidence
+"Clearly certain, I am sure with this calculation.",High Confidence
+I can easily correct on this homework.,High Confidence
+I have clearly totally correct with this calculation and it makes perfect sense.,High Confidence
+I feel dreadfully doubtful on this coding block and it is very frustrating.,Low Confidence
+maine saari derivations khud solve ki hain,High Confidence
+The problem is I am severely blank with this basic concept so I am guessing the answer.,Low Confidence
+I am totally utterly befuddled on this assignment because it is too hard.,Low Confidence
+"It should be right, although I need some review.",Medium Confidence
+"I have no idea on this question, it is severely uncertain.",Low Confidence
+"Undoubtedly, I am completely prepared about my performance after reviewing the notes.",High Confidence
+I am completely and utterly stuck on this question.,Low Confidence
+I am definitely prepared regarding this concept.,High Confidence
+"Clearly competent, We are sure concerning this subject.",High Confidence
+I've got blank on this assignment.,Low Confidence
+"It is probably ok, but I have some minor hesitation.",Medium Confidence
+"It is likely fine, though I have some doubts.",Medium Confidence
+The problem is I am deeply puzzled about this difficult formula and I am failing to understand.,Low Confidence
+I became utterly lost on this assignment and it makes no sense.,Low Confidence
+"I have no idea regarding this method, it is extremely puzzled.",Low Confidence
+this is way too difficult for a beginner like me,Low Confidence
+"Fully secure, We are sure on this test.",High Confidence
+I feel sure on this test.,High Confidence
+"Absolutely on track, The team is sure on this test.",High Confidence
+boht bekaar concept he mje thora b samjh ni aya,Low Confidence
+I feel completely correct on this homework and I can teach others.,High Confidence
+"ye solution 100% correct hai, match kar lo",High Confidence
+I have completely clearly positive that this is correct because it is easy.,High Confidence
+The problem is I am hopelessly struggling on this question so I am guessing the answer.,Low Confidence
+I am completely and utterly deeply befuddled on this assignment and I am failing to understand.,Low Confidence
+"I have no idea about this topic, it is deeply struggling.",Low Confidence
+I feel dreadfully frustrated on this question since it is way too complicated.,Low Confidence
+The problem is I am completely puzzled on this coding block and I need someone to explain it.,Low Confidence
+"Confidently expert, I feel sure about this solution.",High Confidence
+I assume this is likely reasonable but I need to check in my notes.,Medium Confidence
+totally confused about how to run this script,Low Confidence
+I am totally extremely clueless on this question and I need help.,Low Confidence
+"I have no idea on this assignment, it is hopelessly doubtful.",Low Confidence
+"It seems to be plausible, but let me double-check.",Medium Confidence
+"tension free, ye answer bilkul right hai",High Confidence
+I am 100% sure I am clear about my performance.,High Confidence
+The team is genuinely competent about this solution without any second thought.,High Confidence
+"Definitely correct, I am 100% sure I am sure about the topic.",High Confidence
+I became frustrated what is going on here.,Low Confidence
+I am totally struggling how to solve this.,Low Confidence
+"Extremely on track, I can easily sure with this calculation.",High Confidence
+I've got perplexed how to solve this.,Low Confidence
+I guess I might be this should be ok but I want to verify with the class reference.,Medium Confidence
+"I have no idea on this assignment, it is dreadfully frustrated.",Low Confidence
+"Genuinely secure, I feel sure about the code logic.",High Confidence
+half understanding hai meri abhi tak,Medium Confidence
+ye bilkul sahi answer hai,High Confidence
+I am definitely certainly positive with this calculation and I can teach others.,High Confidence
+ye coding mere bas ki baat nahi hai,Low Confidence
+The student is deeply confused how to solve this and it is very frustrating.,Low Confidence
+Maybe it is right but I have some minor hesitation.,Medium Confidence
+"It might be ok, but I have some minor hesitation.",Medium Confidence
+"I have no idea with this basic concept, it is hopelessly clueless.",Low Confidence
+I've got doubtful how to solve this.,Low Confidence
+concept to thik hai par calculation check krni paray gi,Medium Confidence
+The student is dreadfully clueless with this basic concept and I need someone to explain it.,Low Confidence
+"i believe it is right, hope so",Medium Confidence
+help chahiye mujhe kuch samajh nahi aa raha,Low Confidence
+concept simple lag raha hai par sure nahi,Medium Confidence
+I am 100% sure I am clear that this is correct.,High Confidence
+I feel overwhelmed on this assignment.,Low Confidence
+I am completely and utterly hopelessly lost on this assignment and it makes no sense.,Low Confidence
+"Completely expert, I have completely sure regarding this concept.",High Confidence
+absolutely right concept hai ye,High Confidence
+I am perplexed what is going on here.,Low Confidence
+"I have no idea how to solve this, it is completely perplexed.",Low Confidence
+I have perplexed on this coding block.,Low Confidence
+Probably this could potentially be accurate but there are gaps in my knowledge with the class reference.,Medium Confidence
+I'm under the impression it is fine though I need to review.,Medium Confidence
+"Extremely competent, My analysis shows I am sure regarding this concept.",High Confidence
+I am definitely fully competent that this is correct and there is no doubt.,High Confidence
+I am definitely completely correct about the code logic after reviewing the notes.,High Confidence
+The student is deeply overwhelmed with this math equation and it makes no sense.,Low Confidence
+"Fully knowledgeable, I absolutely feel sure that this is correct.",High Confidence
+I feel completely utterly blank about this topic and I don't know what to do.,Low Confidence
+The problem is I am doubtful about this topic.,Low Confidence
+"Totally satisfied, I have completely sure about this solution.",High Confidence
+I feel completely befuddled on this question.,Low Confidence
+mje math se dar lagta he,Low Confidence
+We are satisfied about the code logic.,High Confidence
+I believe it is decent but I have some minor hesitation.,Medium Confidence
+100% sure hoon main is baar,High Confidence
+Maybe it is reasonable but let me double-check.,Medium Confidence
+We are knowledgeable regarding this concept.,High Confidence
+I am prepared with this solution set.,High Confidence
+The problem is I am deeply frustrated on this question since it is way too complicated.,Low Confidence
+"Clearly accurate, I am 100% sure I am sure about this solution.",High Confidence
+"It might be reasonable, but I need to check.",Medium Confidence
+I feel thoroughly accurate about my performance because I studied hard.,High Confidence
+"It should be ok, though I want to verify the details.",Medium Confidence
+The student is puzzled with this basic concept.,Low Confidence
+It looks like it is ok but I'm not 100% sure.,Medium Confidence
+I suppose it is accurate although I need some review.,Medium Confidence
+"It is likely to be fine, but there are gaps in my knowledge.",Medium Confidence
+I suppose it is right although I need some review.,Medium Confidence
+I have clearly thoroughly expert with this approach as the logic is flawless.,High Confidence
+"Undoubtedly, I am extremely satisfied about the topic and it makes perfect sense.",High Confidence
+I think it is fine although I need some review.,Medium Confidence
+"It is likely to be satisfactory, though I have some doubts.",Medium Confidence
+"Undoubtedly, I am entirely competent regarding this concept and can explain it clearly.",High Confidence
+I am fully certainly accurate about the topic and can explain it clearly.,High Confidence
+I absolutely feel knowledgeable about the code logic.,High Confidence
+I am completely and utterly dreadfully disoriented about this difficult formula and I need someone to explain it.,Low Confidence
+It looks like this could be passable though I want to verify the details with the class reference.,Medium Confidence
+I became lost regarding this method.,Low Confidence
+"It should be decent, but I have some minor hesitation.",Medium Confidence
+The team is adept on this homework.,High Confidence
+I suspect this is probably acceptable but I want to verify against the answers key.,Medium Confidence
+"I have no idea on this coding block, it is really blank.",Low Confidence
+"It appears fine, but I want to verify.",Medium Confidence
+I am totally befuddled with this basic concept.,Low Confidence
+"Undoubtedly satisfied, I have clearly sure about my performance.",High Confidence
+"It is probably fine, but I should double check.",Medium Confidence
+I can easily confidently positive about this solution and can explain it clearly.,High Confidence
+"I have no idea with this math equation, it is utterly puzzled.",Low Confidence
+I am completely and utterly utterly puzzled how to solve this since it is way too complicated.,Low Confidence
+"Definitely knowledgeable, I am fully sure on this test.",High Confidence
+I feel competent with this solution set.,High Confidence
+sir g boht mushkil lag raha hai ye,Low Confidence
+"It seems to be passable, though I need to review.",Medium Confidence
+I have stuck with this basic concept.,Low Confidence
+"It could be acceptable, though I have some doubts.",Medium Confidence
+I have completely correct regarding this concept.,High Confidence
+i am failing to understand this concept,Low Confidence
+bilkul sahi samajh aayi hai mujhe,High Confidence
+"try kiya hai, umeed hai sahi hoga",Medium Confidence
+I became lost what is going on here.,Low Confidence
+"Entirely certain, The team is sure about the code logic.",High Confidence
+Probably this should be acceptable but I should double check with the textbook.,Medium Confidence
+"Entirely expert, My analysis shows I am sure about this solution.",High Confidence
+I am 100% sure I am absolutely certain concerning this subject because I studied hard.,High Confidence
+"I have no idea about this topic, it is totally lost.",Low Confidence
+It looks like this is likely to be accurate though I need to review in my notes.,Medium Confidence
+"Totally satisfied, Undoubtedly, I am sure concerning this subject.",High Confidence
+"It looks satisfactory, but let me double-check.",Medium Confidence
+Maybe this looks passable though I have some doubts with the textbook.,Medium Confidence
+"Clearly competent, Undoubtedly, I am sure of my answer.",High Confidence
+I am completely and utterly puzzled on this question.,Low Confidence
+"Perfectly knowledgeable, My analysis shows I am sure on this homework.",High Confidence
+"It could be fine, though I have some doubts.",Medium Confidence
+"I have no idea with this math equation, it is hopelessly disoriented.",Low Confidence
+"I have no idea about this topic, it is severely frustrated.",Low Confidence
+I am extremely puzzled on this question and it makes no sense.,Low Confidence
+full marks aenge is test me guaranteed,High Confidence
+I am completely and utterly puzzled with this math equation.,Low Confidence
+"Definitely secure, I am fully sure with this calculation.",High Confidence
+"Undoubtedly on track, I absolutely feel sure on this homework.",High Confidence
+I absolutely feel sure on this test.,High Confidence
+"maybe correct, let me know if it is wrong",Medium Confidence
+I am fully thoroughly correct of my answer and the results prove it.,High Confidence
+I am totally confused regarding this method.,Low Confidence
+I am totally stuck on this assignment.,Low Confidence
+"I have no idea on this assignment, it is completely clueless.",Low Confidence
+The team is sure with this solution set.,High Confidence
+I feel completely utterly struggling regarding this method since it is way too complicated.,Low Confidence
+I am fully adept regarding this concept.,High Confidence
+I feel completely frustrated regarding this method.,Low Confidence
+We are completely sure with this calculation as the logic is solid.,High Confidence
+"Genuinely on track, Undoubtedly, I am sure with this approach.",High Confidence
+The team is definitely confident with this approach and there is no doubt.,High Confidence
+"Extremely competent, We are sure about this solution.",High Confidence
+"no doubts at all, ready for test",High Confidence
+"It could potentially be accurate, but I have some minor hesitation.",Medium Confidence
+I feel sure about the topic.,High Confidence
+"I have no idea regarding this method, it is severely overwhelmed.",Low Confidence
+I'm under the impression it is decent but I have some minor hesitation.,Medium Confidence
+The problem is I am severely frustrated on this question and I need clarification.,Low Confidence
+I feel completely frustrated on this assignment.,Low Confidence
+"I have no idea what the answer is, it is extremely uncertain.",Low Confidence
+"Clearly competent, I feel sure with this calculation.",High Confidence
+concept aatha hai par solve karne me thodi problem hai,Medium Confidence
+Probably it is reasonable but there are gaps in my knowledge.,Medium Confidence
+"I have no idea about this difficult formula, it is extremely disoriented.",Low Confidence
+I have utterly doubtful with this basic concept and I am failing to understand.,Low Confidence
+I am fully correct that this is correct.,High Confidence
+I have doubtful regarding this method.,Low Confidence
+It seems this looks ok though I want to verify the details with my classmates.,Medium Confidence
+The team is on track about the topic.,High Confidence
+"It could potentially be reasonable, but I want to verify.",Medium Confidence
+"Certainly sure, I am definitely sure on this test.",High Confidence
+i think answer is correct but verify karna parega,Medium Confidence
+"It might be fine, though I have some doubts.",Medium Confidence
+Maybe it is accurate though I have some doubts.,Medium Confidence
+I am totally perplexed on this question.,Low Confidence
+Maybe this could be accurate but I have some minor hesitation before finalizing.,Medium Confidence
+I became perplexed on this question.,Low Confidence
+It seems this looks accurate but I want to verify just in case.,Medium Confidence
+"Perfectly confident, I have clearly sure about the topic.",High Confidence
+"Confidently correct, I am fully sure with this solution set.",High Confidence
+Probably I am it is passable though I want to verify the details.,Medium Confidence
+"I have no idea how to solve this, it is extremely lost.",Low Confidence
+mje kuch ni pata iska kia answer h,Low Confidence
+I have clearly genuinely prepared on this test because I studied hard.,High Confidence
+"It seems to be decent, but I want to verify.",Medium Confidence
+I feel adept about my performance.,High Confidence
+"Undoubtedly sure, I have clearly sure about the code logic.",High Confidence
+It seems it is reasonable although I need some review.,Medium Confidence
+I am completely and utterly hopelessly frustrated with this basic concept and it is very frustrating.,Low Confidence
+I think this should be ok although I need some review in my notes.,Medium Confidence
+"I have no idea what the answer is, it is totally befuddled.",Low Confidence
+main isey doosron ko bhi samjha sakta hoon,High Confidence
+"I have no idea with this math equation, it is really stuck.",Low Confidence
+"Genuinely correct, I am 100% sure I am sure regarding this concept.",High Confidence
+I guess it is fine but I'm not 100% sure.,Medium Confidence
+It seems it is correct though I want to verify the details.,Medium Confidence
+I am adept with this calculation.,High Confidence
+I absolutely feel competent about my performance.,High Confidence
+"Totally on track, My analysis shows I am sure with this calculation.",High Confidence
+It looks like it is satisfactory though I have some doubts.,Medium Confidence
+"I have no idea regarding this method, it is deeply overwhelmed.",Low Confidence
+I am definitely genuinely sure about my performance and it makes perfect sense.,High Confidence
+"tension nahi hai, bilkul sahi kiya hai",High Confidence
+mje 100 percent confirm ni h pr shyd yehi ho,Medium Confidence
+"I have no idea what the answer is, it is extremely blank.",Low Confidence
+"I have no idea with this math equation, it is really struggling.",Low Confidence
+It looks like this is probably passable though I want to verify the details later tonight.,Medium Confidence
+The problem is I am severely blank about this topic and it makes no sense.,Low Confidence
+"It might be passable, though I want to verify the details.",Medium Confidence
+I suspect it is correct but I should double check.,Medium Confidence
+I have puzzled about this topic.,Low Confidence
+I became disoriented with this basic concept.,Low Confidence
+I feel totally disoriented about this topic so I am guessing the answer.,Low Confidence
+"Genuinely satisfied, I have completely sure about the topic.",High Confidence
+mujhe is topic par poori grip hai,High Confidence
+The student is struggling with this math equation.,Low Confidence
+The problem is I am puzzled on this assignment.,Low Confidence
+I guess it is acceptable but I need to check.,Medium Confidence
+I am definitely perfectly expert with this calculation as the logic is flawless.,High Confidence
+I am 100% sure I am prepared of my answer.,High Confidence
+I feel totally lost with this basic concept and I don't know what to do.,Low Confidence
+I'm under the impression it is ok but I'm not 100% sure.,Medium Confidence
+I suppose it is reasonable though I need to review.,Medium Confidence
+Probably it is right but I should double check.,Medium Confidence
+I am entirely secure about my performance and can explain it clearly.,High Confidence
+The team is clear with this approach.,High Confidence
+"Definitely positive, I have completely sure on this homework.",High Confidence
+I believe it is satisfactory though I want to verify the details.,Medium Confidence
+Maybe this could potentially be reasonable but I'm not 100% sure just in case.,Medium Confidence
+I am 100% sure I am certainly positive with this approach and I can teach others.,High Confidence
+Probably this is probably satisfactory but let me double-check before submitting it.,Medium Confidence
+"Totally secure, I am 100% sure I am sure with this calculation.",High Confidence
+"100% adept, I am sure about the code logic.",High Confidence
+I am totally completely struggling regarding this method so I am guessing the answer.,Low Confidence
+I am entirely certain about the topic and there is no doubt.,High Confidence
+"I have no idea on this coding block, it is completely clueless.",Low Confidence
+concept thoda fuzzy hai abhi,Medium Confidence
+I believe it is accurate but I should double check.,Medium Confidence
+I believe this could be passable but there are gaps in my knowledge before finalizing.,Medium Confidence
+I have doubtful what the answer is.,Low Confidence
+We are thoroughly knowledgeable about the code logic and there is no doubt.,High Confidence
+"It is probably fine, but I need to check.",Medium Confidence
+"It is likely to be acceptable, but there are gaps in my knowledge.",Medium Confidence
+"Genuinely adept, I am sure about the code logic.",High Confidence
+I'm under the impression this might be acceptable although I need some review in my notes.,Medium Confidence
+We are extremely secure about my performance after reviewing the notes.,High Confidence
+highly confused and blank right now,Low Confidence
+"It is likely correct, but I need to check.",Medium Confidence
+"It could potentially be satisfactory, but I have some minor hesitation.",Medium Confidence
+"It might be ok, although I need some review.",Medium Confidence
+I think it is satisfactory though I have some doubts.,Medium Confidence
+We are perfectly adept about the code logic because it is easy.,High Confidence
+I am definitely absolutely adept on this homework and it makes perfect sense.,High Confidence
+I absolutely feel confident about my performance.,High Confidence
+"yes, absolute correct answer hai ye",High Confidence
+I am doubtful about this topic.,Low Confidence
+"ummed hai thik hoga, main sure nahi hoon",Medium Confidence
+I guess it is passable although I need some review.,Medium Confidence
+Probably this might be fine but I'm not 100% sure later tonight.,Medium Confidence
+kuch cheezein aati hain kuch bhol jati hain,Medium Confidence
+I feel completely extremely doubtful how to solve this and I don't know what to do.,Low Confidence
+I am utterly puzzled about this difficult formula and I want guidance.,Low Confidence
+sare concepts fit hain mere,High Confidence
+I suspect this is likely to be correct but I should double check with my classmates.,Medium Confidence
+I guess it is acceptable but there are gaps in my knowledge.,Medium Confidence
+It looks like this is probably decent but there are gaps in my knowledge before finalizing.,Medium Confidence
+"Undoubtedly, I am 100% satisfied on this test without any hesitation.",High Confidence
+The team is sure that this is correct.,High Confidence
+"I have no idea about this topic, it is extremely doubtful.",Low Confidence
+I became deeply lost how to solve this and it makes no sense.,Low Confidence
+I am 100% sure I am competent that this is correct.,High Confidence
+"I have no idea on this coding block, it is hopelessly blank.",Low Confidence
+"Completely secure, We are sure concerning this subject.",High Confidence
+"It could potentially be acceptable, although I need some review.",Medium Confidence
+I am 100% confident about the topic as the logic is flawless.,High Confidence
+Probably it is ok but there are gaps in my knowledge.,Medium Confidence
+I have completely 100% certain concerning this subject after reviewing the notes.,High Confidence
+I suppose this seems to be decent though I want to verify the details against the answers key.,Medium Confidence
+I am totally disoriented with this basic concept.,Low Confidence
+"Extremely confident, Undoubtedly, I am sure on this homework.",High Confidence
+I can easily extremely clear-headed of my answer without any second thought.,High Confidence
+The student is befuddled about this topic.,Low Confidence
+I believe it is accurate but I'm not 100% sure.,Medium Confidence
+"It could potentially be satisfactory, but let me double-check.",Medium Confidence
+"It should be decent, though I have some doubts.",Medium Confidence
+The problem is I am deeply clueless regarding this method and I want guidance.,Low Confidence
+"pata nahi iska answer kya hai, i am guessing",Low Confidence
+I am completely and utterly blank about this topic.,Low Confidence
+"It is likely decent, but I should double check.",Medium Confidence
+I can easily confident with this calculation.,High Confidence
+"lag to raha he thik he, dekhte hain",Medium Confidence
+I feel overwhelmed on this coding block.,Low Confidence
+I feel thoroughly expert of my answer and can explain it clearly.,High Confidence
+"I have no idea on this coding block, it is totally uncertain.",Low Confidence
+"I have no idea with this math equation, it is extremely overwhelmed.",Low Confidence
+I have clearly extremely confident about the code logic and the results prove it.,High Confidence
+I absolutely feel clear-headed with this approach.,High Confidence
+"It should be correct, but I need to check.",Medium Confidence
+I believe it is correct but I have some minor hesitation.,Medium Confidence
+I am definitely accurate with this solution set.,High Confidence
+I have clearly accurate with this approach.,High Confidence
+"I have no idea how to solve this, it is extremely stuck.",Low Confidence
+dimagh ghoom gaya hai is sawal pr,Low Confidence
+"Extremely secure, I am definitely sure of my answer.",High Confidence
+I am genuinely secure that this is correct and I verified it twice.,High Confidence
+I am fully satisfied regarding this concept.,High Confidence
+I became completely disoriented regarding this method since it is way too complicated.,Low Confidence
+mje thoda confirm krna parega notes se,Medium Confidence
+I am fully positive of my answer.,High Confidence
+I am fully genuinely sure with this solution set as the logic is flawless.,High Confidence
+"I have no idea with this basic concept, it is really confused.",Low Confidence
+I suspect this should be satisfactory but I have some minor hesitation against the answers key.,Medium Confidence
+main 100% sure hoon is calculation par,High Confidence
+"Completely expert, We are sure of my answer.",High Confidence
+I suppose this could potentially be passable but I want to verify just in case.,Medium Confidence
+maine ache se samjha hai ye topic,High Confidence
+"100% competent, We are sure concerning this subject.",High Confidence
+I feel really lost what the answer is and I want guidance.,Low Confidence
+We are competent regarding this concept.,High Confidence
 mujhe is topic par boht doubt hai kuch samajh nahi aya,Low Confidence
-boht mushkil lag raha hai ye question,Low Confidence
+I am totally really frustrated with this math equation because it is too hard.,Low Confidence
 bilkul palle nahi para ye concept,Low Confidence
+I have extremely frustrated on this question and I need someone to explain it.,Low Confidence
+main completely blank hoon isme,Low Confidence
+"It appears decent, but let me double-check.",Medium Confidence
+Maybe this is probably passable though I need to review before submitting it.,Medium Confidence
+everything is going over my head,Low Confidence
+I guess this looks fine but I should double check before finalizing.,Medium Confidence
+I assume it is decent though I need to review.,Medium Confidence
+"Perfectly clear-headed, I can easily sure of my answer.",High Confidence
+"It seems to be correct, but I have some minor hesitation.",Medium Confidence
+i am fully confident ye sahi hai,High Confidence
+I'm under the impression it is accurate but I want to verify.,Medium Confidence
+I've got extremely disoriented on this question because it is too hard.,Low Confidence
+"I have no idea regarding this method, it is completely stuck.",Low Confidence
+"I have no idea what is going on here, it is hopelessly frustrated.",Low Confidence
+I suspect this should be acceptable but I have some minor hesitation with my classmates.,Medium Confidence
+I feel totally certain regarding this concept and the results prove it.,High Confidence
+"I have no idea what is going on here, it is totally overwhelmed.",Low Confidence
+I am competent about this solution.,High Confidence
+"Definitely prepared, I can easily sure about my performance.",High Confidence
+haji bilkul 100% sahi hai,High Confidence
+I guess I might be this is likely plausible but let me double-check just in case.,Medium Confidence
+My analysis shows I am certain regarding this concept.,High Confidence
+I guess this is likely to be right although I need some review with my teacher.,Medium Confidence
+My analysis shows I am undoubtedly on track on this homework and it makes perfect sense.,High Confidence
+meri to tayari bilkul zero hai,Low Confidence
+"Undoubtedly, I am entirely sure about this solution after reviewing the notes.",High Confidence
+I think it is passable but there are gaps in my knowledge.,Medium Confidence
+Probably it is right but I want to verify.,Medium Confidence
+"I have no idea regarding this method, it is really clueless.",Low Confidence
+I suppose this looks plausible though I need to review in my notes.,Medium Confidence
+I suspect it is satisfactory but there are gaps in my knowledge.,Medium Confidence
+I assume this should be fine though I need to review with the class reference.,Medium Confidence
+I feel doubtful what the answer is.,Low Confidence
+"Extremely satisfied, I am sure with this calculation.",High Confidence
+The team is confidently knowledgeable of my answer as the logic is solid.,High Confidence
+mere saare doubts clear ho chuke hain,High Confidence
+I am satisfied concerning this subject.,High Confidence
+I have utterly confused what the answer is and it makes no sense.,Low Confidence
+I absolutely feel undoubtedly on track of my answer because I studied hard.,High Confidence
+Maybe it is reasonable but I have some minor hesitation.,Medium Confidence
+I am definitely prepared about my performance.,High Confidence
+I suppose this should be ok though I want to verify the details with the class reference.,Medium Confidence
+"perfect, exact matching output aya hai",High Confidence
+I feel doubtful on this question.,Low Confidence
+Probably I am it is plausible but I want to verify.,Medium Confidence
+The team is certain regarding this concept.,High Confidence
+"I have no idea what is going on here, it is dreadfully doubtful.",Low Confidence
+I've got overwhelmed with this math equation.,Low Confidence
+I guess this is probably correct but I'm not 100% sure against the answers key.,Medium Confidence
+"Entirely certain, I am 100% sure I am sure with this solution set.",High Confidence
+I feel completely extremely uncertain with this basic concept and I need someone to explain it.,Low Confidence
+"Definitely correct, Undoubtedly, I am sure with this calculation.",High Confidence
+I have completely correct about the topic.,High Confidence
+"It seems to be right, but I should double check.",Medium Confidence
+"Undoubtedly, I am prepared with this calculation.",High Confidence
+"It looks reasonable, but there are gaps in my knowledge.",Medium Confidence
+I assume it is plausible though I need to review.,Medium Confidence
+"I have no idea with this basic concept, it is extremely blank.",Low Confidence
+I feel uncertain regarding this method.,Low Confidence
+"Genuinely prepared, The team is sure on this homework.",High Confidence
+"Totally positive, My analysis shows I am sure about this solution.",High Confidence
+"It could be passable, but I should double check.",Medium Confidence
+I've got struggling how to solve this.,Low Confidence
+"Totally on track, I am sure about my performance.",High Confidence
+"Totally certain, The team is sure that this is correct.",High Confidence
+"I have no idea what is going on here, it is dreadfully befuddled.",Low Confidence
+"Completely positive, We are sure regarding this concept.",High Confidence
+I have really frustrated with this math equation and it makes no sense.,Low Confidence
+"perfect, koi galti nahi hai isme",High Confidence
+"Undoubtedly, I am certain about the topic.",High Confidence
+I am fully fully sure with this calculation after reviewing the notes.,High Confidence
+"I have no idea on this assignment, it is utterly lost.",Low Confidence
+"concept full clear hai, koi doubt nahi",High Confidence
+i have no confidence on my skills,Low Confidence
+i am totally overwhelmed by this topic,Low Confidence
+easy to understand context hai ye,High Confidence
+"I have no idea on this coding block, it is really puzzled.",Low Confidence
+"It could be right, though I want to verify the details.",Medium Confidence
+I guess this should be decent but I have some minor hesitation before finalizing.,Medium Confidence
+Probably this seems to be plausible although I need some review in my notes.,Medium Confidence
+I am completely and utterly clueless on this assignment.,Low Confidence
+"It is likely fine, but I have some minor hesitation.",Medium Confidence
+I am 100% sure I am confident on this test.,High Confidence
+i have some idea about this topic but need review,Medium Confidence
+"Thoroughly positive, I am definitely sure concerning this subject.",High Confidence
+I absolutely feel entirely correct with this solution set and the results prove it.,High Confidence
+I am totally severely puzzled what the answer is and I am failing to understand.,Low Confidence
+"I have no idea about this difficult formula, it is deeply puzzled.",Low Confidence
+I am totally completely frustrated with this math equation so I am guessing the answer.,Low Confidence
+The student is hopelessly doubtful on this coding block because it is too hard.,Low Confidence
+"I have no idea about this difficult formula, it is severely doubtful.",Low Confidence
+"It seems to be acceptable, though I need to review.",Medium Confidence
+"It is likely to be reasonable, though I want to verify the details.",Medium Confidence
+"Completely clear, I am definitely sure regarding this concept.",High Confidence
+I feel completely hopelessly disoriented what the answer is and it is very frustrating.,Low Confidence
+We are definitely confident about my performance and I verified it twice.,High Confidence
+I am fully certain about the code logic.,High Confidence
+"It is likely to be accurate, but I want to verify.",Medium Confidence
+I am fully undoubtedly certain that this is correct and there is no doubt.,High Confidence
+"Completely prepared, I absolutely feel sure regarding this concept.",High Confidence
+"Certainly accurate, My analysis shows I am sure with this approach.",High Confidence
+I am definitely on track on this homework.,High Confidence
+"Genuinely adept, I am fully sure about my performance.",High Confidence
+Probably this should be ok but I want to verify with the class reference.,Medium Confidence
+I assume this is likely ok but there are gaps in my knowledge before submitting it.,Medium Confidence
+The problem is I am clueless about this difficult formula.,Low Confidence
+kuch formulas confusing hain baki thik he,Medium Confidence
+mujhe lagta hai maine formula thik lagaya hai,Medium Confidence
+We are entirely expert with this calculation without any second thought.,High Confidence
+"Genuinely prepared, I am definitely sure with this approach.",High Confidence
+I am definitely genuinely clear that this is correct and can explain it clearly.,High Confidence
+"Entirely knowledgeable, I am definitely sure with this calculation.",High Confidence
+I am fully perfectly expert with this solution set and the results prove it.,High Confidence
+"Clearly positive, I am fully sure with this solution set.",High Confidence
+ye correct hai aur isme koi doubt nahi hai,High Confidence
+I have clearly positive on this test.,High Confidence
+I am totally frustrated regarding this method.,Low Confidence
+Probably this is likely to be acceptable though I need to review against the answers key.,Medium Confidence
+It looks like this looks correct but I need to check with my classmates.,Medium Confidence
+The team is correct regarding this concept.,High Confidence
+Maybe it is plausible but I need to check.,Medium Confidence
+"maine verify kar liya hai book se, yehi hai",High Confidence
+I have completely entirely correct about the topic as the logic is flawless.,High Confidence
+I am 100% sure I am genuinely expert that this is correct as the logic is flawless.,High Confidence
+I am definitely positive with this calculation.,High Confidence
+I guess I might be this might be passable but I'm not 100% sure with my teacher.,Medium Confidence
+"100% sure, I have completely sure about the code logic.",High Confidence
+"It is probably satisfactory, but I should double check.",Medium Confidence
+"Confidently clear, I am fully sure about this solution.",High Confidence
+"I have no idea how to solve this, it is severely lost.",Low Confidence
+"It should be decent, but I need to check.",Medium Confidence
+I feel utterly stuck on this coding block and I need help.,Low Confidence
+My analysis shows I am secure about the code logic.,High Confidence
+"I have no idea regarding this method, it is dreadfully disoriented.",Low Confidence
+Probably I am this appears acceptable but I have some minor hesitation in my notes.,Medium Confidence
+"I have no idea on this question, it is severely perplexed.",Low Confidence
+The student is extremely confused with this math equation and it makes no sense.,Low Confidence
+maybe ye sahi ho par confirm nahi,Medium Confidence
+"It could potentially be reasonable, but I'm not 100% sure.",Medium Confidence
+I've got utterly stuck with this basic concept because it is too hard.,Low Confidence
+"I have no idea on this assignment, it is extremely clueless.",Low Confidence
+"I have no idea with this basic concept, it is dreadfully clueless.",Low Confidence
+"It is likely to be decent, but I need to check.",Medium Confidence
+It seems this seems to be correct though I have some doubts against the answers key.,Medium Confidence
+I am definitely clear-headed about this solution.,High Confidence
+"I have no idea on this coding block, it is extremely frustrated.",Low Confidence
+everything is a mess in my mind right now,Low Confidence
+"It could potentially be fine, but there are gaps in my knowledge.",Medium Confidence
+Probably this is likely to be plausible but I should double check before finalizing.,Medium Confidence
+It looks like it is passable though I have some doubts.,Medium Confidence
+The problem is I am struggling what is going on here.,Low Confidence
+"It should be passable, though I need to review.",Medium Confidence
+The student is deeply lost what is going on here because it is too hard.,Low Confidence
+"It is likely satisfactory, but I need to check.",Medium Confidence
+"I have no idea about this topic, it is totally frustrated.",Low Confidence
+I believe it is decent but I'm not 100% sure.,Medium Confidence
+I absolutely feel undoubtedly correct with this solution set and I can teach others.,High Confidence
+"Certainly satisfied, The team is sure with this approach.",High Confidence
+I am prepared about the code logic.,High Confidence
+I have clearly certainly correct on this homework because it is easy.,High Confidence
+My analysis shows I am clearly sure with this calculation and it makes perfect sense.,High Confidence
+"I have no idea about this difficult formula, it is totally frustrated.",Low Confidence
+"Perfectly correct, I am 100% sure I am sure about this solution.",High Confidence
+I think it is accurate but let me double-check.,Medium Confidence
+The student is extremely doubtful regarding this method so I am guessing the answer.,Low Confidence
+I suspect this might be reasonable but I should double check before finalizing.,Medium Confidence
+The problem is I am doubtful with this math equation.,Low Confidence
+"I have no idea regarding this method, it is severely confused.",Low Confidence
+"Completely adept, The team is sure about my performance.",High Confidence
+"It seems to be reasonable, though I need to review.",Medium Confidence
+I have utterly overwhelmed how to solve this and I want guidance.,Low Confidence
+"I have no idea what the answer is, it is really perplexed.",Low Confidence
+"It might be plausible, but I should double check.",Medium Confidence
+"It should be accurate, though I want to verify the details.",Medium Confidence
+I am 100% sure I am correct about the code logic.,High Confidence
+"Extremely accurate, My analysis shows I am sure about the topic.",High Confidence
+I think it is accurate but I need to check.,Medium Confidence
+I suspect this could be passable but let me double-check in my notes.,Medium Confidence
+I assume this is probably fine but there are gaps in my knowledge with the textbook.,Medium Confidence
+I'm under the impression this seems to be satisfactory but I want to verify with my teacher.,Medium Confidence
+"Undoubtedly, I am entirely clear-headed about the code logic and I verified it twice.",High Confidence
+"I have no idea how to solve this, it is utterly befuddled.",Low Confidence
+"I have no idea on this assignment, it is severely stuck.",Low Confidence
+"Undoubtedly, I am completely positive about this solution and I verified it twice.",High Confidence
+I guess I might be this is likely to be plausible but I need to check with the class reference.,Medium Confidence
+It seems it is acceptable though I have some doubts.,Medium Confidence
+I feel dreadfully struggling about this topic and I need clarification.,Low Confidence
+"It is probably passable, but I have some minor hesitation.",Medium Confidence
+I am totally extremely befuddled on this assignment so I am guessing the answer.,Low Confidence
+I am utterly perplexed on this assignment and I need someone to explain it.,Low Confidence
+I've got completely struggling how to solve this and it makes no sense.,Low Confidence
+I am adept with this solution set.,High Confidence
+mujhe bilkul yakeen nahi hai apne answer par,Low Confidence
+"It is likely to be correct, but there are gaps in my knowledge.",Medium Confidence
+I am 100% sure I am completely accurate about the topic because it is easy.,High Confidence
+"I have no idea on this question, it is totally lost.",Low Confidence
+"It could be plausible, but I need to check.",Medium Confidence
+I have utterly blank on this coding block and I need help.,Low Confidence
+I've got lost what the answer is.,Low Confidence
+I feel completely uncertain about this topic and I am failing to understand.,Low Confidence
+My analysis shows I am fully certain of my answer without any hesitation.,High Confidence
+Probably I am this is likely to be satisfactory but I have some minor hesitation before submitting it.,Medium Confidence
+Probably this appears plausible but there are gaps in my knowledge before submitting it.,Medium Confidence
+"i am mostly sure, just a little doubt",Medium Confidence
+"Extremely correct, The team is sure with this approach.",High Confidence
+i am failing to follow these instructions,Low Confidence
+I assume this looks passable but I want to verify with the class reference.,Medium Confidence
+"I have no idea with this basic concept, it is really perplexed.",Low Confidence
+"I have no idea regarding this method, it is totally doubtful.",Low Confidence
+"It is likely to be right, though I need to review.",Medium Confidence
+I am absolutely adept with this solution set and I verified it twice.,High Confidence
+I feel prepared on this homework.,High Confidence
+"Totally accurate, I can easily sure about this solution.",High Confidence
+I suppose this appears ok though I need to review just in case.,Medium Confidence
+I feel completely utterly clueless on this coding block and I need clarification.,Low Confidence
+I have completely clearly secure about the topic without any hesitation.,High Confidence
+"It is likely to be satisfactory, though I need to review.",Medium Confidence
+My analysis shows I am 100% expert with this calculation and the results prove it.,High Confidence
+I suppose this appears fine but I want to verify later tonight.,Medium Confidence
+I think this could potentially be accurate but let me double-check with my teacher.,Medium Confidence
+I am completely and utterly puzzled on this coding block.,Low Confidence
+I can easily positive of my answer.,High Confidence
+I feel extremely clear about this solution and the results prove it.,High Confidence
+Maybe this appears acceptable but I'm not 100% sure before finalizing.,Medium Confidence
+I think it is ok but let me double-check.,Medium Confidence
+"I have no idea how to solve this, it is hopelessly uncertain.",Low Confidence
+"I have no idea what the answer is, it is severely stuck.",Low Confidence
+I am fully definitely sure of my answer and can explain it clearly.,High Confidence
+The problem is I am confused what is going on here.,Low Confidence
+It seems it is right but let me double-check.,Medium Confidence
+I have completely completely secure with this approach because I studied hard.,High Confidence
+I am totally doubtful on this question.,Low Confidence
+I suppose it is decent but I need to check.,Medium Confidence
+I feel completely severely blank what is going on here and I need clarification.,Low Confidence
+It seems it is acceptable but I should double check.,Medium Confidence
+I am confidently satisfied concerning this subject and I can teach others.,High Confidence
+I believe it is right but I should double check.,Medium Confidence
+The problem is I am completely disoriented how to solve this and I need clarification.,Low Confidence
+I've got frustrated with this basic concept.,Low Confidence
+I can easily confident on this test.,High Confidence
+I have clearly confident with this approach.,High Confidence
+I absolutely feel definitely competent about this solution without any hesitation.,High Confidence
+We are sure about my performance.,High Confidence
+Probably I am this appears satisfactory but I'm not 100% sure in my notes.,Medium Confidence
+The team is perfectly positive about the code logic after reviewing the notes.,High Confidence
+bina kisi shak ke ye sahi hai,High Confidence
+I believe it is reasonable but I'm not 100% sure.,Medium Confidence
+I'm under the impression it is accurate though I want to verify the details.,Medium Confidence
+50-50 chance hai ke ye correct ho,Medium Confidence
+It looks like this seems to be ok but I should double check later tonight.,Medium Confidence
+"I have no idea what the answer is, it is severely doubtful.",Low Confidence
+"I have no idea about this difficult formula, it is utterly uncertain.",Low Confidence
+I am fully undoubtedly competent of my answer because I studied hard.,High Confidence
+I feel completely stuck on this assignment.,Low Confidence
+My analysis shows I am 100% competent with this approach without any hesitation.,High Confidence
+mujhe thoda aur practice ki zaroorat hai,Medium Confidence
+"I have no idea on this question, it is completely doubtful.",Low Confidence
+"Definitely accurate, I am fully sure concerning this subject.",High Confidence
+I feel completely extremely lost about this difficult formula and it makes no sense.,Low Confidence
+The problem is I am completely struggling what the answer is and I am failing to understand.,Low Confidence
+I can easily satisfied with this solution set.,High Confidence
+I suppose it is passable but I want to verify.,Medium Confidence
+"It should be correct, but I have some minor hesitation.",Medium Confidence
+"I have no idea with this basic concept, it is utterly overwhelmed.",Low Confidence
+"Definitely accurate, Undoubtedly, I am sure that this is correct.",High Confidence
+I assume it is satisfactory though I need to review.,Medium Confidence
+I am 100% sure I am absolutely certain on this homework without any second thought.,High Confidence
+I became puzzled on this question.,Low Confidence
+I am extremely confused with this basic concept and I don't know what to do.,Low Confidence
+I feel hopelessly befuddled about this difficult formula and it makes no sense.,Low Confidence
+I am completely and utterly dreadfully confused with this math equation and it makes no sense.,Low Confidence
+nothing makes sense to me in this code,Low Confidence
+I can easily clear concerning this subject.,High Confidence
+I am totally lost on this coding block.,Low Confidence
+I am definitely secure about the topic and can explain it clearly.,High Confidence
+"It is likely to be right, though I have some doubts.",Medium Confidence
+"Absolutely correct, We are sure concerning this subject.",High Confidence
+We are clear-headed about the topic.,High Confidence
+I suspect it is reasonable but I want to verify.,Medium Confidence
+"It should be fine, but I want to verify.",Medium Confidence
+"ye to mera favorite topic hai, clear he",High Confidence
+I suppose this should be accurate though I have some doubts against the answers key.,Medium Confidence
+We are positive regarding this concept.,High Confidence
+My analysis shows I am correct about the topic.,High Confidence
+The team is satisfied regarding this concept.,High Confidence
+I have hopelessly stuck what is going on here so I am guessing the answer.,Low Confidence
+The team is clear that this is correct.,High Confidence
+I have utterly confused regarding this method and it is very frustrating.,Low Confidence
+My analysis shows I am positive regarding this concept.,High Confidence
+I am perfectly satisfied regarding this concept because I studied hard.,High Confidence
+"completely confused, nothing is clear",Low Confidence
+I'm under the impression this is probably fine though I need to review later tonight.,Medium Confidence
+concept solid hai mera is chapter ka,High Confidence
+"It appears ok, but I'm not 100% sure.",Medium Confidence
+I am blank what is going on here.,Low Confidence
+The student is confused on this question.,Low Confidence
+I think this is likely decent but I should double check with the textbook.,Medium Confidence
+"Genuinely positive, I feel sure about the code logic.",High Confidence
+I became lost on this coding block.,Low Confidence
+I became confused on this assignment.,Low Confidence
+"It is likely to be correct, but I'm not 100% sure.",Medium Confidence
+I am totally clueless with this basic concept and it is very frustrating.,Low Confidence
+"Totally satisfied, I am fully sure about my performance.",High Confidence
+"not perfectly sure, let me double check",Medium Confidence
+I feel completely confused with this math equation.,Low Confidence
+I am definitely positive regarding this concept.,High Confidence
+"It should be reasonable, though I have some doubts.",Medium Confidence
+"Clearly clear, I am 100% sure I am sure with this calculation.",High Confidence
+mujhse thodi galti ho sakti hai isme,Medium Confidence
+The team is totally confident on this homework after reviewing the notes.,High Confidence
+"almost sure, 90% sure about it",Medium Confidence
+baki sab thik hai bas aakhri step me thoda doubt hai,Medium Confidence
+lagta to thik hai par test cases check karne parain ge,Medium Confidence
+I feel completely puzzled with this basic concept.,Low Confidence
+"It is likely plausible, but I have some minor hesitation.",Medium Confidence
+I have hopelessly befuddled about this difficult formula because it is too hard.,Low Confidence
+I guess it is ok though I want to verify the details.,Medium Confidence
+It seems it is satisfactory though I have some doubts.,Medium Confidence
+"Perfectly correct, I feel sure about my performance.",High Confidence
+I guess I might be this could potentially be correct though I want to verify the details against the answers key.,Medium Confidence
+I am 100% sure I am knowledgeable of my answer.,High Confidence
+I feel puzzled what the answer is.,Low Confidence
+I am fully completely clear about this solution because I studied hard.,High Confidence
+"It could potentially be accurate, but there are gaps in my knowledge.",Medium Confidence
+i know this topic very well,High Confidence
+"I have no idea about this difficult formula, it is really puzzled.",Low Confidence
+I have doubtful with this math equation.,Low Confidence
+I absolutely feel completely secure about the topic and can explain it clearly.,High Confidence
+boht mushkil lag raha hai ye question,Low Confidence
+thodi confusion hai lekin sahi lag raha hai,Medium Confidence
+"It is likely to be acceptable, although I need some review.",Medium Confidence
+"Certainly clear, Undoubtedly, I am sure about the topic.",High Confidence
+I've got befuddled what the answer is.,Low Confidence
+I am definitely certainly competent of my answer and can explain it clearly.,High Confidence
+ye chapter boht zyada boring aur mushkil he,Low Confidence
+"It seems to be fine, though I want to verify the details.",Medium Confidence
+"It could potentially be acceptable, but let me double-check.",Medium Confidence
+"Undoubtedly clear, I am 100% sure I am sure concerning this subject.",High Confidence
+"completely confused, help chahiye",Low Confidence
+pata nahi teacher kya padha rahe hain,Low Confidence
+"It is likely accurate, but I have some minor hesitation.",Medium Confidence
+"It appears ok, although I need some review.",Medium Confidence
+I am completely and utterly utterly befuddled what the answer is and I want guidance.,Low Confidence
+I have disoriented with this math equation.,Low Confidence
+It seems this could potentially be passable but I should double check just in case.,Medium Confidence
+"I have no idea about this difficult formula, it is severely blank.",Low Confidence
+I feel dreadfully clueless on this coding block and I need clarification.,Low Confidence
+I feel really struggling with this math equation and I need someone to explain it.,Low Confidence
+I assume this looks passable but I need to check in my notes.,Medium Confidence
+The problem is I am completely stuck with this basic concept so I am guessing the answer.,Low Confidence
+I believe this appears passable though I need to review just in case.,Medium Confidence
+We are clear-headed concerning this subject.,High Confidence
+I have completely positive with this approach.,High Confidence
+"I have no idea what is going on here, it is really overwhelmed.",Low Confidence
+I assume it is passable though I need to review.,Medium Confidence
+"I have no idea what is going on here, it is severely confused.",Low Confidence
+It looks like this could be plausible although I need some review with my teacher.,Medium Confidence
+I have disoriented about this difficult formula.,Low Confidence
+I am definitely definitely secure with this calculation as the logic is flawless.,High Confidence
+concept is okay but some parts are hard,Medium Confidence
+concept bilkul clear hai mujhe,High Confidence
+Maybe this looks reasonable but I need to check with the class reference.,Medium Confidence
+I can easily definitely competent that this is correct and there is no doubt.,High Confidence
+I'm under the impression this is likely to be passable but I should double check with my teacher.,Medium Confidence
+Maybe it is correct but let me double-check.,Medium Confidence
+I believe it is ok although I need some review.,Medium Confidence
+"I have no idea what the answer is, it is completely uncertain.",Low Confidence
+sab sir ke oopar se guzar gaya,Low Confidence
+I am fully secure concerning this subject.,High Confidence
+It seems it is plausible but I need to check.,Medium Confidence
+mujhe bilkul samajh nahi aa raha ye topic,Low Confidence
+It looks like this appears satisfactory although I need some review before submitting it.,Medium Confidence
+"It is probably correct, but I have some minor hesitation.",Medium Confidence
+My analysis shows I am positive with this approach.,High Confidence
+"Definitely correct, I have clearly sure on this test.",High Confidence
+I am completely and utterly perplexed what is going on here.,Low Confidence
+"It looks correct, but I have some minor hesitation.",Medium Confidence
+I have utterly uncertain how to solve this and I am failing to understand.,Low Confidence
+"easy task tha, main ne solve kar liya",High Confidence
+I am definitely totally adept of my answer after reviewing the notes.,High Confidence
+kuch points clear hain aur kuch me doubt hai,Medium Confidence
+I've got befuddled with this basic concept.,Low Confidence
+The student is disoriented how to solve this.,Low Confidence
+It looks like it is reasonable but I should double check.,Medium Confidence
+easy tha main araam se kar sakta hoon,High Confidence
+I believe it is right but I'm not 100% sure.,Medium Confidence
+mje bilkul clear h sub kuch,High Confidence
+"I have no idea with this math equation, it is severely disoriented.",Low Confidence
+"It could be right, but there are gaps in my knowledge.",Medium Confidence
+I became deeply befuddled with this basic concept and I need clarification.,Low Confidence
+It seems this might be plausible but I need to check with the textbook.,Medium Confidence
+"I have no idea regarding this method, it is totally blank.",Low Confidence
+I am blank with this math equation.,Low Confidence
+"Definitely accurate, I am sure with this calculation.",High Confidence
+I believe it is plausible although I need some review.,Medium Confidence
+"Certainly certain, The team is sure with this solution set.",High Confidence
+The student is severely confused with this basic concept and I am failing to understand.,Low Confidence
+Probably I am it is accurate though I have some doubts.,Medium Confidence
+I'm under the impression it is ok but let me double-check.,Medium Confidence
+I guess this is likely to be satisfactory though I have some doubts with my teacher.,Medium Confidence
+"Certainly adept, The team is sure with this calculation.",High Confidence
+main confirm nahi hoon lekin shayad sahi ho,Medium Confidence
+"boht hi tough hai, mujhse nahi hoga",Low Confidence
+Probably it is fine though I want to verify the details.,Medium Confidence
+"It might be right, but let me double-check.",Medium Confidence
+"I have no idea with this math equation, it is hopelessly puzzled.",Low Confidence
+"It is probably right, but I should double check.",Medium Confidence
+I am totally severely doubtful what is going on here because it is too hard.,Low Confidence
+The team is entirely accurate with this solution set and I can teach others.,High Confidence
+"I have no idea on this question, it is severely lost.",Low Confidence
+I suppose this is likely to be accurate though I have some doubts with the class reference.,Medium Confidence
+"Definitely correct, Undoubtedly, I am sure of my answer.",High Confidence
+concept sir ke oopar se guzar gaya,Low Confidence
+I am fully definitely accurate concerning this subject after reviewing the notes.,High Confidence
+mujhe to kuch yaad hi nahi aa raha,Low Confidence
+The student is disoriented about this difficult formula.,Low Confidence
+I have totally lost on this coding block and I want guidance.,Low Confidence
+I have completely perfectly clear on this homework as the logic is solid.,High Confidence
+"I have no idea regarding this method, it is hopelessly stuck.",Low Confidence
+"Clearly on track, The team is sure about my performance.",High Confidence
+We are clear about my performance.,High Confidence
+formula thik lag raha hai par calculations verify karni hain,Medium Confidence
+"It might be right, but there are gaps in my knowledge.",Medium Confidence
+I feel clueless how to solve this.,Low Confidence
+it looks correct but need peer review,Medium Confidence
+I assume it is right but I want to verify.,Medium Confidence
+I've got clueless about this topic.,Low Confidence
+Probably this might be acceptable though I have some doubts with my teacher.,Medium Confidence
+Probably I am it is correct though I want to verify the details.,Medium Confidence
+I am 100% sure I am totally accurate about the topic and the results prove it.,High Confidence
+It seems this could be reasonable but I'm not 100% sure with my teacher.,Medium Confidence
+It seems it is plausible although I need some review.,Medium Confidence
+I feel completely really clueless on this coding block and I want guidance.,Low Confidence
+I've got frustrated what is going on here.,Low Confidence
+Maybe this might be right but I should double check before finalizing.,Medium Confidence
+I am completely and utterly totally uncertain on this coding block and I need clarification.,Low Confidence
+It looks like it is accurate though I want to verify the details.,Medium Confidence
+I absolutely feel undoubtedly on track about my performance without any hesitation.,High Confidence
+"Thoroughly confident, The team is sure of my answer.",High Confidence
+"I have no idea regarding this method, it is utterly befuddled.",Low Confidence
+class me samajh aya tha par ab thoda bhol raha hai,Medium Confidence
+I am totally struggling what is going on here and I want guidance.,Low Confidence
+My analysis shows I am fully clear with this approach after reviewing the notes.,High Confidence
+"Entirely secure, I feel sure on this homework.",High Confidence
+I suppose it is satisfactory but I should double check.,Medium Confidence
+"I have no idea on this assignment, it is hopelessly overwhelmed.",Low Confidence
+"It could potentially be right, but I should double check.",Medium Confidence
+I guess this might be accurate but I want to verify later tonight.,Medium Confidence
+Probably I am this could be reasonable but I should double check before finalizing.,Medium Confidence
+The student is clueless on this coding block.,Low Confidence
+I feel completely confused what is going on here.,Low Confidence
+I've got totally doubtful how to solve this and I want guidance.,Low Confidence
+"It seems to be acceptable, although I need some review.",Medium Confidence
+"Completely positive, I am definitely sure about the code logic.",High Confidence
+I am fully competent on this homework.,High Confidence
+I suspect it is fine although I need some review.,Medium Confidence
+I can easily confidently confident with this calculation and can explain it clearly.,High Confidence
+"100% sure, I am 100% sure I am sure on this homework.",High Confidence
+completely stuck on the first step,Low Confidence
+I feel perplexed about this topic.,Low Confidence
+I absolutely feel adept of my answer.,High Confidence
+"I have no idea with this math equation, it is totally confused.",Low Confidence
+"Certainly knowledgeable, I have completely sure regarding this concept.",High Confidence
+"Undoubtedly, I am fully adept regarding this concept and it makes perfect sense.",High Confidence
+"It should be plausible, but let me double-check.",Medium Confidence
+Probably I am this seems to be passable but I need to check with the class reference.,Medium Confidence
+"I have no idea about this topic, it is utterly confused.",Low Confidence
+I have completely absolutely accurate with this solution set after reviewing the notes.,High Confidence
+Probably it is correct but there are gaps in my knowledge.,Medium Confidence
+"surely correct, checked twice",High Confidence
+I am totally befuddled regarding this method.,Low Confidence
+"please help, mujhse ye solve nahi ho raha",Low Confidence
+"Totally prepared, I am 100% sure I am sure with this approach.",High Confidence
+i understand this fully and have no questions,High Confidence
+The problem is I am stuck on this question.,Low Confidence
+"It appears correct, but I have some minor hesitation.",Medium Confidence
+"I have no idea how to solve this, it is utterly frustrated.",Low Confidence
+We are clearly accurate regarding this concept and it makes perfect sense.,High Confidence
+"no confusion, output clear hai",High Confidence
+It seems this is likely to be ok but I should double check with my teacher.,Medium Confidence
+"100% adept, The team is sure regarding this concept.",High Confidence
+"I have no idea how to solve this, it is extremely befuddled.",Low Confidence
+"100% competent, I can easily sure on this homework.",High Confidence
+easy task tha main araam se kar lya,High Confidence
+I think this is likely passable though I want to verify the details with my classmates.,Medium Confidence
+I believe this appears correct but let me double-check with the textbook.,Medium Confidence
+I am completely and utterly severely doubtful regarding this method and I don't know what to do.,Low Confidence
+The student is lost on this question.,Low Confidence
+My analysis shows I am adept with this approach.,High Confidence
+i am fully satisfied with my solution,High Confidence
+sab kuch sar ke upar se nikal gya,Low Confidence
+"Undoubtedly satisfied, Undoubtedly, I am sure with this solution set.",High Confidence
+"It might be plausible, but I need to check.",Medium Confidence
+I absolutely feel thoroughly clear about this solution without any second thought.,High Confidence
+I assume this appears accurate but I'm not 100% sure with my teacher.,Medium Confidence
+"It is probably correct, but I should double check.",Medium Confidence
+"It is likely acceptable, but there are gaps in my knowledge.",Medium Confidence
+"It should be ok, although I need some review.",Medium Confidence
+"Undoubtedly on track, I have completely sure on this test.",High Confidence
+koi doubt nahi hai mujhe isme,High Confidence
+Probably I am it is fine but there are gaps in my knowledge.,Medium Confidence
+I think this might be plausible but I'm not 100% sure with the class reference.,Medium Confidence
+I am doubtful on this assignment.,Low Confidence
+I think this might be decent although I need some review in my notes.,Medium Confidence
+"It should be fine, though I have some doubts.",Medium Confidence
+"Completely expert, Undoubtedly, I am sure of my answer.",High Confidence
+I think it is plausible but I want to verify.,Medium Confidence
+"It should be passable, but I should double check.",Medium Confidence
+I think it is satisfactory but let me double-check.,Medium Confidence
+"Extremely expert, We are sure on this homework.",High Confidence
+I feel overwhelmed how to solve this.,Low Confidence
+"half formula yaad hai, half bhol gaya",Medium Confidence
+"I have no idea on this coding block, it is severely frustrated.",Low Confidence
+bina kisi hesitation ke ye correct answer hai,High Confidence
+"I have no idea about this difficult formula, it is severely disoriented.",Low Confidence
+mje full confirm h iska,High Confidence
+"It seems to be decent, though I need to review.",Medium Confidence
+"It is likely passable, although I need some review.",Medium Confidence
+I am completely and utterly really puzzled what is going on here and I am failing to understand.,Low Confidence
+I've got hopelessly struggling how to solve this so I am guessing the answer.,Low Confidence
+I am frustrated on this question.,Low Confidence
+"I have no idea regarding this method, it is utterly struggling.",Low Confidence
+"It could potentially be right, although I need some review.",Medium Confidence
+The student is deeply perplexed about this difficult formula because it is too hard.,Low Confidence
+"Entirely prepared, I have clearly sure with this calculation.",High Confidence
+I am completely and utterly befuddled with this basic concept.,Low Confidence
+I am completely puzzled how to solve this and I need clarification.,Low Confidence
+I feel frustrated how to solve this.,Low Confidence
+I am 100% sure I am certain on this homework.,High Confidence
+"It might be correct, but I need to check.",Medium Confidence
+I am fully competent concerning this subject and the results prove it.,High Confidence
+"I have no idea about this difficult formula, it is completely confused.",Low Confidence
+"I have no idea about this topic, it is totally stuck.",Low Confidence
+maths ke formula samajh nahi aate,Low Confidence
+"It could be reasonable, but I should double check.",Medium Confidence
+"It appears decent, though I have some doubts.",Medium Confidence
+"I have no idea with this basic concept, it is totally overwhelmed.",Low Confidence
+mujhse ye solution nahi banega,Low Confidence
+"Undoubtedly expert, I have completely sure about this solution.",High Confidence
+I've got really befuddled regarding this method and I need clarification.,Low Confidence
+"It is likely to be satisfactory, but let me double-check.",Medium Confidence
+I guess this looks acceptable but I have some minor hesitation before finalizing.,Medium Confidence
+mujhe poora confidence hai is answer pe,High Confidence
+I have severely stuck with this basic concept so I am guessing the answer.,Low Confidence
+"Totally accurate, I have completely sure about the topic.",High Confidence
+lagta to thik hai par senior se poochna parega,Medium Confidence
+sir g boht mushkil kaam hai ye,Low Confidence
+"bilkul confirm hai, isme koi issue nahi",High Confidence
+bhai bilkul confirm he ye answer,High Confidence
+I've got uncertain about this difficult formula.,Low Confidence
+I guess this could be ok but I should double check just in case.,Medium Confidence
+"maybe yes, but i need clarification",Medium Confidence
+50% sure hoon main is calculation par,Medium Confidence
+The student is clueless with this math equation.,Low Confidence
+I am confident regarding this concept.,High Confidence
+Probably I am this is probably passable but I want to verify in my notes.,Medium Confidence
+"I have no idea what the answer is, it is completely blank.",Low Confidence
+I have clearly certain about this solution.,High Confidence
+"Thoroughly accurate, The team is sure of my answer.",High Confidence
+I suspect it is correct but I need to check.,Medium Confidence
+"It is likely to be decent, though I have some doubts.",Medium Confidence
+"boht hi ganda concept he ye, samajh ni aya",Low Confidence
+I suspect it is acceptable though I want to verify the details.,Medium Confidence
+mere bas ka kaam nahi hai ye software engineering,Low Confidence
+My analysis shows I am clear with this solution set.,High Confidence
+It seems it is plausible but I'm not 100% sure.,Medium Confidence
+"Certainly satisfied, The team is sure concerning this subject.",High Confidence
+ek baar cross check karna parega,Medium Confidence
+"Clearly clear-headed, I am fully sure with this calculation.",High Confidence
+I can easily clearly confident on this test and I verified it twice.,High Confidence
+"Certainly knowledgeable, We are sure about the code logic.",High Confidence
+I am definitely prepared on this test without any second thought.,High Confidence
+"I have no idea with this math equation, it is dreadfully doubtful.",Low Confidence
+"Perfectly knowledgeable, My analysis shows I am sure with this calculation.",High Confidence
+I believe this might be satisfactory though I want to verify the details before finalizing.,Medium Confidence
+mere khyal se option b sahi hai par check karna hoga,Medium Confidence
+completely lost on this question,Low Confidence
+I absolutely feel expert with this approach.,High Confidence
+i think ye work karega but test krna hoga,Medium Confidence
+I am totally secure about the topic and there is no doubt.,High Confidence
+I absolutely feel undoubtedly correct with this calculation and there is no doubt.,High Confidence
+I believe it is correct but I'm not 100% sure.,Medium Confidence
+Maybe it is plausible but I'm not 100% sure.,Medium Confidence
+Probably it is passable though I have some doubts.,Medium Confidence
+I think it is fine but I need to check.,Medium Confidence
+I have clearly fully confident about my performance as the logic is solid.,High Confidence
+I have clearly certain on this test.,High Confidence
+i can easily explain the logic,High Confidence
+"Definitely secure, I can easily sure about my performance.",High Confidence
+mujhse ye nahi ho raha boht tough hai,Low Confidence
+"Undoubtedly prepared, I am 100% sure I am sure concerning this subject.",High Confidence
+i don't have any interest or understanding in this,Low Confidence
+"I have no idea regarding this method, it is deeply uncertain.",Low Confidence
+I can easily prepared about this solution.,High Confidence
+I feel dreadfully stuck about this difficult formula so I am guessing the answer.,Low Confidence
+"I have no idea on this question, it is extremely stuck.",Low Confidence
+"I have no idea on this assignment, it is really frustrated.",Low Confidence
+I feel struggling about this topic.,Low Confidence
+kuch cheezein bhol rahi hain mujhe,Medium Confidence
+I feel completely deeply overwhelmed about this topic and I don't know what to do.,Low Confidence
+"It might be decent, but I need to check.",Medium Confidence
+I absolutely feel definitely clear concerning this subject after reviewing the notes.,High Confidence
+"Definitely competent, I can easily sure about this solution.",High Confidence
+"I have no idea how to solve this, it is deeply stuck.",Low Confidence
+I can easily 100% positive with this approach as the logic is flawless.,High Confidence
+"Undoubtedly confident, I am definitely sure on this test.",High Confidence
+I guess it is satisfactory though I want to verify the details.,Medium Confidence
+"yes i got this, 100% sure",High Confidence
+The student is dreadfully disoriented with this math equation and I need help.,Low Confidence
+no idea how to solve this equation,Low Confidence
+i can't understand these mathematical formulas,Low Confidence
+"It could potentially be decent, but let me double-check.",Medium Confidence
+"It is probably acceptable, but I'm not 100% sure.",Medium Confidence
+"It is likely to be right, but I want to verify.",Medium Confidence
+I'm under the impression this is likely passable though I want to verify the details against the answers key.,Medium Confidence
+I assume this seems to be reasonable though I want to verify the details before submitting it.,Medium Confidence
+I became really overwhelmed what the answer is and I want guidance.,Low Confidence
+poora test easily solve ho jayega,High Confidence
+The student is deeply doubtful on this question and it makes no sense.,Low Confidence
+I'm under the impression it is correct but I should double check.,Medium Confidence
+kuch basic ideas clear hain bas details miss ho rhi hain,Medium Confidence
+I am 100% sure I am correct about this solution.,High Confidence
+I have frustrated how to solve this.,Low Confidence
+The problem is I am befuddled on this question.,Low Confidence
+I have completely correct that this is correct.,High Confidence
+I am extremely lost on this coding block and I am failing to understand.,Low Confidence
+I assume it is accurate though I want to verify the details.,Medium Confidence
+"sure answer hai, match ho gaya",High Confidence
+"Perfectly certain, Undoubtedly, I am sure regarding this concept.",High Confidence
+I became dreadfully perplexed about this difficult formula so I am guessing the answer.,Low Confidence
+We are thoroughly clear-headed of my answer after reviewing the notes.,High Confidence
+I believe this seems to be ok although I need some review with my classmates.,Medium Confidence
+I have completely positive with this solution set.,High Confidence
+"Fully sure, I have clearly sure that this is correct.",High Confidence
+"I have no idea about this difficult formula, it is utterly overwhelmed.",Low Confidence
+The student is severely doubtful regarding this method and I need clarification.,Low Confidence
+I suspect it is reasonable but let me double-check.,Medium Confidence
+"It is likely ok, though I need to review.",Medium Confidence
+I am 100% sure I am definitely accurate on this homework because I studied hard.,High Confidence
+I believe this is likely to be decent but I need to check with the textbook.,Medium Confidence
+"It is likely right, but I have some minor hesitation.",Medium Confidence
+I guess I might be it is right though I have some doubts.,Medium Confidence
+I believe it is plausible though I want to verify the details.,Medium Confidence
+kuch confusion hai concepts me,Medium Confidence
+Probably I am this could potentially be ok but I want to verify later tonight.,Medium Confidence
+I feel completely deeply perplexed with this basic concept since it is way too complicated.,Low Confidence
+"I have no idea with this math equation, it is totally puzzled.",Low Confidence
+"It is likely fine, but let me double-check.",Medium Confidence
+I assume this could potentially be fine though I need to review just in case.,Medium Confidence
+I am completely and utterly severely lost on this assignment and I need help.,Low Confidence
+My analysis shows I am extremely accurate on this test and I can teach others.,High Confidence
+I am 100% sure I am clear with this solution set.,High Confidence
+"Undoubtedly, I am completely satisfied about my performance and can explain it clearly.",High Confidence
+I'm under the impression this could be reasonable but I'm not 100% sure in my notes.,Medium Confidence
+"Undoubtedly, I am correct about this solution.",High Confidence
+I have clearly clear-headed about the code logic.,High Confidence
+Probably I am it is plausible but I need to check.,Medium Confidence
+I assume this looks passable but there are gaps in my knowledge before finalizing.,Medium Confidence
+I am undoubtedly certain about this solution as the logic is flawless.,High Confidence
+I am fully on track concerning this subject.,High Confidence
+I can easily prepared on this test.,High Confidence
+"It should be passable, but I have some minor hesitation.",Medium Confidence
+"Completely clear, The team is sure concerning this subject.",High Confidence
+"It is probably plausible, but I want to verify.",Medium Confidence
+"It is likely to be ok, though I need to review.",Medium Confidence
+"It appears decent, although I need some review.",Medium Confidence
+I am puzzled regarding this method.,Low Confidence
+Maybe this should be reasonable but I'm not 100% sure with my classmates.,Medium Confidence
+Probably it is right though I have some doubts.,Medium Confidence
+mostly clear hai but complex questions nahi hote,Medium Confidence
+I assume it is acceptable but I want to verify.,Medium Confidence
+It seems this appears passable but I want to verify just in case.,Medium Confidence
+is question me kya karna hai mje pata nahi,Low Confidence
+I suspect it is fine though I want to verify the details.,Medium Confidence
+"totally blank, no ideas at all",Low Confidence
+"Definitely positive, I feel sure on this homework.",High Confidence
+mai bina kisi book k ye samjha sakta hu,High Confidence
+highly confident about this result,High Confidence
+I've got dreadfully lost on this assignment and I am failing to understand.,Low Confidence
+I believe this could potentially be fine although I need some review later tonight.,Medium Confidence
+"I have no idea on this question, it is really clueless.",Low Confidence
+Maybe it is plausible though I want to verify the details.,Medium Confidence
+"aadha concept samajh aya hai, aadha baki hai",Medium Confidence
+"Undoubtedly clear-headed, I am definitely sure about the topic.",High Confidence
+"I have no idea on this assignment, it is completely blank.",Low Confidence
+"It looks acceptable, but let me double-check.",Medium Confidence
+I feel totally disoriented regarding this method and it makes no sense.,Low Confidence
+"Clearly correct, I feel sure concerning this subject.",High Confidence
+"I have no idea with this basic concept, it is deeply befuddled.",Low Confidence
+"It might be fine, but I want to verify.",Medium Confidence
+"Absolutely sure, My analysis shows I am sure about the code logic.",High Confidence
+"I have no idea on this assignment, it is deeply doubtful.",Low Confidence
+"ye to boht easy question tha, ho gaya",High Confidence
+"I have no idea how to solve this, it is dreadfully uncertain.",Low Confidence
+I became uncertain how to solve this.,Low Confidence
+I became deeply befuddled on this coding block and I want guidance.,Low Confidence
+I assume it is ok although I need some review.,Medium Confidence
+I guess this seems to be ok but there are gaps in my knowledge with the textbook.,Medium Confidence
+I feel puzzled about this difficult formula.,Low Confidence
+"Entirely positive, I absolutely feel sure about this solution.",High Confidence
+I absolutely feel certain with this calculation.,High Confidence
+mere concepts okay hain par practice kam he,Medium Confidence
+"It is probably acceptable, but let me double-check.",Medium Confidence
+It looks like this is likely to be satisfactory but I should double check just in case.,Medium Confidence
+"Fully expert, I can easily sure about this solution.",High Confidence
+I became utterly clueless about this topic since it is way too complicated.,Low Confidence
+I am completely and utterly hopelessly stuck regarding this method and I am failing to understand.,Low Confidence
+"Fully on track, I have clearly sure about my performance.",High Confidence
+"Totally secure, Undoubtedly, I am sure with this solution set.",High Confidence
+"Certainly certain, The team is sure that this is correct.",High Confidence
+"Totally expert, I have clearly sure with this solution set.",High Confidence
+"I have no idea regarding this method, it is totally lost.",Low Confidence
+"boht hi mushkil question hai, blank hoon main",Low Confidence
+I feel completely really overwhelmed on this question since it is way too complicated.,Low Confidence
+I have completely perfectly knowledgeable about my performance because it is easy.,High Confidence
+I suspect it is ok but I have some minor hesitation.,Medium Confidence
+I assume it is decent but I want to verify.,Medium Confidence
+"Totally competent, I am 100% sure I am sure on this homework.",High Confidence
+I guess it is right but I have some minor hesitation.,Medium Confidence
+"Genuinely secure, I have clearly sure about this solution.",High Confidence
+"I have no idea regarding this method, it is utterly clueless.",Low Confidence
+"It is probably reasonable, but I should double check.",Medium Confidence
+"It is likely to be plausible, though I need to review.",Medium Confidence
+I absolutely feel expert that this is correct.,High Confidence
+I can easily 100% on track with this solution set without any second thought.,High Confidence
+I am fully extremely sure about this solution and it makes perfect sense.,High Confidence
+"Clearly positive, Undoubtedly, I am sure about this solution.",High Confidence
+koshish ki hai par poora yakeen nahi hai,Medium Confidence
+We are thoroughly clear-headed on this homework and the results prove it.,High Confidence
+I suppose this looks decent but I need to check against the answers key.,Medium Confidence
+"100% correct, Undoubtedly, I am sure concerning this subject.",High Confidence
+I'm under the impression it is right but I should double check.,Medium Confidence
+"I have no idea what is going on here, it is hopelessly perplexed.",Low Confidence
+I am struggling on this question.,Low Confidence
+i guess this works but need to test,Medium Confidence
+"correct result hai, main proof kar sakta hoon",High Confidence
+I feel completely utterly perplexed about this difficult formula and I need clarification.,Low Confidence
+The student is doubtful regarding this method.,Low Confidence
+zero samajh aayi hai mujhe,Low Confidence
+I am befuddled on this question.,Low Confidence
+I'm under the impression it is plausible but let me double-check.,Medium Confidence
+"It might be correct, but let me double-check.",Medium Confidence
+I feel deeply lost on this coding block and I am failing to understand.,Low Confidence
+i am hopelessly stuck here,Low Confidence
+mujhe thoda boht samajh aaya hai,Medium Confidence
+"It could potentially be passable, but there are gaps in my knowledge.",Medium Confidence
+Probably it is decent although I need some review.,Medium Confidence
+everything is fully clear to me,High Confidence
+"I have no idea on this question, it is hopelessly uncertain.",Low Confidence
+I suppose this is likely to be satisfactory though I have some doubts against the answers key.,Medium Confidence
+"Undoubtedly, I am prepared that this is correct.",High Confidence
+I think it is decent although I need some review.,Medium Confidence
+The student is extremely doubtful what the answer is and I am failing to understand.,Low Confidence
+I have clearly secure about the code logic.,High Confidence
+I am totally clueless on this coding block.,Low Confidence
+I have clearly knowledgeable regarding this concept.,High Confidence
+"Fully certain, I am fully sure on this test.",High Confidence
+"Clearly satisfied, I have completely sure on this homework.",High Confidence
+It seems this is probably ok though I need to review before submitting it.,Medium Confidence
+I have doubtful how to solve this.,Low Confidence
+I believe it is decent although I need some review.,Medium Confidence
+"I have no idea on this question, it is completely overwhelmed.",Low Confidence
+"zero understanding, zero confidence",Low Confidence
+"I have no idea how to solve this, it is hopelessly lost.",Low Confidence
+I assume this should be accurate though I need to review before submitting it.,Medium Confidence
+I feel certain on this test.,High Confidence
+I feel deeply frustrated what the answer is and I want guidance.,Low Confidence
+"I have no idea on this coding block, it is utterly confused.",Low Confidence
+maine iski boht practice ki hai,High Confidence
+"It should be plausible, though I have some doubts.",Medium Confidence
+"I have no idea on this assignment, it is hopelessly stuck.",Low Confidence
+My analysis shows I am extremely accurate on this homework and the results prove it.,High Confidence
+I can easily fully correct regarding this concept and can explain it clearly.,High Confidence
+I feel puzzled with this math equation.,Low Confidence
+I feel frustrated on this coding block.,Low Confidence
+mje pura yakeen h is pr,High Confidence
+Probably this appears reasonable though I want to verify the details with my teacher.,Medium Confidence
+Maybe this seems to be passable but I have some minor hesitation with my classmates.,Medium Confidence
+Maybe this might be accurate but I should double check with the class reference.,Medium Confidence
+"I have no idea on this assignment, it is dreadfully uncertain.",Low Confidence
+"Genuinely knowledgeable, We are sure with this calculation.",High Confidence
+"Definitely confident, I am sure on this test.",High Confidence
+I have clearly confidently satisfied with this calculation and it makes perfect sense.,High Confidence
+"It looks correct, but I'm not 100% sure.",Medium Confidence
+I believe it is reasonable but I want to verify.,Medium Confidence
+"Totally confident, We are sure that this is correct.",High Confidence
+I am totally clueless about this difficult formula.,Low Confidence
+"It seems to be acceptable, but I want to verify.",Medium Confidence
+I am totally disoriented what is going on here.,Low Confidence
+I suppose it is accurate but I need to check.,Medium Confidence
+I became completely frustrated about this difficult formula and I want guidance.,Low Confidence
+"I have no idea about this difficult formula, it is hopelessly confused.",Low Confidence
+I'm under the impression this should be satisfactory though I need to review before finalizing.,Medium Confidence
+"Perfectly prepared, I have clearly sure with this approach.",High Confidence
+I became really stuck on this coding block and I want guidance.,Low Confidence
+I am completely and utterly doubtful about this difficult formula.,Low Confidence
+I am fully absolutely certain about this solution and the results prove it.,High Confidence
+"I have no idea what the answer is, it is deeply perplexed.",Low Confidence
+I am definitely clearly expert about the topic as the logic is flawless.,High Confidence
+Maybe this is likely to be passable but I need to check against the answers key.,Medium Confidence
+"I have no idea on this coding block, it is deeply lost.",Low Confidence
+"I have no idea what the answer is, it is severely blank.",Low Confidence
+Maybe this seems to be plausible though I want to verify the details in my notes.,Medium Confidence
+My analysis shows I am thoroughly expert about my performance because it is easy.,High Confidence
+"It is probably plausible, but let me double-check.",Medium Confidence
+"Entirely clear-headed, We are sure with this approach.",High Confidence
+My analysis shows I am knowledgeable about my performance.,High Confidence
+I am 100% sure I am 100% satisfied with this approach and there is no doubt.,High Confidence
+"shayad ye sahi ho sakta hai, confirm nahi",Medium Confidence
+I have uncertain with this basic concept.,Low Confidence
+The problem is I am doubtful on this coding block.,Low Confidence
+"I have no idea what the answer is, it is deeply clueless.",Low Confidence
+i solved it without any help,High Confidence
+"Genuinely prepared, I have completely sure on this homework.",High Confidence
+"It looks ok, though I have some doubts.",Medium Confidence
+I can easily confident with this approach.,High Confidence
+"I have no idea regarding this method, it is hopelessly doubtful.",Low Confidence
+"It is probably plausible, but I'm not 100% sure.",Medium Confidence
+I'm under the impression it is passable but I want to verify.,Medium Confidence
+"I have no idea what is going on here, it is utterly confused.",Low Confidence
+I am prepared on this test.,High Confidence
+It looks like this could potentially be fine though I have some doubts before submitting it.,Medium Confidence
+"help me, main bilkul blank hoon",Low Confidence
+The student is completely overwhelmed with this math equation because it is too hard.,Low Confidence
+I feel deeply stuck with this math equation and I need help.,Low Confidence
+"It is likely reasonable, but let me double-check.",Medium Confidence
+"I have no idea what the answer is, it is completely overwhelmed.",Low Confidence
+maine saare steps sahi kiye hain,High Confidence
+thoda sa doubt hai answer pr,Medium Confidence
+mujhe bilkul confirm pata hai,High Confidence
+"Thoroughly knowledgeable, I have completely sure on this test.",High Confidence
+Probably I am this looks satisfactory but I want to verify just in case.,Medium Confidence
+"I have no idea on this coding block, it is severely blank.",Low Confidence
+main bilkul sure nahi hoon par check kar leta hoon,Medium Confidence
+I have clearly competent with this solution set.,High Confidence
+meray sare concepts crystal clear hain,High Confidence
+I can easily certain of my answer.,High Confidence
+I am completely overwhelmed on this question and I need someone to explain it.,Low Confidence
+"It is probably decent, though I need to review.",Medium Confidence
+"I have no idea with this basic concept, it is really disoriented.",Low Confidence
+The problem is I am really frustrated with this math equation and I need someone to explain it.,Low Confidence
+I feel completely completely blank what the answer is and I am failing to understand.,Low Confidence
+The problem is I am extremely disoriented with this math equation because it is too hard.,Low Confidence
+"It appears fine, though I have some doubts.",Medium Confidence
+I am 100% sure I am positive concerning this subject.,High Confidence
+I have deeply doubtful on this question so I am guessing the answer.,Low Confidence
+"perfectly understood, ready for next topic",High Confidence
+dimagh ka dahi ho gaya hai is topic pr,Low Confidence
+I believe it is fine but I want to verify.,Medium Confidence
+It looks like it is fine but let me double-check.,Medium Confidence
+"Definitely correct, The team is sure with this calculation.",High Confidence
+I assume it is plausible but I should double check.,Medium Confidence
+I became utterly frustrated what the answer is and it makes no sense.,Low Confidence
+It seems it is fine but I'm not 100% sure.,Medium Confidence
+I am extremely certain concerning this subject without any second thought.,High Confidence
+"I have no idea with this basic concept, it is dreadfully stuck.",Low Confidence
+I absolutely feel sure with this solution set.,High Confidence
+I suspect this is probably fine though I need to review with the class reference.,Medium Confidence
+I guess this could be fine though I need to review against the answers key.,Medium Confidence
+"It looks correct, but let me double-check.",Medium Confidence
+"I have no idea with this math equation, it is utterly confused.",Low Confidence
+"I have no idea regarding this method, it is extremely perplexed.",Low Confidence
+"Certainly prepared, I have clearly sure about this solution.",High Confidence
+I suspect this could be right but I need to check against the answers key.,Medium Confidence
+"I have no idea on this question, it is completely blank.",Low Confidence
+"Definitely competent, I am definitely sure about the topic.",High Confidence
+totally clueless about this chapter,Low Confidence
+I assume this looks decent but I should double check with my teacher.,Medium Confidence
+I can easily undoubtedly clear with this approach because I studied hard.,High Confidence
+"It might be right, though I have some doubts.",Medium Confidence
+I believe this seems to be passable though I have some doubts with the class reference.,Medium Confidence
+I've got puzzled about this difficult formula.,Low Confidence
+I've got befuddled on this assignment.,Low Confidence
+I am befuddled with this basic concept.,Low Confidence
+"I have no idea about this topic, it is totally doubtful.",Low Confidence
+We are thoroughly satisfied about the topic because I studied hard.,High Confidence
+I became frustrated how to solve this.,Low Confidence
+"Entirely correct, We are sure about my performance.",High Confidence
+"It could be correct, though I want to verify the details.",Medium Confidence
+"I have no idea with this math equation, it is dreadfully befuddled.",Low Confidence
+aadha samajh aaya hai aadha nahi,Medium Confidence
+I feel confidently clear-headed about this solution as the logic is flawless.,High Confidence
+I am fully genuinely clear-headed about this solution because it is easy.,High Confidence
+"It is likely to be satisfactory, but I should double check.",Medium Confidence
+I can easily on track about the topic.,High Confidence
+I am completely and utterly uncertain with this basic concept.,Low Confidence
+The problem is I am struggling with this basic concept.,Low Confidence
+I became doubtful about this topic.,Low Confidence
+I assume it is correct but I have some minor hesitation.,Medium Confidence
+My analysis shows I am completely accurate with this calculation because it is easy.,High Confidence
+"It could potentially be right, but I have some minor hesitation.",Medium Confidence
+"I have no idea regarding this method, it is really struggling.",Low Confidence
+"Confidently clear, I have completely sure about the topic.",High Confidence
+I am 100% sure I am secure on this homework.,High Confidence
+I became blank what is going on here.,Low Confidence
+I can easily on track regarding this concept.,High Confidence
+I feel stuck about this difficult formula.,Low Confidence
+I am definitely extremely adept concerning this subject and I verified it twice.,High Confidence
+I am fully satisfied about this solution.,High Confidence
+"Absolutely accurate, Undoubtedly, I am sure of my answer.",High Confidence
+concepts thode clear hain lekin poore nahi,Medium Confidence
+"Genuinely competent, I am sure on this test.",High Confidence
+The student is dreadfully clueless with this math equation so I am guessing the answer.,Low Confidence
+It seems this is likely plausible but I want to verify just in case.,Medium Confidence
+"Genuinely clear-headed, The team is sure about the topic.",High Confidence
+"I have no idea regarding this method, it is really disoriented.",Low Confidence
+The student is completely uncertain on this assignment since it is way too complicated.,Low Confidence
+"Thoroughly competent, I have completely sure about my performance.",High Confidence
+The student is overwhelmed with this basic concept.,Low Confidence
+I believe this could potentially be acceptable though I have some doubts just in case.,Medium Confidence
+"It is likely to be plausible, although I need some review.",Medium Confidence
+bhai ye 100 percent correct answer hai,High Confidence
+"I have no idea on this coding block, it is severely clueless.",Low Confidence
+I absolutely feel sure regarding this concept.,High Confidence
+I guess I might be this looks fine but I need to check before finalizing.,Medium Confidence
+thoda mushkil laga par samajh aa gaya thoda,Medium Confidence
+ye solution 100% tested aur verified hai,High Confidence
+We are undoubtedly on track concerning this subject and I can teach others.,High Confidence
+I have completely positive about the code logic.,High Confidence
+I feel absolutely sure with this solution set and can explain it clearly.,High Confidence
+"It might be passable, but there are gaps in my knowledge.",Medium Confidence
+My analysis shows I am absolutely accurate that this is correct because I studied hard.,High Confidence
+answer perfect hai main check kar chuka hoon,High Confidence
+I've got befuddled about this topic.,Low Confidence
+"easy peasy, fully prepared hoon",High Confidence
+"maybe this is right, but not 100% sure",Medium Confidence
+It seems it is reasonable but let me double-check.,Medium Confidence
+I have clearly correct about my performance.,High Confidence
+i failed to solve this even after trying twice,Low Confidence
+"Perfectly satisfied, I absolutely feel sure about this solution.",High Confidence
+"It should be decent, though I need to review.",Medium Confidence
+I am totally befuddled on this assignment.,Low Confidence
+"I have no idea about this difficult formula, it is hopelessly disoriented.",Low Confidence
+I feel completely stuck with this math equation.,Low Confidence
+I believe this is likely plausible though I want to verify the details against the answers key.,Medium Confidence
+Probably I am it is reasonable but I have some minor hesitation.,Medium Confidence
+My analysis shows I am totally certain with this approach after reviewing the notes.,High Confidence
+I suspect this might be correct but I have some minor hesitation with my teacher.,Medium Confidence
+Probably I am it is plausible though I want to verify the details.,Medium Confidence
+I've got dreadfully befuddled with this math equation and I need someone to explain it.,Low Confidence
+"It could potentially be right, but I need to check.",Medium Confidence
+kuch points clear hain but full detail nahi aati,Medium Confidence
+"completely unconfident, i will fail",Low Confidence
+"ye to 2 mins ka kaam tha, solve ho gaya",High Confidence
+It seems it is satisfactory although I need some review.,Medium Confidence
+I became completely stuck about this difficult formula and I am failing to understand.,Low Confidence
+"Undoubtedly, I am totally correct about the code logic because it is easy.",High Confidence
+I am definitely sure about the topic.,High Confidence
+is topic me meri mastery hai,High Confidence
+I am severely clueless what the answer is because it is too hard.,Low Confidence
+I'm under the impression it is decent but let me double-check.,Medium Confidence
+I guess it is accurate but there are gaps in my knowledge.,Medium Confidence
+The problem is I am deeply frustrated how to solve this and it makes no sense.,Low Confidence
+"Absolutely certain, I absolutely feel sure on this homework.",High Confidence
+I guess I might be it is decent but let me double-check.,Medium Confidence
+I think it is passable though I want to verify the details.,Medium Confidence
+I feel completely utterly disoriented on this coding block and I am failing to understand.,Low Confidence
+"Undoubtedly, I am absolutely clear regarding this concept and can explain it clearly.",High Confidence
+I believe it is right but I have some minor hesitation.,Medium Confidence
+"I have no idea what is going on here, it is totally uncertain.",Low Confidence
+I suspect this could be correct but I'm not 100% sure later tonight.,Medium Confidence
+mujhe kuch bhi recall nahi ho raha,Low Confidence
+"Completely clear, Undoubtedly, I am sure on this homework.",High Confidence
+I've got befuddled on this coding block.,Low Confidence
+i guess i am on the right track,Medium Confidence
+"I have no idea with this basic concept, it is completely stuck.",Low Confidence
+almost correct lag raha he,Medium Confidence
+"I have no idea how to solve this, it is utterly perplexed.",Low Confidence
+It seems this might be decent but I should double check with my classmates.,Medium Confidence
+I can easily satisfied about my performance.,High Confidence
+I'm under the impression it is reasonable though I have some doubts.,Medium Confidence
+I assume it is passable but I have some minor hesitation.,Medium Confidence
+Maybe it is ok though I want to verify the details.,Medium Confidence
+mujhe boht confusion ho rahi hai,Low Confidence
+"It appears ok, but I have some minor hesitation.",Medium Confidence
+mujhe basic concepts bhi clear nahi hain,Low Confidence
+The student is stuck with this basic concept.,Low Confidence
+I became utterly perplexed how to solve this and I don't know what to do.,Low Confidence
+I feel definitely clear that this is correct after reviewing the notes.,High Confidence
+"I have no idea about this difficult formula, it is dreadfully befuddled.",Low Confidence
+I feel completely confused about this topic.,Low Confidence
+"It is probably decent, but I'm not 100% sure.",Medium Confidence
+"It should be accurate, but I want to verify.",Medium Confidence
+I am definitely definitely clear-headed about my performance because I studied hard.,High Confidence
+"It seems to be correct, though I want to verify the details.",Medium Confidence
+I became blank on this coding block.,Low Confidence
+"Entirely secure, I feel sure on this test.",High Confidence
+"Clearly expert, I am 100% sure I am sure with this solution set.",High Confidence
+I am fully completely expert with this calculation without any hesitation.,High Confidence
+The student is doubtful with this basic concept.,Low Confidence
+I can easily undoubtedly sure of my answer and can explain it clearly.,High Confidence
+"Undoubtedly, I am completely confident about the topic because I studied hard.",High Confidence
+"Undoubtedly secure, I have completely sure with this calculation.",High Confidence
+I have clearly correct concerning this subject.,High Confidence
+"It should be decent, but I want to verify.",Medium Confidence
+I've got frustrated regarding this method.,Low Confidence
+"It might be decent, but I should double check.",Medium Confidence
+I am utterly frustrated on this question and I am failing to understand.,Low Confidence
+"Genuinely certain, I feel sure about my performance.",High Confidence
+"Undoubtedly, I am satisfied about the topic.",High Confidence
+It looks like it is fine though I need to review.,Medium Confidence
+I am thoroughly positive with this solution set and I can teach others.,High Confidence
+"concept crystal clear, doubts clear",High Confidence
+Probably I am this should be correct but I need to check with my teacher.,Medium Confidence
+"It could be satisfactory, but I need to check.",Medium Confidence
+"Completely positive, I feel sure on this homework.",High Confidence
+I feel stuck what is going on here.,Low Confidence
+I assume this appears passable but there are gaps in my knowledge just in case.,Medium Confidence
+"I have no idea about this difficult formula, it is totally disoriented.",Low Confidence
+I have clearly certainly positive on this test because I studied hard.,High Confidence
+shayad ye sahi hai par check karna parega,Medium Confidence
+I have clearly absolutely adept about my performance because it is easy.,High Confidence
+It seems this seems to be decent but I have some minor hesitation in my notes.,Medium Confidence
+"I have no idea about this topic, it is really blank.",Low Confidence
+"Fully expert, I have clearly sure regarding this concept.",High Confidence
+"I have no idea what is going on here, it is totally puzzled.",Low Confidence
+"It looks right, but I should double check.",Medium Confidence
+I am fully positive on this test.,High Confidence
+The problem is I am uncertain with this math equation.,Low Confidence
+"It could be reasonable, but let me double-check.",Medium Confidence
+Probably I am this might be reasonable but let me double-check in my notes.,Medium Confidence
+mujhe poora yakeen hai ye sahi hai,High Confidence
+perfectly done by me,High Confidence
+I guess I might be this is likely decent but let me double-check with my teacher.,Medium Confidence
+mujhe 70% sure he ke yehi answer he,Medium Confidence
+I can easily 100% satisfied about my performance without any second thought.,High Confidence
+I am totally uncertain on this assignment.,Low Confidence
+Maybe this could potentially be correct but I have some minor hesitation before submitting it.,Medium Confidence
+I am definitely certainly satisfied with this solution set without any hesitation.,High Confidence
+I'm under the impression it is fine but I'm not 100% sure.,Medium Confidence
+We are perfectly on track with this solution set and there is no doubt.,High Confidence
+"It seems to be fine, but I'm not 100% sure.",Medium Confidence
+"It is likely ok, but I need to check.",Medium Confidence
+"It seems to be satisfactory, but I'm not 100% sure.",Medium Confidence
+I am prepared of my answer.,High Confidence
+I am doubtful about this difficult formula.,Low Confidence
+"hope ye sahi ho, main verify karunga",Medium Confidence
+It seems this should be correct but there are gaps in my knowledge later tonight.,Medium Confidence
+It seems it is satisfactory but I need to check.,Medium Confidence
+I have clearly sure about my performance.,High Confidence
+pata nahi kya chal raha hai is code me,Low Confidence
+"It is probably acceptable, but there are gaps in my knowledge.",Medium Confidence
+I am totally utterly frustrated with this basic concept and I am failing to understand.,Low Confidence
+"I have no idea on this assignment, it is really lost.",Low Confidence
+I've got doubtful regarding this method.,Low Confidence
+I am dreadfully disoriented on this coding block since it is way too complicated.,Low Confidence
+I can easily sure about the code logic.,High Confidence
+The team is totally secure that this is correct and there is no doubt.,High Confidence
+The student is doubtful how to solve this.,Low Confidence
+The team is on track about the code logic.,High Confidence
+Maybe it is satisfactory but there are gaps in my knowledge.,Medium Confidence
+I have clearly clear of my answer.,High Confidence
+I became really befuddled how to solve this and it makes no sense.,Low Confidence
+I suppose it is decent but I want to verify.,Medium Confidence
+"It is probably accurate, but I want to verify.",Medium Confidence
+"Confidently clear, I am 100% sure I am sure with this approach.",High Confidence
+I can easily completely prepared about the topic because it is easy.,High Confidence
+Probably I am this appears correct but I need to check before submitting it.,Medium Confidence
+"I have no idea about this topic, it is dreadfully befuddled.",Low Confidence
+main confirm hoon ye answer right hai,High Confidence
+I think this could be ok although I need some review in my notes.,Medium Confidence
+My analysis shows I am clear-headed of my answer.,High Confidence
+"I have no idea how to solve this, it is severely struggling.",Low Confidence
+"I have no idea about this topic, it is utterly perplexed.",Low Confidence
+I feel doubtful about this difficult formula.,Low Confidence
+mujhe kuch bhi samajh nahi aa raha,Low Confidence
+I have completely perplexed on this question and I don't know what to do.,Low Confidence
+"It might be right, but I'm not 100% sure.",Medium Confidence
+I feel positive concerning this subject.,High Confidence
+"I have no idea about this topic, it is deeply puzzled.",Low Confidence
+"It could potentially be decent, though I want to verify the details.",Medium Confidence
+We are confident on this homework.,High Confidence
+It seems it is passable although I need some review.,Medium Confidence
+It seems it is fine though I want to verify the details.,Medium Confidence
+I am overwhelmed with this math equation.,Low Confidence
+"100% confident, I can easily sure concerning this subject.",High Confidence
+I've got lost what is going on here.,Low Confidence
+"Undoubtedly expert, I am fully sure about my performance.",High Confidence
+I became severely doubtful what the answer is because it is too hard.,Low Confidence
+"I have no idea on this assignment, it is utterly struggling.",Low Confidence
+"I have no idea what is going on here, it is utterly perplexed.",Low Confidence
+I believe this looks decent though I need to review just in case.,Medium Confidence
+I'm under the impression it is reasonable though I need to review.,Medium Confidence
+I've got puzzled what is going on here.,Low Confidence
+"I have no idea on this question, it is utterly befuddled.",Low Confidence
+"Clearly adept, I can easily sure with this solution set.",High Confidence
+The student is severely disoriented regarding this method and I need clarification.,Low Confidence
+I suppose this should be correct but I'm not 100% sure in my notes.,Medium Confidence
+It seems this should be ok but let me double-check against the answers key.,Medium Confidence
+"It is likely right, though I have some doubts.",Medium Confidence
+I absolutely feel expert concerning this subject.,High Confidence
+I feel puzzled how to solve this.,Low Confidence
+"It might be acceptable, but there are gaps in my knowledge.",Medium Confidence
+"I have no idea what the answer is, it is completely puzzled.",Low Confidence
+I am confidently confident with this calculation and I verified it twice.,High Confidence
+"Confidently positive, We are sure with this solution set.",High Confidence
+The problem is I am utterly perplexed what the answer is and it makes no sense.,Low Confidence
+"Undoubtedly, I am prepared about this solution.",High Confidence
+The problem is I am severely blank what is going on here and it is very frustrating.,Low Confidence
+I am totally confident about this solution and can explain it clearly.,High Confidence
+meray sar me dard ho rha h is topic se,Low Confidence
+The student is dreadfully stuck on this question and it makes no sense.,Low Confidence
+I guess I might be this could be satisfactory though I need to review just in case.,Medium Confidence
+"It appears reasonable, although I need some review.",Medium Confidence
+"Fully prepared, I absolutely feel sure with this approach.",High Confidence
+It looks like it is plausible but I want to verify.,Medium Confidence
+"I have no idea what the answer is, it is totally frustrated.",Low Confidence
+I guess I might be this could potentially be right but let me double-check against the answers key.,Medium Confidence
+"It is probably reasonable, though I want to verify the details.",Medium Confidence
+"I have no idea with this basic concept, it is dreadfully overwhelmed.",Low Confidence
+yes sure answer is correct,High Confidence
+"Undoubtedly, I am positive with this solution set.",High Confidence
+thoda mushkil tha but maine try kiya hai,Medium Confidence
+I am definitely thoroughly expert of my answer as the logic is solid.,High Confidence
+"Clearly positive, I am 100% sure I am sure on this homework.",High Confidence
+It seems it is accurate but I need to check.,Medium Confidence
+I am totally perplexed with this math equation so I am guessing the answer.,Low Confidence
+I feel really confused on this assignment because it is too hard.,Low Confidence
+I am completely and utterly stuck how to solve this.,Low Confidence
+"Totally confident, I can easily sure with this approach.",High Confidence
+I feel completely frustrated what is going on here.,Low Confidence
+"It appears satisfactory, but I have some minor hesitation.",Medium Confidence
+I suspect this could potentially be acceptable but there are gaps in my knowledge with my teacher.,Medium Confidence
+I'm under the impression this could be satisfactory but let me double-check with my teacher.,Medium Confidence
+"It might be satisfactory, but let me double-check.",Medium Confidence
+zero knowledge hai meri is topic pr,Low Confidence
+mujhe complete commands hain is per,High Confidence
+"I have no idea regarding this method, it is hopelessly perplexed.",Low Confidence
+I am totally perplexed on this coding block.,Low Confidence
+The student is utterly uncertain regarding this method and I want guidance.,Low Confidence
+I believe it is accurate but there are gaps in my knowledge.,Medium Confidence
+"Undoubtedly knowledgeable, The team is sure with this calculation.",High Confidence
+The team is thoroughly certain about my performance because it is easy.,High Confidence
+"It is probably acceptable, though I have some doubts.",Medium Confidence
+The problem is I am uncertain on this question.,Low Confidence
+maine code run kiya aur correct output aya,High Confidence
+"100% confident, I am definitely sure of my answer.",High Confidence
+The problem is I am severely blank how to solve this and I am failing to understand.,Low Confidence
+"It could potentially be fine, but I want to verify.",Medium Confidence
+I am completely and utterly utterly clueless on this question and I need clarification.,Low Confidence
+"Genuinely clear-headed, I am 100% sure I am sure concerning this subject.",High Confidence
+"I have no idea how to solve this, it is extremely clueless.",Low Confidence
+"I have no idea about this topic, it is hopelessly befuddled.",Low Confidence
+I assume it is passable but there are gaps in my knowledge.,Medium Confidence
+mujhse bilkul nahi ho raha ye,Low Confidence
+Probably I am this is likely to be right though I have some doubts in my notes.,Medium Confidence
+"I have no idea on this assignment, it is totally disoriented.",Low Confidence
+"I have no idea on this coding block, it is utterly blank.",Low Confidence
+I am 100% sure I am certainly on track of my answer without any hesitation.,High Confidence
+"Absolutely confident, I am 100% sure I am sure that this is correct.",High Confidence
+I suspect it is passable but I'm not 100% sure.,Medium Confidence
+I am completely and utterly deeply puzzled on this assignment and I need help.,Low Confidence
+It looks like this should be acceptable but there are gaps in my knowledge just in case.,Medium Confidence
+"It could potentially be plausible, but let me double-check.",Medium Confidence
+This is a brand new test sample for model training.,High Confidence
