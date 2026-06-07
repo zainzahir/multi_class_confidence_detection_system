@@ -1,67 +1,196 @@
 text,confidence_level
-"I am absolutely certain about this solution and can explain it clearly",High Confidence
-"This seems correct based on my understanding of the concepts",High Confidence
-"I'm confident that my approach will work effectively",High Confidence
-"I have mastered this topic and can teach others",High Confidence
-"The answer is clear and I can defend my reasoning",High Confidence
-"I think this might be correct but I'm not entirely sure",Medium Confidence
-"I believe this answer is probably right, though I need to verify",Medium Confidence
-"I have some understanding but there are gaps in my knowledge",Medium Confidence
-"This could work but I'd like to double-check my approach",Medium Confidence
-"I'm reasonably confident but there might be better solutions",Medium Confidence
-"I'm really confused about this topic and need help",Low Confidence
-"I have no idea what the answer might be",Low Confidence
-"This doesn't make sense to me at all",Low Confidence
-"I'm struggling to understand this concept",Low Confidence
-"I would need more guidance to solve this problem",Low Confidence
-"I feel uncertain because I haven't practiced this much",Low Confidence
-"My understanding is incomplete and I need clarification",Low Confidence
-"I can solve this with complete accuracy and explain every step",High Confidence
-"I've seen similar problems before and I know how to approach this",High Confidence
-"I might need to review some parts before finalizing",Medium Confidence
-"mujhe poora yakeen hai ye sahi hai",High Confidence
-"ye bilkul sahi answer hai",High Confidence
-"maine saare steps sahi kiye hain",High Confidence
-"concept bilkul clear hai mujhe",High Confidence
-"mujhe is topic par poori grip hai",High Confidence
-"bilkul sahi samajh aayi hai mujhe",High Confidence
-"easy tha main araam se kar sakta hoon",High Confidence
-"koi doubt nahi hai mujhe isme",High Confidence
-"meri understanding bilkul perfect hai",High Confidence
-"bina kisi shak ke ye sahi hai",High Confidence
-"main isey doosron ko bhi samjha sakta hoon",High Confidence
-"haji bilkul 100% sahi hai",High Confidence
-"mujhe bilkul confirm pata hai",High Confidence
-"maine ache se samjha hai ye topic",High Confidence
-"main confirm hoon ye answer right hai",High Confidence
-"mujhe thoda boht samajh aaya hai",Medium Confidence
-"shayad ye sahi hai par check karna parega",Medium Confidence
-"thodi confusion hai lekin sahi lag raha hai",Medium Confidence
-"kuch concepts samajh aaye hain kuch nahi",Medium Confidence
-"main confirm nahi hoon lekin shayad sahi ho",Medium Confidence
-"mujhe thoda aur practice ki zaroorat hai",Medium Confidence
-"concepts thode clear hain lekin poore nahi",Medium Confidence
-"kuch cheezein bhol rahi hain mujhe",Medium Confidence
-"maybe ye sahi ho par confirm nahi",Medium Confidence
-"koshish ki hai par poora yakeen nahi hai",Medium Confidence
-"thoda mushkil laga par samajh aa gaya thoda",Medium Confidence
-"aadha samajh aaya hai aadha nahi",Medium Confidence
-"kuch points clear hain aur kuch me doubt hai",Medium Confidence
-"mujhse thodi galti ho sakti hai isme",Medium Confidence
-"check karna parega par lagta hai thik hai",Medium Confidence
-"mujhe bilkul samajh nahi aaya",Low Confidence
-"boht mushkil hai ye topic mere liye",Low Confidence
-"mujhe kuch bhi samajh nahi aa raha",Low Confidence
-"mujhe boht confusion ho rahi hai",Low Confidence
-"main completely blank hoon isme",Low Confidence
-"mujhse ye nahi ho raha boht tough hai",Low Confidence
-"meri samajh se bahar hai ye sab",Low Confidence
-"help chahiye mujhe kuch samajh nahi aa raha",Low Confidence
-"koi concept clear nahi hai mera isme",Low Confidence
-"mujhe bilkul yakeen nahi hai apne answer par",Low Confidence
-"sab sir ke oopar se guzar gaya",Low Confidence
-"zero samajh aayi hai mujhe",Low Confidence
-"mujhe is topic par boht doubt hai kuch samajh nahi aya",Low Confidence
-"boht mushkil lag raha hai ye question",Low Confidence
-"bilkul palle nahi para ye concept",Low Confidence
-This is a brand new test sample for model training.,High Confidence
+I am absolutely certain about this solution and can explain it clearly.,High Confidence
+This seems correct based on my understanding of the concepts.,High Confidence
+I'm confident that my approach will work effectively.,High Confidence
+I have mastered this topic and can teach others.,High Confidence
+The answer is clear and I can defend my reasoning.,High Confidence
+I can solve this with complete accuracy and explain every step.,High Confidence
+I've seen similar problems before and I know how to approach this.,High Confidence
+I am 100% sure about the accuracy of this statement.,High Confidence
+I understand this concept completely and have no doubts.,High Confidence
+"This is the correct method, I am positive about it.",High Confidence
+I have a strong grip on this subject matter.,High Confidence
+I can easily prove why this answer is correct.,High Confidence
+I solved this without any hesitation or difficulty.,High Confidence
+My solution is correct because I checked all parameters.,High Confidence
+I am fully prepared to explain this logic in detail.,High Confidence
+There is no doubt that this is the right answer.,High Confidence
+I have verified this formula and it works perfectly.,High Confidence
+I am absolutely sure of the output here.,High Confidence
+This is extremely easy for me to solve.,High Confidence
+I fully understand the underlying principles of this topic.,High Confidence
+I have clear and concrete reasoning behind this solution.,High Confidence
+I can confidently say this is the correct answer.,High Confidence
+I have successfully resolved similar issues in the past.,High Confidence
+I am certain that my calculations are accurate.,High Confidence
+This concept is clear and straightforward to apply.,High Confidence
+I am positive that this approach is the most efficient.,High Confidence
+I have a thorough understanding of the material.,High Confidence
+My analysis is complete and fully correct.,High Confidence
+I am fully confident in the validity of these results.,High Confidence
+I can explain this code line by line with ease.,High Confidence
+I am completely sure this is the right way to do it.,High Confidence
+The logic here is sound and correct.,High Confidence
+I have solved this problem multiple times successfully.,High Confidence
+I have a solid understanding of how this works.,High Confidence
+I am absolutely confident in my performance on this test.,High Confidence
+This is correct without any doubt.,High Confidence
+I am very confident in my understanding of this chapter.,High Confidence
+I have zero doubts about this specific topic.,High Confidence
+The reasoning is mathematically sound and correct.,High Confidence
+I know exactly how to solve this type of equation.,High Confidence
+I am perfectly clear about this concept.,High Confidence
+I can write this program without looking at any references.,High Confidence
+"This is correct, I have verified it with the notes.",High Confidence
+"I am sure about this, I tested it myself.",High Confidence
+My knowledge on this is solid and complete.,High Confidence
+I have full confidence in my answers.,High Confidence
+I am certain about the logic used here.,High Confidence
+This is definitely correct.,High Confidence
+I have complete clarity on this subject.,High Confidence
+I am sure I did this correctly.,High Confidence
+I think this might be correct but I'm not entirely sure.,Medium Confidence
+"I believe this answer is probably right, though I need to verify.",Medium Confidence
+I have some understanding but there are gaps in my knowledge.,Medium Confidence
+This could work but I'd like to double-check my approach.,Medium Confidence
+I'm reasonably confident but there might be better solutions.,Medium Confidence
+I might need to review some parts before finalizing.,Medium Confidence
+"I think I understand the basic idea, but the details are a bit fuzzy.",Medium Confidence
+"I am mostly sure, but I have a few questions.",Medium Confidence
+"This seems correct, but I should check the textbook again.",Medium Confidence
+"I have a general idea of how to solve this, but I'm not certain.",Medium Confidence
+"I believe I followed the correct steps, hopefully.",Medium Confidence
+"I'm relatively sure about the first half, but not the second.",Medium Confidence
+"This is probably correct, but I'm open to correction.",Medium Confidence
+"I think I did it right, but I need to test it first.",Medium Confidence
+"I have a decent understanding, though some points are unclear.",Medium Confidence
+I am partially confident in this response.,Medium Confidence
+"I think I got the correct output, but I'm not 100% sure.",Medium Confidence
+I have a basic understanding of this topic.,Medium Confidence
+"This seems like the right way, but it could be wrong.",Medium Confidence
+I am somewhat sure about this solution.,Medium Confidence
+I might have made a small mistake in the calculations.,Medium Confidence
+"I think I understand the concept, but I need more practice.",Medium Confidence
+"This approach works, but there might be a simpler one.",Medium Confidence
+I am moderately confident about this.,Medium Confidence
+"I believe this is correct, but I want to verify with friends.",Medium Confidence
+I think this is the right formula to use.,Medium Confidence
+I have a fair understanding of this concept.,Medium Confidence
+"I am mostly confident, just slightly unsure of the last step.",Medium Confidence
+"This is likely correct, though I have some minor doubts.",Medium Confidence
+I have a rough understanding of this topic.,Medium Confidence
+"I think I know how to do this, but I'm hesitant.",Medium Confidence
+I am reasonably sure this is the right answer.,Medium Confidence
+"I have some doubts, but this seems like the best guess.",Medium Confidence
+I think I followed the instructions correctly.,Medium Confidence
+I am somewhat confident in my reasoning.,Medium Confidence
+This is probably the correct way to solve it.,Medium Confidence
+"I have a general understanding, but I need to study more.",Medium Confidence
+"I think this is correct, but let me check again.",Medium Confidence
+I am fairly confident in this solution.,Medium Confidence
+"I think I have the right concept, but my math might be off.",Medium Confidence
+"I am mostly sure about this, but not completely.",Medium Confidence
+I have a basic grasp of the theory here.,Medium Confidence
+"This seems reasonable, but I'm not positive.",Medium Confidence
+"I think I solved it, but I need feedback.",Medium Confidence
+I am somewhat sure of the steps I took.,Medium Confidence
+This is likely the correct answer.,Medium Confidence
+"I think I got it, but it was a bit confusing.",Medium Confidence
+I have some confidence in this answer.,Medium Confidence
+I think this is how it works.,Medium Confidence
+I am fairly sure about this.,Medium Confidence
+I'm really confused about this topic and need help.,Low Confidence
+I have no idea what the answer might be.,Low Confidence
+This doesn't make sense to me at all.,Low Confidence
+I'm struggling to understand this concept.,Low Confidence
+I would need more guidance to solve this problem.,Low Confidence
+I feel uncertain because I haven't practiced this much.,Low Confidence
+My understanding is incomplete and I need clarification.,Low Confidence
+I am completely lost on how to solve this.,Low Confidence
+This is too difficult for me to understand right now.,Low Confidence
+I am very unsure about my answer here.,Low Confidence
+I don't think I understand this topic well enough.,Low Confidence
+"I am guessing the answer, I have no clue.",Low Confidence
+I find this concept extremely confusing.,Low Confidence
+I need someone to explain this to me from the beginning.,Low Confidence
+I am completely blank on this question.,Low Confidence
+I don't know where to start with this problem.,Low Confidence
+I am not confident at all in this solution.,Low Confidence
+"I think my answer is incorrect, I don't understand it.",Low Confidence
+I am having a lot of trouble with this subject.,Low Confidence
+I don't understand the logic behind this formula.,Low Confidence
+I am very confused about the instructions.,Low Confidence
+I don't have a good grasp of this concept.,Low Confidence
+I am totally unsure about this.,Low Confidence
+I don't know how to apply this theory.,Low Confidence
+I am struggling to keep up with this class.,Low Confidence
+I have a lot of doubts about this topic.,Low Confidence
+I don't think I did this right at all.,Low Confidence
+I am completely uncertain about this approach.,Low Confidence
+I don't know the correct method for this.,Low Confidence
+I am failing to understand the basics here.,Low Confidence
+I am extremely unsure about the results.,Low Confidence
+I don't understand what this question is asking.,Low Confidence
+I am completely confused by this diagram.,Low Confidence
+I don't know how to solve this equation.,Low Confidence
+I am very unconfident in my skills.,Low Confidence
+I have zero understanding of this lesson.,Low Confidence
+I am totally lost in this chapter.,Low Confidence
+"I don't think this is correct, but I don't know the alternative.",Low Confidence
+I am struggling with the homework questions.,Low Confidence
+I don't understand this code at all.,Low Confidence
+I am very doubtful about this answer.,Low Confidence
+I have no confidence in this solution.,Low Confidence
+This is way over my head.,Low Confidence
+I am totally confused.,Low Confidence
+I don't understand any of this.,Low Confidence
+I have no idea.,Low Confidence
+I am extremely confused.,Low Confidence
+I don't know what to do.,Low Confidence
+I am very uncertain.,Low Confidence
+I don't understand.,Low Confidence
+mujhe poora yakeen hai ye sahi hai,High Confidence
+ye bilkul sahi answer hai,High Confidence
+maine saare steps sahi kiye hain,High Confidence
+concept bilkul clear hai mujhe,High Confidence
+mujhe is topic par poori grip hai,High Confidence
+bilkul sahi samajh aayi hai mujhe,High Confidence
+easy tha main araam se kar sakta hoon,High Confidence
+koi doubt nahi hai mujhe isme,High Confidence
+meri understanding bilkul perfect hai,High Confidence
+bina kisi shak ke ye sahi hai,High Confidence
+main isey doosron ko bhi samjha sakta hoon,High Confidence
+haji bilkul 100% sahi hai,High Confidence
+mujhe bilkul confirm pata hai,High Confidence
+maine ache se samjha hai ye topic,High Confidence
+main confirm hoon ye answer right hai,High Confidence
+mujhe thoda boht samajh aaya hai,Medium Confidence
+shayad ye sahi hai par check karna parega,Medium Confidence
+thodi confusion hai lekin sahi lag raha hai,Medium Confidence
+kuch concepts samajh aaye hain kuch nahi,Medium Confidence
+main confirm nahi hoon lekin shayad sahi ho,Medium Confidence
+mujhe thoda aur practice ki zaroorat hai,Medium Confidence
+concepts thode clear hain lekin poore nahi,Medium Confidence
+kuch cheezein bhol rahi hain mujhe,Medium Confidence
+maybe ye sahi ho par confirm nahi,Medium Confidence
+koshish ki hai par poora yakeen nahi hai,Medium Confidence
+thoda mushkil laga par samajh aa gaya thoda,Medium Confidence
+aadha samajh aaya hai aadha nahi,Medium Confidence
+kuch points clear hain aur kuch me doubt hai,Medium Confidence
+mujhse thodi galti ho sakti hai isme,Medium Confidence
+check karna parega par lagta hai thik hai,Medium Confidence
+mujhe bilkul samajh nahi aaya,Low Confidence
+boht mushkil hai ye topic mere liye,Low Confidence
+mujhe kuch bhi samajh nahi aa raha,Low Confidence
+mujhe boht confusion ho rahi hai,Low Confidence
+main completely blank hoon isme,Low Confidence
+mujhse ye nahi ho raha boht tough hai,Low Confidence
+meri samajh se bahar hai ye sab,Low Confidence
+help chahiye mujhe kuch samajh nahi aa raha,Low Confidence
+koi concept clear nahi hai mera isme,Low Confidence
+mujhe bilkul yakeen nahi hai apne answer par,Low Confidence
+sab sir ke oopar se guzar gaya,Low Confidence
+zero samajh aayi hai mujhe,Low Confidence
+mujhe is topic par boht doubt hai kuch samajh nahi aya,Low Confidence
+boht mushkil lag raha hai ye question,Low Confidence
+bilkul palle nahi para ye concept,Low Confidence
